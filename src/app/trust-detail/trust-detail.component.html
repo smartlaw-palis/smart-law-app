@@ -1,0 +1,140 @@
+
+<ng-template #newBeneficiaryModal let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">New Beneficiary</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="text-center" *ngIf="!entities">
+      Loading...
+    </div>
+    <form *ngIf="entities">
+      <div class="form-group">
+        <label>Beneficiary</label>
+        <select class="form-control" name="beneficiary" [(ngModel)]="newTrustBeneficiary">
+          <option value=""></option>
+          <option *ngFor="let entity of entities" value="{{entity}}">{{entity}}</option>
+        </select>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer" *ngIf="entities">
+    <button [disabled]="newBeneficiaryBtn.isProcessing" (click)="addNewBeneficiary()" type="button" class="btn btn-outline-dark">{{newBeneficiaryBtn.caption}}</button>
+  </div>
+</ng-template>
+
+<ng-template #saleOfferModal let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">Sale Offer</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="form-group">
+        <label>Amount in ETH</label>
+        <input type="number" name="amount" placeholder="Sale Amount in ETH" [(ngModel)]="amount" class="form-control">
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button [disabled]="offerSaleBtn.isProcessing" (click)="submitSaleOffer()" type="button" class="btn btn-outline-dark">{{offerSaleBtn.caption}}</button>
+  </div>
+</ng-template>
+
+<ng-template #saleOffersModal let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">Sale Offers</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Amount</th>
+          <th>Signatures</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let s of saleOfferDetails">
+          <td>{{s.amount}} ETH</td>
+          <td>
+            <div *ngFor="let signature of s.signatures">{{signature}}</div>
+          </td>
+          <td>
+            <button [disabled]="s.hasAgreed" class="btn btn-sm btn-success" (click)="agreeToOffer(s.hash)">Agree</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</ng-template>
+
+<div class="row">
+  <div class="col-md-6 col-sm-12">
+    <ul class="list-group">
+      <li class="list-group-item active">Trust Details</li>
+      <li class="list-group-item text-center" *ngIf="!trust">
+        Loading...
+      </li>
+      <li class="list-group-item" *ngIf="trust">
+        Name: {{trust.name}}
+      </li>
+      <li class="list-group-item" *ngIf="trust">
+        Property: {{trust.property}}
+      </li>
+      <li class="list-group-item" *ngIf="trust">
+        For Sale: {{trust.isForSale}}
+      </li>
+      <li class="list-group-item" *ngIf="trust">
+        Amount: {{trust.amount}} ETH
+      </li>
+    </ul>
+
+    <br>
+
+    <ul class="list-group" *ngIf="isBeneficiary==true">
+      <li class="list-group-item active">Beneficiary Features</li>
+      <li class="list-group-item list-group-item-action" (click)="showNewBeneficiaryModal(newBeneficiaryModal)">
+        Assign Beneficiary
+      </li>
+      <li class="list-group-item list-group-item-action" (click)="showSaleOfferModal(saleOfferModal)">
+        Offer Sale
+      </li>
+      <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"  (click)="showSaleOffersModal(saleOffersModal)">
+        View Sales Offer <span class="badge badge-primary badge-pill">{{saleOffers.length}}</span>
+      </li>
+      <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+        Dissolve Trust
+        <span class="badge badge-primary badge-pill">{{dissolveSignatures.length}}</span>
+      </li>
+    </ul>
+
+    <br>
+
+    <ul class="list-group" *ngIf="trust && trust.isForSale == 'Yes' && isBeneficiary==false">
+      <li class="list-group-item active">Non-Beneficiary Feature</li>
+      <li class="list-group-item list-group-item-action" (click)="buyTrust()">
+        Buy Beneficiary Interest
+      </li>
+    </ul>
+
+  </div>
+  <div class="col-md-6 col-sm-12">
+    <ul class="list-group">
+      <li class="list-group-item active">Trust Beneficiaries</li>
+      <li class="list-group-item list-group-item-success" *ngIf="isBeneficiary==true">
+        Active account is a beneficiary of this trust
+      </li>
+      <li class="list-group-item text-wrap" *ngFor="let beneficiary of beneficiaries">
+        {{beneficiary}}
+      </li>
+    </ul>
+  </div>
+</div>

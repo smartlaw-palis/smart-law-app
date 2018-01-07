@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+@import "node_modules/ng2-toasty/bundles/style-bootstrap";
+
+body {
+  padding-top: 3.5rem;
+  main {
+    margin-top: 3.5rem;
+  }
+}
+
+.text-wrap {
+  word-break: break-all;
+}

@@ -1,0 +1,69 @@
+<ng-template #newEntityModal let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">New Entity</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="form-group">
+        <label>Category</label>
+        <select class="form-control" name="category" [(ngModel)]="entity.category">
+          <option value="0">Individual</option>
+          <option value="1">LLC</option>
+          <option value="2">C Corp.</option>
+          <option value="3">S Corp.</option>
+          <option value="4">LLP</option>
+          <option value="5">Trust</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Accredited Investor</label>
+        <select class="form-control" name="accreditedInvestor" [(ngModel)]="entity.accreditedInvestor">
+          <option value="false">No</option>
+          <option value="true">Yes</option>
+        </select>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button [disabled]="newEntityBtn.isProcessing" (click)="createNewEntity()" type="button" class="btn btn-outline-dark">{{newEntityBtn.caption}}</button>
+  </div>
+</ng-template>
+
+<div class="row">
+  <div class="col-md-12 my-3">
+    <button class="btn btn-primary float-right" (click)="open(newEntityModal)">Create Entity</button>
+  </div>
+  <div class="col-md-12">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Address</th>
+          <th>Category</th>
+          <th>Accredited Investor</th>
+          <th>Verified</th>
+        </tr>
+      </thead>
+      <tbody *ngIf="!entities">
+        <tr>
+          <td colspan="4" class="text-center">
+            Loading...
+          </td>
+        </tr>
+      </tbody>
+      <tbody *ngIf="entities">
+        <tr *ngFor="let entity of entities; let i = index">
+          <td>{{entity.address}}</td>
+          <td>{{entity.category}}</td>
+          <td>{{entity.accreditedInvestor}}</td>
+          <td>
+            {{entity.verified}}
+            <button *ngIf="entity.hasPendingVerification==false" (click)="verifyEntity(entity.address, i)" class="btn btn-sm btn-primary">Verify</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,67 @@
+<ng-template #newTrustModal let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">New Trust</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="form-group">
+        <label>Name</label>
+        <input type="text" name="name" class="form-control" [(ngModel)]="trust.name">
+      </div>
+      <div class="form-group">
+        <label>Property</label>
+        <input type="text" name="property" class="form-control" [(ngModel)]="trust.property">
+      </div>
+      <div class="form-group" *ngIf="entities">
+        <label>Beneficiary</label>
+        <select class="form-control" name="beneficiary" [(ngModel)]="trust.beneficiary">
+          <option value=""></option>
+          <option *ngFor="let entity of entities" value="{{entity}}">{{entity}}</option>
+        </select>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button [disabled]="newTrustBtn.isProcessing" (click)="createNewTrust()" type="button" class="btn btn-outline-dark">{{newTrustBtn.caption}}</button>
+  </div>
+</ng-template>
+
+<div class="row">
+  <div class="col-md-12 my-3">
+    <button (click)="open(newTrustModal)" class="btn btn-primary float-right">Create Trust</button>
+  </div>
+  <div class="col-md-12">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Property</th>
+          <th>Is For Sale</th>
+          <th>Amount</th>
+        </tr>
+      </thead>
+      <tbody *ngIf="!trusts">
+        <tr>
+          <td colspan="4" class="text-center">
+            Loading...
+          </td>
+        </tr>
+      </tbody>
+      <tbody *ngIf="trusts">
+        <tr *ngFor="let trust of trusts; let i = index">
+          <td>
+            <a [routerLink]="['/trust', trust.hash]">{{trust.name}}</a>
+          </td>
+          <td>{{trust.property}}</td>
+          <td>{{trust.isForSale}}</td>
+          <td>
+            {{trust.amount}} ETH
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
