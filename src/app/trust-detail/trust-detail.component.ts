@@ -32,9 +32,14 @@ export class TrustDetailComponent implements OnInit {
     caption: 'Submit',
     isProcessing: false
   };
+  dissolveBtn: any = {
+    caption: 'Yes',
+    isProcessing: false
+  };
 
   entities: any = null;
   newBeneficiaryModal: any = null;
+  dissolveModal: any = null;
   saleOfferModal: any = null;
   saleOffersModal: any = null;
   amount: number = null;
@@ -52,6 +57,16 @@ export class TrustDetailComponent implements OnInit {
     } else {
       this.newBeneficiaryBtn.caption = "Add";
       this.newBeneficiaryBtn.isProcessing = false;
+    }
+  }
+
+  private dissolveBtnStatus(status) {
+    if (status) {
+      this.dissolveBtn.caption = "Processing...";
+      this.dissolveBtn.isProcessing = true;
+    } else {
+      this.dissolveBtn.caption = "Yes";
+      this.dissolveBtn.isProcessing = false;
     }
   }
 
@@ -102,6 +117,11 @@ export class TrustDetailComponent implements OnInit {
   showSaleOfferModal(content) {
     this.offerSaleBtnStatus(false);
     this.saleOfferModal = this._modalService.open(content);
+  }
+
+  showDissolveModal(content) {
+    this.dissolveBtnStatus(false);
+    this.dissolveModal = this._modalService.open(content);
   }
 
   showSaleOffersModal(content) {
@@ -160,6 +180,34 @@ export class TrustDetailComponent implements OnInit {
       .catch(err => {
         this.offerSaleBtnStatus(false);
         this.saleOfferModal.close();
+        this._web3.showError("Error getting default account.");
+      })
+  }
+
+  submitDissolve() {
+    this.dissolveBtnStatus(true);
+    this._web3.activeAccount()
+      .then(account => {
+        this._web3.smartLawInstance.methods.dissolveTrust(this.trustHash)
+          .send({ from: account })
+          .on('transactionHash', (hash) => {
+            this.dissolveBtnStatus(false);
+            //this.getTrusts();
+            this._web3.showSuccess(hash);
+            this.dissolveModal.close();
+          })
+          .on('receipt', receipt => {
+            //this.getTrusts();
+          })
+          .on('error', err => {
+            this._web3.showError("Error submitting dissolve request.");
+            this.dissolveModal.close();
+            this.dissolveBtnStatus(false);
+          });
+      })
+      .catch(err => {
+        this.dissolveBtnStatus(false);
+        this.dissolveModal.close();
         this._web3.showError("Error getting default account.");
       })
   }

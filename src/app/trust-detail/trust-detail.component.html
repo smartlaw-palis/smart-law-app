@@ -76,6 +76,23 @@
   </div>
 </ng-template>
 
+<ng-template #dissolveModal let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">Confirmation</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>
+      Are you sure you want to dissolve this trust?
+    </p>
+  </div>
+  <div class="modal-footer">
+    <button [disabled]="dissolveBtn.isProcessing" (click)="submitDissolve()" type="button" class="btn btn-outline-dark">{{dissolveBtn.caption}}</button>
+  </div>
+</ng-template>
+
 <div class="row">
   <div class="col-md-6 col-sm-12">
     <ul class="list-group">
@@ -107,12 +124,12 @@
       <li class="list-group-item list-group-item-action" (click)="showSaleOfferModal(saleOfferModal)">
         Offer Sale
       </li>
-      <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"  (click)="showSaleOffersModal(saleOffersModal)">
-        View Sales Offer <span class="badge badge-primary badge-pill">{{saleOffers.length}}</span>
+      <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" (click)="showSaleOffersModal(saleOffersModal)">
+        View Sales Offer <span class="badge badge-primary badge-pill" *ngIf="saleOffers">{{saleOffers.length}}</span>
       </li>
-      <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+      <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" (click)="showDissolveModal(dissolveModal)">
         Dissolve Trust
-        <span class="badge badge-primary badge-pill">{{dissolveSignatures.length}}</span>
+        <span class="badge badge-primary badge-pill" *ngIf="dissolveSignatures">{{dissolveSignatures.length}}</span>
       </li>
     </ul>
 

@@ -1,6 +1,7 @@
 <ng2-toasty [position]="'top-right'"></ng2-toasty>
 
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <img src="/assets/img/logo.png" style="margin-right:10px; width: 25px;">
       <a class="navbar-brand" href="/">Smart Law Contract</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -9,10 +10,10 @@
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item" routerLinkActive="active">
-            <a class="nav-link" routerLink="/" >Entity</a>
+            <a class="nav-link" routerLink="/" >Legal Entities</a>
           </li>
           <li class="nav-item" routerLinkActive="active">
-            <a class="nav-link" routerLink="/trust" >Trust</a>
+            <a class="nav-link" routerLink="/trust" >Smart Trusts</a>
           </li>
         </ul>
       </div>
@@ -21,17 +22,6 @@
     <main role="main">
 
       <div class="container">
-
-        <div class="row">
-          <div class="col-md-12">
-            <div *ngIf="!isOwner" class="alert alert-danger" role="alert">
-              Active account is not the owner of contract.
-            </div>
-            <div *ngIf="isOwner" class="alert alert-success" role="alert">
-              Active account is the owner of contract.
-            </div>
-          </div>
-        </div>
 
         <router-outlet></router-outlet>
 

@@ -30,7 +30,7 @@
 </ng-template>
 
 <div class="row">
-  <div class="col-md-12 my-3">
+  <div class="col-md-12 my-3" *ngIf="isOwner">
     <button (click)="open(newTrustModal)" class="btn btn-primary float-right">Create Trust</button>
   </div>
   <div class="col-md-12">
@@ -51,6 +51,11 @@
         </tr>
       </tbody>
       <tbody *ngIf="trusts">
+        <tr *ngIf="trusts.length == 0">
+          <td colspan="4" class="text-center">
+            No trust found.
+          </td>
+        </tr>
         <tr *ngFor="let trust of trusts; let i = index">
           <td>
             <a [routerLink]="['/trust', trust.hash]">{{trust.name}}</a>

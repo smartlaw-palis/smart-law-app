@@ -54,13 +54,18 @@
         </tr>
       </tbody>
       <tbody *ngIf="entities">
+        <tr *ngIf="entities.length == 0">
+          <td colspan="4" class="text-center">
+            No entity found.
+          </td>
+        </tr>
         <tr *ngFor="let entity of entities; let i = index">
           <td>{{entity.address}}</td>
           <td>{{entity.category}}</td>
           <td>{{entity.accreditedInvestor}}</td>
           <td>
             {{entity.verified}}
-            <button *ngIf="entity.hasPendingVerification==false" (click)="verifyEntity(entity.address, i)" class="btn btn-sm btn-primary">Verify</button>
+            <button *ngIf="entity.hasPendingVerification==false && isOwner" (click)="verifyEntity(entity.address, i)" class="btn btn-sm btn-primary">Verify</button>
           </td>
         </tr>
       </tbody>

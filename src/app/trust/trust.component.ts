@@ -10,6 +10,8 @@ import _ from 'lodash';
 })
 export class TrustComponent implements OnInit {
 
+  isOwner: boolean = false;
+
   newTrustModal: any = null;
   trust: any = {
     name: '',
@@ -32,6 +34,10 @@ export class TrustComponent implements OnInit {
 
   ngOnInit() {
     this.getTrusts();
+    this._web3.isContractOwner()
+      .then((res: any) => {
+        this.isOwner = res;
+      })
   }
 
   getEntities() {

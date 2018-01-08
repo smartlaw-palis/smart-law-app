@@ -10,6 +10,8 @@ import _ from 'lodash';
 })
 export class EntityComponent implements OnInit {
 
+  isOwner: boolean = false;
+
   newEntityModal: any = null;
   entity: any = {
     category: 0,
@@ -30,6 +32,10 @@ export class EntityComponent implements OnInit {
 
   ngOnInit() {
     this.getEntities();
+    this._web3.isContractOwner()
+      .then((res: any) => {
+        this.isOwner = res;
+      })
   }
 
   getEntities() {

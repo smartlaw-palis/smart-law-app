@@ -575,14 +575,19 @@ export class Web3Service {
     if (count > 0) {
       for (let i = 0; i < count; i++) {
         let hash = await this.smartLawInstance.methods.TrustList(i).call();
-        let trust = await this.smartLawInstance.methods.getTrust(hash).call();
-        trusts.push({
-          hash: hash,
-          name: trust[0],
-          property: trust[1],
-          isForSale: this.booleanStr[trust[2]],
-          amount: this.web3.utils.fromWei(trust[3], 'ether')
-        });
+        let trust = null;
+        try {
+          trust = await this.smartLawInstance.methods.getTrust(hash).call();
+        } catch(e) {}
+        if(trust) {
+          trusts.push({
+            hash: hash,
+            name: trust[0],
+            property: trust[1],
+            isForSale: this.booleanStr[trust[2]],
+            amount: this.web3.utils.fromWei(trust[3], 'ether')
+          });
+        }
       }
     }
     return trusts;
