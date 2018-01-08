@@ -9,7 +9,7 @@ import { Injectable } from '@angular/core';
 export class Web3Service {
 
   public web3: any = null;
-  smartLawContractAddress: string = '0xc38387171b1a691a5435838974a7aa9ec949b891';
+  smartLawContractAddress: string = '0xaB913350E8950c56d2c462306aFE98DB7442AEb2';
   public smartLawInstance: any = null;
 
   categoryStr = [

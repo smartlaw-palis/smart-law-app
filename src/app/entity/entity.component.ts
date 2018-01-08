@@ -92,15 +92,18 @@ export class EntityComponent implements OnInit {
     this.newBtnStatus(true);
     this._web3.activeAccount()
       .then(account => {
-        this._web3.smartLawInstance.methods.newLegalEntity(this.entity.category, this.entity.accreditedInvestor)
+        return this._web3.smartLawInstance.methods.newLegalEntity(this.entity.category, this.entity.accreditedInvestor)
           .send({ from: account })
-          .on('transactionHash', (hash) => {
+          .once('transactionHash', (hash) => {
             this.newBtnStatus(false);
             this.getEntities();
             this._web3.showSuccess(hash);
             this.newEntityModal.close();
           })
-          .on('receipt', receipt => {
+          .once('receipt', receipt => {
+            this.getEntities();
+          })
+          .on('confirmation', receipt => {
             this.getEntities();
           })
           .on('error', err => {

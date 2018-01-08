@@ -74,15 +74,18 @@ export class TrustComponent implements OnInit {
     this.newBtnStatus(true);
     this._web3.activeAccount()
       .then(account => {
-        this._web3.smartLawInstance.methods.newTrust(this.trust.name, this.trust.property, this.trust.beneficiary)
+        return this._web3.smartLawInstance.methods.newTrust(this.trust.name, this.trust.property, this.trust.beneficiary)
           .send({ from: account })
-          .on('transactionHash', (hash) => {
+          .once('transactionHash', (hash) => {
             this.newBtnStatus(false);
             this.getTrusts();
             this._web3.showSuccess(hash);
             this.newTrustModal.close();
           })
-          .on('receipt', receipt => {
+          .once('receipt', receipt => {
+            this.getTrusts();
+          })
+          .on('confirmation', receipt => {
             this.getTrusts();
           })
           .on('error', err => {
