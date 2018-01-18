@@ -1,0 +1,83 @@
+{
+  "contract_name": "Trusteed",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "newTrustee",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_newTrustee",
+          "type": "address"
+        }
+      ],
+      "name": "transferTrustee",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "acceptTrustee",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "trustee",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_trustee",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "_prevTrustee",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_newTrustee",
+          "type": "address"
+        }
+      ],
+      "name": "TrusteeUpdate",
+      "type": "event"
+    }
+  ],
+  "unlinked_binary": "0x6060604052341561000f57600080fd5b604051602080610281833981016040528080519150505b60008054600160a060020a031916600160a060020a0383161790555b505b61022e806100536000396000f300606060405263ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166332243378811461005e5780633ac7f8311461008d5780634c10b9cd146100ae578063fdf97cb2146100c3575b600080fd5b341561006957600080fd5b6100716100f2565b604051600160a060020a03909116815260200160405180910390f35b341561009857600080fd5b6100ac600160a060020a0360043516610101565b005b34156100b957600080fd5b6100ac61014b565b005b34156100ce57600080fd5b6100716101f3565b604051600160a060020a03909116815260200160405180910390f35b600154600160a060020a031681565b6000543390600160a060020a0380831691161461011d57600080fd5b6001805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0384161790555b5b5050565b60015433600160a060020a0390811691161461016657600080fd5b6000546001547fe26fc4f197ae4791837ad16b269120b79398e58128899ccdbca7d4ed6a9f203d91600160a060020a039081169116604051600160a060020a039283168152911660208201526040908101905180910390a1600180546000805473ffffffffffffffffffffffffffffffffffffffff19908116600160a060020a038416179091551690555b565b600054600160a060020a0316815600a165627a7a72305820d1c4af112048706765319a8f5b2ed5081bf92242f50198106adb89452cd779f60029",
+  "networks": {},
+  "schema_version": "0.0.5",
+  "updated_at": 1516206584278
+}

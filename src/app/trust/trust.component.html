@@ -39,7 +39,7 @@
         <tr>
           <th>Name</th>
           <th>Property</th>
-          <th>Is For Sale</th>
+          <th>For Sale</th>
           <th>Amount</th>
         </tr>
       </thead>
@@ -58,10 +58,10 @@
         </tr>
         <tr *ngFor="let trust of trusts; let i = index">
           <td>
-            <a [routerLink]="['/trust', trust.hash]">{{trust.name}}</a>
+            <a [routerLink]="['/smart-trust', trust.address]">{{trust.name}}</a>
           </td>
           <td>{{trust.property}}</td>
-          <td>{{trust.isForSale}}</td>
+          <td>{{trust.forSale}}</td>
           <td>
             {{trust.amount}} ETH
           </td>

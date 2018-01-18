@@ -11,6 +11,7 @@ import _ from 'lodash';
 export class EntityComponent implements OnInit {
 
   isOwner: boolean = false;
+  isNewOwner: boolean = false;
 
   newEntityModal: any = null;
   entity: any = {
@@ -36,6 +37,10 @@ export class EntityComponent implements OnInit {
       .then((res: any) => {
         this.isOwner = res;
       })
+    this._web3.isContractNewOwner()
+      .then((res: any) => {
+        this.isNewOwner = res;
+      })
   }
 
   getEntities() {
@@ -47,7 +52,13 @@ export class EntityComponent implements OnInit {
 
   open(content) {
     this.newBtnStatus(false);
-    this.newEntityModal = this._modalService.open(content);
+    this._web3.isEntityOwner()
+      .then(res => {
+        if (!res)
+          this.newEntityModal = this._modalService.open(content);
+        else
+          this._web3.showError('Already an entity.');
+      })
   }
 
   private newBtnStatus(status) {
@@ -61,61 +72,54 @@ export class EntityComponent implements OnInit {
   }
 
   verifyEntity(address, i) {
-    this._zone.run(() => {
-      this.entities[i].hasPendingVerification = true;
-      this._web3.activeAccount()
-        .then(account => {
+    //this.entities[i].hasPendingVerification = true;
+    this._web3.activeAccount()
+      .then(account => {
+        return this._web3.smartLawInstance.methods.verifyEntity(address)
+          .send({ from: account })
+      })
+      .then(receipt => {
+        this.getEntities();
+        this._web3.showSuccess(receipt.transactionHash);
+      })
+      .catch(err => {
+        //this.entities[i].hasPendingVerification = false;
+        this._web3.showError(err);
+      })
+  }
 
-          this._web3.smartLawInstance.methods.verifyLegalEntity(address)
-            .send({ from: account })
-            .on('transactionHash', (hash) => {
-              this.getEntities();
-              this._web3.showSuccess(hash);
-            })
-            .on('receipt', receipt => {
-              this.getEntities();
-            })
-            .on('error', err => {
-              this.entities[i].hasPendingVerification = false;
-              this._web3.showError("Error verifying entity.");
-            });
-
-        })
-        .catch(err => {
-          this.entities[i].hasPendingVerification = false;
-          this._web3.showError("Error getting default account.");
-        })
-    })
+  acceptOwnership() {
+    this._web3.activeAccount()
+      .then(account => {
+        return this._web3.smartLawInstance.methods.acceptOwnership()
+          .send({ from: account })
+      })
+      .then(receipt => {
+        this.getEntities();
+        this._web3.showSuccess(receipt.transactionHash);
+      })
+      .catch(err => {
+        this._web3.showError(err);
+      })
   }
 
   createNewEntity() {
     this.newBtnStatus(true);
     this._web3.activeAccount()
       .then(account => {
-        return this._web3.smartLawInstance.methods.newLegalEntity(this.entity.category, this.entity.accreditedInvestor)
+        return this._web3.smartLawInstance.methods.newEntity(this.entity.category, this.entity.accreditedInvestor)
           .send({ from: account })
-          .once('transactionHash', (hash) => {
-            this.newBtnStatus(false);
-            this.getEntities();
-            this._web3.showSuccess(hash);
-            this.newEntityModal.close();
-          })
-          .once('receipt', receipt => {
-            this.getEntities();
-          })
-          .on('confirmation', receipt => {
-            this.getEntities();
-          })
-          .on('error', err => {
-            this._web3.showError("Error creating entity.");
-            this.newEntityModal.close();
-            this.newBtnStatus(false);
-          });
+      })
+      .then(receipt => {
+        this.getEntities();
+        this.newBtnStatus(false);
+        this.newEntityModal.close();
+        this._web3.showSuccess(receipt.transactionHash);
       })
       .catch(err => {
         this.newBtnStatus(false);
         this.newEntityModal.close();
-        this._web3.showError("Error getting default account.");
+        this._web3.showError(err);
       })
   }
 

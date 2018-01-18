@@ -8,14 +8,14 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    component: EntityComponent
-  },
-  {
-    path: 'trust',
     component: TrustComponent
   },
   {
-    path: 'trust/:hash',
+    path: 'legal-entities',
+    component: EntityComponent
+  },
+  {
+    path: 'smart-trust/:hash',
     component: TrustDetailComponent
   }
 ];

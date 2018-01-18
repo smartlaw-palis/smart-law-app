@@ -1,0 +1,31 @@
+{
+  "contract_name": "UtilsLib",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_source",
+          "type": "address[]"
+        },
+        {
+          "name": "_address",
+          "type": "address"
+        }
+      ],
+      "name": "isAddressFound",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    }
+  ],
+  "unlinked_binary": "0x6060604052341561000f57600080fd5b5b61014d8061001f6000396000f300606060405263ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416638782be35811461003d575b600080fd5b61009960046024813581810190830135806020818102016040519081016040528093929190818152602001838360200280828437509496505050923573ffffffffffffffffffffffffffffffffffffffff1692506100ad915050565b604051901515815260200160405180910390f35b6000805b8351811015610115578273ffffffffffffffffffffffffffffffffffffffff168482815181106100dd57fe5b9060200190602002015173ffffffffffffffffffffffffffffffffffffffff16141561010c576001915061011a565b5b6001016100b1565b600091505b50929150505600a165627a7a72305820cd253c09884b3543d94ab8b006e93ac1d7ccf81661faf2fdc47c4c09a6f7365b0029",
+  "networks": {},
+  "schema_version": "0.0.5",
+  "updated_at": 1516206584278
+}

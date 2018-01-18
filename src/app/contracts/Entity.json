@@ -1,0 +1,240 @@
+{
+  "contract_name": "Entity",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "newTrustee",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_newTrustee",
+          "type": "address"
+        }
+      ],
+      "name": "transferTrustee",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "withdraw",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "availableFunds",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "acceptTrustee",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_sender",
+          "type": "address"
+        }
+      ],
+      "name": "acceptOwnership",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_sender",
+          "type": "address"
+        },
+        {
+          "name": "_newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "sweepFunds",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "deposit",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "verified",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "newOwner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "isAccreditedInvestor",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "category",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "verify",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "trustee",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_owner",
+          "type": "address"
+        },
+        {
+          "name": "_category",
+          "type": "uint256"
+        },
+        {
+          "name": "_investor",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "constructor"
+    },
+    {
+      "payable": true,
+      "type": "fallback"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "_prevTrustee",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_newTrustee",
+          "type": "address"
+        }
+      ],
+      "name": "TrusteeUpdate",
+      "type": "event"
+    }
+  ],
+  "unlinked_binary": "0x6060604052341561000f57600080fd5b6040516060806107768339810160405280805191906020018051919060200180519150505b335b60008054600160a060020a031916600160a060020a0383161790555b5060028054600160a060020a031916600160a060020a03851617905560058290556006805460ff19168215151761ff001916905560006004555b5050505b6106d78061009f6000396000f300606060405236156100e35763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416633224337881146100ef5780633ac7f8311461011e5780633ccfd60b1461013f57806346fcff4c146101545780634c10b9cd1461017957806351710e451461018e5780636d435421146101af5780638da5cb5b146101d6578063a8d6fe0414610205578063b6b55f251461021a578063bbb82d8914610232578063d4ee1d9014610259578063dd21a61a14610288578063ef430aa6146102af578063fc735e99146102d4578063fdf97cb2146102e9575b5b60048054340190555b005b34156100fa57600080fd5b610102610318565b604051600160a060020a03909116815260200160405180910390f35b341561012957600080fd5b6100ed600160a060020a0360043516610327565b005b341561014a57600080fd5b6100ed610371565b005b341561015f57600080fd5b610167610405565b60405190815260200160405180910390f35b341561018457600080fd5b6100ed610447565b005b341561019957600080fd5b6100ed600160a060020a03600435166104ef565b005b34156101ba57600080fd5b6100ed600160a060020a036004358116906024351661055d565b005b34156101e157600080fd5b6101026105e1565b604051600160a060020a03909116815260200160405180910390f35b341561021057600080fd5b6100ed6105f0565b005b341561022557600080fd5b6100ed600435610616565b005b341561023d57600080fd5b610245610640565b604051901515815260200160405180910390f35b341561026457600080fd5b61010261064e565b604051600160a060020a03909116815260200160405180910390f35b341561029357600080fd5b61024561065d565b604051901515815260200160405180910390f35b34156102ba57600080fd5b610167610666565b60405190815260200160405180910390f35b34156102df57600080fd5b6100ed61066c565b005b34156102f457600080fd5b61010261069c565b604051600160a060020a03909116815260200160405180910390f35b600154600160a060020a031681565b6000543390600160a060020a0380831691161461034357600080fd5b6001805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0384161790555b5b5050565b6002546000903390600160a060020a0380831691161461039057600080fd5b600054600160a060020a0316915081633ccfd60b6040518163ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401600060405180830381600087803b15156103eb57600080fd5b6102c65a03f115156103fc57600080fd5b5050505b5b5050565b60025460009033600160a060020a0390811691161480610433575060005433600160a060020a039081169116145b151561043e57600080fd5b506004545b5b90565b60015433600160a060020a0390811691161461046257600080fd5b6000546001547fe26fc4f197ae4791837ad16b269120b79398e58128899ccdbca7d4ed6a9f203d91600160a060020a039081169116604051600160a060020a039283168152911660208201526040908101905180910390a1600180546000805473ffffffffffffffffffffffffffffffffffffffff19908116600160a060020a038416179091551690555b565b6000543390600160a060020a0380831691161461050b57600080fd5b600354600160a060020a0383811691161461052557600080fd5b600380546002805473ffffffffffffffffffffffffffffffffffffffff19908116600160a060020a038416179091551690555b5b5050565b6002548290600160a060020a0380831691161461057957600080fd5b6000543390600160a060020a0380831691161461059557600080fd5b600254600160a060020a03848116911614156105b057600080fd5b6003805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0385161790555b5b505b505050565b600254600160a060020a031681565b6000543390600160a060020a0380831691161461060c57600080fd5b60006004555b5b50565b6000543390600160a060020a0380831691161461063257600080fd5b60048054830190555b5b5050565b600654610100900460ff1681565b600354600160a060020a031681565b60065460ff1681565b60055481565b6000543390600160a060020a0380831691161461068857600080fd5b6006805461ff0019166101001790555b5b50565b600054600160a060020a0316815600a165627a7a72305820202c3bf682b3bbe60279f4e88f0fa4b6ccfdf8ed6db5de5bf12aa54e11f425ff0029",
+  "networks": {},
+  "schema_version": "0.0.5",
+  "updated_at": 1516206584278
+}

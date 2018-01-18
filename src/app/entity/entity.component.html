@@ -35,32 +35,35 @@
 <div class="row">
   <div class="col-md-12 my-3">
     <button class="btn btn-primary float-right" (click)="open(newEntityModal)">Create Entity</button>
+    <button *ngIf="isNewOwner" class="btn btn-primary float-right" (click)="acceptOwnership()">Accept Ownership</button>
   </div>
   <div class="col-md-12">
     <table class="table table-striped">
       <thead>
         <tr>
           <th>Address</th>
+          <th>Owner</th>
           <th>Category</th>
-          <th>Accredited Investor</th>
+          <th>Investor</th>
           <th>Verified</th>
         </tr>
       </thead>
       <tbody *ngIf="!entities">
         <tr>
-          <td colspan="4" class="text-center">
+          <td colspan="5" class="text-center">
             Loading...
           </td>
         </tr>
       </tbody>
       <tbody *ngIf="entities">
         <tr *ngIf="entities.length == 0">
-          <td colspan="4" class="text-center">
+          <td colspan="5" class="text-center">
             No entity found.
           </td>
         </tr>
         <tr *ngFor="let entity of entities; let i = index">
           <td>{{entity.address}}</td>
+          <td>{{entity.owner}}</td>
           <td>{{entity.category}}</td>
           <td>{{entity.accreditedInvestor}}</td>
           <td>

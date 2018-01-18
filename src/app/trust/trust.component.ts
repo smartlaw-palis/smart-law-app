@@ -36,12 +36,13 @@ export class TrustComponent implements OnInit {
     this.getTrusts();
     this._web3.isContractOwner()
       .then((res: any) => {
+        console.log(res)
         this.isOwner = res;
       })
   }
 
   getEntities() {
-    this._web3.getEntitiesAddress()
+    this._web3.entityAddresses()
       .then((res: any) => {
         this.entities = res;
       })
@@ -74,30 +75,19 @@ export class TrustComponent implements OnInit {
     this.newBtnStatus(true);
     this._web3.activeAccount()
       .then(account => {
-        return this._web3.smartLawInstance.methods.newTrust(this.trust.name, this.trust.property, this.trust.beneficiary)
+          return this._web3.smartLawInstance.methods.newTrust(this.trust.name, this.trust.property, this.trust.beneficiary)
           .send({ from: account })
-          .once('transactionHash', (hash) => {
-            this.newBtnStatus(false);
-            this.getTrusts();
-            this._web3.showSuccess(hash);
-            this.newTrustModal.close();
-          })
-          .once('receipt', receipt => {
-            this.getTrusts();
-          })
-          .on('confirmation', receipt => {
-            this.getTrusts();
-          })
-          .on('error', err => {
-            this._web3.showError("Error creating trust.");
-            this.newTrustModal.close();
-            this.newBtnStatus(false);
-          });
+      })
+      .then(receipt => {
+        this.getTrusts();
+        this.newBtnStatus(false);
+        this.newTrustModal.close();
+        this._web3.showSuccess(receipt.transactionHash);
       })
       .catch(err => {
         this.newBtnStatus(false);
         this.newTrustModal.close();
-        this._web3.showError("Error getting default account.");
+        this._web3.showError(err);
       })
   }
 
