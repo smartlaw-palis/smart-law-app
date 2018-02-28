@@ -6,18 +6,27 @@ import _ from 'lodash';
 import { Injectable } from '@angular/core';
 
 
-import * as SmartLawTrustContract from './contracts/SmartLawTrust.json';
-import * as TrustContract from './contracts/Trust.json';
+import * as LiquidREContract from './contracts/LiquidRE.json';
+import * as DexREContract from './contracts/DexRE.json';
+import * as TrusteeContract from './contracts/Trustee.json';
 import * as EntityContract from './contracts/Entity.json';
-import * as BeneficiaryContract from './contracts/Beneficiary.json';
-import * as SaleContract from './contracts/Sale.json';
+import * as IREOContract from './contracts/IREO.json';
+import * as TrusteeFactoryContract from './contracts/TrusteeFactory.json';
+import * as EntityFactoryContract from './contracts/EntityFactory.json';
 
 @Injectable()
 export class Web3Service {
 
   public web3: any = null;
-  smartLawContractAddress: string = '0x3154E7c003039A27dB8404Ed95cBAA68A4051e5E';
-  public smartLawInstance: any = null;
+  public addresses: any = {
+      LiquidRE: '0x2788fa633ee62b5284f1fe43adc77bb4d153f2bd',
+      DexRE: '',
+      TrusteeFactory: '0x28ebac418b76f6c6c5be9dda0024bb845ec1a1dc',
+      EntityFactory: '0x153a3f91e4cd89e27513cdb5792060205917956a'
+  };
+  public LiquidREInstance: any = null;
+  public TrusteeFactoryInstance: any = null;
+  public EntityFactoryInstance: any = null;
 
   categoryStr = [
     'Individual',
@@ -39,9 +48,17 @@ export class Web3Service {
   ) {
 
     this.web3 = new Web3(Web3.givenProvider || "ws://localhost:8546");
-    this.smartLawInstance = new this.web3.eth.Contract(
-      (<any>SmartLawTrustContract).abi,
-      this.smartLawContractAddress
+    this.TrusteeFactoryInstance = new this.web3.eth.Contract(
+      (<any>TrusteeFactoryContract).abi,
+      this.addresses['TrusteeFactory']
+    );
+    this.EntityFactoryInstance = new this.web3.eth.Contract(
+      (<any>EntityFactoryContract).abi,
+      this.addresses['EntityFactory']
+    );
+    this.LiquidREInstance = new this.web3.eth.Contract(
+      (<any>LiquidREContract).abi,
+      this.addresses['LiquidRE']
     );
 
   }
@@ -69,12 +86,20 @@ export class Web3Service {
   }
 
   async entityAddresses() {
-    return await this.smartLawInstance.methods.entityAddresses().call();
+    return await this.EntityFactoryInstance.methods.entityAddresses().call();
   }
 
-  async trustAddresses() {
-    return await this.smartLawInstance.methods.trustAddresses().call();
+  async trusteeAddresses() {
+    return await this.TrusteeFactoryInstance.methods.trusteeAddresses().call();
   }
+
+  async ireoAddresses() {
+    return await this.LiquidREInstance.methods.IREOsAddresses().call();
+  }
+
+  // async trustAddresses() {
+  //   return await this.smartLawInstance.methods.trustAddresses().call();
+  // }
 
   createEntityInstance(_address) {
     return new this.web3.eth.Contract(
@@ -83,26 +108,40 @@ export class Web3Service {
     );
   }
 
-  createTrustInstance(_address) {
+  createTrusteeInstance(_address) {
     return new this.web3.eth.Contract(
-      (<any>TrustContract).abi,
+      (<any>TrusteeContract).abi,
       _address
     );
   }
 
-  createSaleInstance(_address) {
+  createIREOInstance(_address) {
     return new this.web3.eth.Contract(
-      (<any>SaleContract).abi,
+      (<any>IREOContract).abi,
       _address
     );
   }
 
-  createBeneficiaryInstance(_address) {
-    return new this.web3.eth.Contract(
-      (<any>BeneficiaryContract).abi,
-      _address
-    );
-  }
+  // createTrustInstance(_address) {
+  //   return new this.web3.eth.Contract(
+  //     (<any>TrustContract).abi,
+  //     _address
+  //   );
+  // }
+  //
+  // createSaleInstance(_address) {
+  //   return new this.web3.eth.Contract(
+  //     (<any>SaleContract).abi,
+  //     _address
+  //   );
+  // }
+  //
+  // createBeneficiaryInstance(_address) {
+  //   return new this.web3.eth.Contract(
+  //     (<any>BeneficiaryContract).abi,
+  //     _address
+  //   );
+  // }
 
   async getEntities() {
     let entities = [];
@@ -115,6 +154,7 @@ export class Web3Service {
           category: this.categoryStr[await entityInstance.methods.category().call()],
           verified: this.booleanStr[verified],
           owner: await entityInstance.methods.owner().call(),
+          country: await entityInstance.methods.country().call(),
           address: addresses[i],
           accreditedInvestor: this.booleanStr[await entityInstance.methods.isAccreditedInvestor().call()],
           hasPendingVerification: verified
@@ -124,108 +164,145 @@ export class Web3Service {
     return entities;
   }
 
-  async getTrustDetails(_address) {
-    let account = await this.activeAccount();
-    let entity = await this.smartLawInstance.methods.entityAddress(account).call();
-    let trustInstance = await this.createTrustInstance(_address);
-    let dissolveSignatures = await trustInstance.methods.getDissolveSignatures().call();
-    return {
-      name: await trustInstance.methods.name().call(),
-      property: await trustInstance.methods.property().call(),
-      deleted: await trustInstance.methods.deleted().call(),
-      address: _address,
-      forSale: this.booleanStr[await trustInstance.methods.forSale().call()],
-      amount: this.web3.utils.fromWei(await trustInstance.methods.forSaleAmount().call() + '', 'ether'),
-      dissolveSignatures: dissolveSignatures,
-      signedDissolve: dissolveSignatures.indexOf(entity) > -1,
-      beneficiaries: await trustInstance.methods.beneficiariesSignatures().call(),
-      saleOffers: await this.getTrustSaleOffers(_address),
-      pendingBeneficiaries: await this.getTrustPendingBeneficiaries(_address)
-    };
-  }
-
-  async isTrustBeneficiary(_address) {
-    let account = await this.activeAccount();
-    let entity = await this.smartLawInstance.methods.entityAddress(account).call();
-    let trustInstance = await this.createTrustInstance(_address);
-    return await trustInstance.methods.isBeneficiary(entity).call();
-  }
-
-  async getTrustBeneficiaries(_address) {
-    let trustInstance = await this.createTrustInstance(_address);
-    return await trustInstance.methods.beneficiariesSignatures().call();
-  }
-
-  async getTrustDissolveSignatures(hash) {
-    return await this.smartLawInstance.methods.getTrustDissolveSignatures(hash).call();
-  }
-
-  async getTrustSaleOffers(_address) {
-    let account = await this.activeAccount();
-    let entity = await this.smartLawInstance.methods.entityAddress(account).call();
-    let trustInstance = await this.createTrustInstance(_address);
-    let addresses = await trustInstance.methods.saleOffers().call();
-    let saleOffers = [];
-
-    for(let i = 0; i < addresses.length; i++) {
-      let saleInstance =  await this.createSaleInstance(addresses[i]);
-      let disabled = await saleInstance.methods.disabled().call();
-      if(!disabled) {
-        let signatures = await saleInstance.methods.getSignatures().call();
-        saleOffers.push({
+  async getTrustees() {
+    let trustees = [];
+    let addresses = await this.trusteeAddresses();
+    if (addresses.length > 0) {
+      for (let i = 0; i < addresses.length; i++) {
+        let trusteeInstance = await this.createTrusteeInstance(addresses[i]);
+        trustees.push({
+          owner: await trusteeInstance.methods.owner().call(),
+          name: await trusteeInstance.methods.name().call(),
           address: addresses[i],
-          amount: this.web3.utils.fromWei(await saleInstance.methods.amount().call() + '', 'ether'),
-          signatures: signatures,
-          hasAgreed: signatures.indexOf(entity) > -1
-        })
-      }
-    }
-    return saleOffers;
-  }
-
-  async getTrustPendingBeneficiaries(_address) {
-    let account = await this.activeAccount();
-    let entity = await this.smartLawInstance.methods.entityAddress(account).call();
-    let trustInstance = await this.createTrustInstance(_address);
-    let addresses = await trustInstance.methods.getPendingBeneficiaries().call();
-    let pendingBeneficiaries = [];
-    for(let i = 0; i < addresses.length; i++) {
-      let beneficiaryInstance =  await this.createBeneficiaryInstance(addresses[i]);
-      let disabled = await beneficiaryInstance.methods.disabled().call();
-      if(!disabled) {
-        let signatures = await beneficiaryInstance.methods.getSignatures().call();
-        pendingBeneficiaries.push({
-          address: addresses[i],
-          entity: await beneficiaryInstance.methods.entity().call(),
-          signatures: signatures,
-          hasAgreed: signatures.indexOf(entity) > -1
         });
       }
     }
-    return pendingBeneficiaries;
+    return trustees;
   }
 
-  async getTrusts() {
-    let trusts = [];
-    let addresses = await this.trustAddresses();
+  async getIREOs() {
+    let ireos = [];
+    let addresses = await this.ireoAddresses();
     if (addresses.length > 0) {
       for (let i = 0; i < addresses.length; i++) {
-        let trustInstance = await this.createTrustInstance(addresses[i]);
-        let deleted = await trustInstance.methods.deleted().call();
-        if(!deleted) {
-          trusts.push({
-            name: await trustInstance.methods.name().call(),
-            property: await trustInstance.methods.property().call(),
-            address: addresses[i],
-            forSale: this.booleanStr[await trustInstance.methods.forSale().call()],
-            amount: await trustInstance.methods.forSaleAmount().call(),
-          });
-        }
+        let ireoInstance = await this.createIREOInstance(addresses[i]);
+        ireos.push({
+          entity: await ireoInstance.methods.entity().call(),
+          startTime: await ireoInstance.methods.startTime().call(),
+          endTime: await ireoInstance.methods.endTime().call(),
+          goal: await ireoInstance.methods.fundingGoal().call(),
+          price: await ireoInstance.methods.price().call(),
+          status: await ireoInstance.methods.status().call(),
+          raised: await ireoInstance.methods.amountRaised().call(),
+          address: addresses[i],
+        });
       }
     }
-    return trusts;
+    return ireos;
   }
 
+  // async getTrustDetails(_address) {
+  //   let account = await this.activeAccount();
+  //   let entity = await this.smartLawInstance.methods.entityAddress(account).call();
+  //   let trustInstance = await this.createTrustInstance(_address);
+  //   let dissolveSignatures = await trustInstance.methods.getDissolveSignatures().call();
+  //   return {
+  //     name: await trustInstance.methods.name().call(),
+  //     property: await trustInstance.methods.property().call(),
+  //     deleted: await trustInstance.methods.deleted().call(),
+  //     address: _address,
+  //     forSale: this.booleanStr[await trustInstance.methods.forSale().call()],
+  //     amount: this.web3.utils.fromWei(await trustInstance.methods.forSaleAmount().call() + '', 'ether'),
+  //     dissolveSignatures: dissolveSignatures,
+  //     signedDissolve: dissolveSignatures.indexOf(entity) > -1,
+  //     beneficiaries: await trustInstance.methods.beneficiariesSignatures().call(),
+  //     saleOffers: await this.getTrustSaleOffers(_address),
+  //     pendingBeneficiaries: await this.getTrustPendingBeneficiaries(_address)
+  //   };
+  // }
+  //
+  // async isTrustBeneficiary(_address) {
+  //   let account = await this.activeAccount();
+  //   let entity = await this.smartLawInstance.methods.entityAddress(account).call();
+  //   let trustInstance = await this.createTrustInstance(_address);
+  //   return await trustInstance.methods.isBeneficiary(entity).call();
+  // }
+  //
+  // async getTrustBeneficiaries(_address) {
+  //   let trustInstance = await this.createTrustInstance(_address);
+  //   return await trustInstance.methods.beneficiariesSignatures().call();
+  // }
+  //
+  // async getTrustDissolveSignatures(hash) {
+  //   return await this.smartLawInstance.methods.getTrustDissolveSignatures(hash).call();
+  // }
+  //
+  // async getTrustSaleOffers(_address) {
+  //   let account = await this.activeAccount();
+  //   let entity = await this.smartLawInstance.methods.entityAddress(account).call();
+  //   let trustInstance = await this.createTrustInstance(_address);
+  //   let addresses = await trustInstance.methods.saleOffers().call();
+  //   let saleOffers = [];
+  //
+  //   for(let i = 0; i < addresses.length; i++) {
+  //     let saleInstance =  await this.createSaleInstance(addresses[i]);
+  //     let disabled = await saleInstance.methods.disabled().call();
+  //     if(!disabled) {
+  //       let signatures = await saleInstance.methods.getSignatures().call();
+  //       saleOffers.push({
+  //         address: addresses[i],
+  //         amount: this.web3.utils.fromWei(await saleInstance.methods.amount().call() + '', 'ether'),
+  //         signatures: signatures,
+  //         hasAgreed: signatures.indexOf(entity) > -1
+  //       })
+  //     }
+  //   }
+  //   return saleOffers;
+  // }
+  //
+  // async getTrustPendingBeneficiaries(_address) {
+  //   let account = await this.activeAccount();
+  //   let entity = await this.smartLawInstance.methods.entityAddress(account).call();
+  //   let trustInstance = await this.createTrustInstance(_address);
+  //   let addresses = await trustInstance.methods.getPendingBeneficiaries().call();
+  //   let pendingBeneficiaries = [];
+  //   for(let i = 0; i < addresses.length; i++) {
+  //     let beneficiaryInstance =  await this.createBeneficiaryInstance(addresses[i]);
+  //     let disabled = await beneficiaryInstance.methods.disabled().call();
+  //     if(!disabled) {
+  //       let signatures = await beneficiaryInstance.methods.getSignatures().call();
+  //       pendingBeneficiaries.push({
+  //         address: addresses[i],
+  //         entity: await beneficiaryInstance.methods.entity().call(),
+  //         signatures: signatures,
+  //         hasAgreed: signatures.indexOf(entity) > -1
+  //       });
+  //     }
+  //   }
+  //   return pendingBeneficiaries;
+  // }
+  //
+  // async getTrusts() {
+  //   let trusts = [];
+  //   let addresses = await this.trustAddresses();
+  //   if (addresses.length > 0) {
+  //     for (let i = 0; i < addresses.length; i++) {
+  //       let trustInstance = await this.createTrustInstance(addresses[i]);
+  //       let deleted = await trustInstance.methods.deleted().call();
+  //       if(!deleted) {
+  //         trusts.push({
+  //           name: await trustInstance.methods.name().call(),
+  //           property: await trustInstance.methods.property().call(),
+  //           address: addresses[i],
+  //           forSale: this.booleanStr[await trustInstance.methods.forSale().call()],
+  //           amount: await trustInstance.methods.forSaleAmount().call(),
+  //         });
+  //       }
+  //     }
+  //   }
+  //   return trusts;
+  // }
+  //
   async activeAccount() {
     let accounts = await this.web3.eth.getAccounts();
     console.log(`Active account: ${accounts[0]}`);
@@ -234,26 +311,31 @@ export class Web3Service {
 
   async isContractOwner() {
     let account = await this.activeAccount();
-    let owner = await this.smartLawInstance.methods.owner().call();
+    let owner = await this.LiquidREInstance.methods.owner().call();
     console.log(`Owner: ${owner}`)
     return account == owner;
   }
 
   async isContractNewOwner() {
     let account = await this.activeAccount();
-    let newOwner = await this.smartLawInstance.methods.newOwner().call();
+    let newOwner = await this.LiquidREInstance.methods.newOwner().call();
     console.log(`newOwner: ${newOwner}`)
     return account == newOwner;
   }
 
   async isEntityOwner() {
     let account = await this.activeAccount();
-    return await this.smartLawInstance.methods.isEntityOwner(account).call();
+    return await this.EntityFactoryInstance.methods.isEntityOwner(account).call();
+  }
+
+  async isTrusteeOwner() {
+    let account = await this.activeAccount();
+    return await this.TrusteeFactoryInstance.methods.isTrusteeOwner(account).call();
   }
 
   async availableFunds() {
     let account = await this.activeAccount();
-    let entity = await this.smartLawInstance.methods.entityAddress(account).call();
+    let entity = await this.EntityFactoryInstance.methods.entityAddress(account).call();
     let entityInstance = await this.createEntityInstance(entity);
     let funds = 0;
 
@@ -265,7 +347,7 @@ export class Web3Service {
 
   async accountEntityAddress() {
     let account = await this.activeAccount();
-    return await this.smartLawInstance.methods.entityAddress(account).call();
+    return await this.EntityFactoryInstance.methods.entityAddress(account).call();
   }
 
 }

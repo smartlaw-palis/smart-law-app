@@ -1,0 +1,84 @@
+<ng-template #newIREOModal let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">New Entity</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+        <div class="form-group" *ngIf="trustees">
+          <label>Trustee</label>
+          <select class="form-control" name="trustee" [(ngModel)]="ireo.trustee">
+            <option value=""></option>
+            <option *ngFor="let trustee of trustees" value="{{trustee.address}}">{{trustee.name}}</option>
+          </select>
+        </div>
+      <div class="form-group">
+        <label>Start Date</label>
+        <input class="form-control" type="datetime-local" name="startTime" [(ngModel)]="ireo.startTime">
+      </div>
+      <div class="form-group">
+        <label>End Date</label>
+        <input class="form-control" type="datetime-local" name="endTime" [(ngModel)]="ireo.endTime">
+      </div>
+      <div class="form-group">
+        <label>Funding Goal(ETH)</label>
+        <input class="form-control" type="number" name="goal" [(ngModel)]="ireo.goal">
+      </div>
+      <div class="form-group">
+        <label>Price(ETH)</label>
+        <input class="form-control" type="number" name="price" [(ngModel)]="ireo.price">
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button [disabled]="newIREOBtn.isProcessing" (click)="createNewIREO()" type="button" class="btn btn-outline-dark">{{newIREOBtn.caption}}</button>
+  </div>
+</ng-template>
+
+<div class="row">
+  <div class="col-md-12 my-3">
+    <button class="btn btn-primary float-right" (click)="open(newIREOModal)">Register an IREO</button>
+  </div>
+  <div class="col-md-12">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Status</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+          <th>Price</th>
+          <th>Goal</th>
+          <th>Raised</th>
+          <th>Entity</th>
+          <th>Trustee</th>
+        </tr>
+      </thead>
+      <tbody *ngIf="!ireos">
+        <tr>
+          <td colspan="8" class="text-center">
+            Loading...
+          </td>
+        </tr>
+      </tbody>
+      <tbody *ngIf="ireos">
+        <tr *ngIf="ireos.length == 0">
+          <td colspan="8" class="text-center">
+            No IREO found.
+          </td>
+        </tr>
+        <tr *ngFor="let ireo of ireos; let i = index">
+          <td>{{ireo.status}}</td>
+          <td>{{ireo.startTime}}</td>
+          <td>{{ireo.endTime}}</td>
+          <td>{{ireo.price}}</td>
+          <td>{{ireo.goal}}</td>
+          <td>{{ireo.raised}}</td>
+          <td>{{ireo.entity}}</td>
+          <td>{{ireo.trustee}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

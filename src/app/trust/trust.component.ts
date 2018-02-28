@@ -33,62 +33,62 @@ export class TrustComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getTrusts();
-    this._web3.isContractOwner()
-      .then((res: any) => {
-        console.log(res)
-        this.isOwner = res;
-      })
+    // this.getTrusts();
+    // this._web3.isContractOwner()
+    //   .then((res: any) => {
+    //     console.log(res)
+    //     this.isOwner = res;
+    //   })
   }
-
-  getEntities() {
-    this._web3.entityAddresses()
-      .then((res: any) => {
-        this.entities = res;
-      })
-  }
-
-  private newBtnStatus(status) {
-    if (status) {
-      this.newTrustBtn.caption = "Processing...";
-      this.newTrustBtn.isProcessing = true;
-    } else {
-      this.newTrustBtn.caption = "Create";
-      this.newTrustBtn.isProcessing = false;
-    }
-  }
-
-  open(content) {
-    this.getEntities();
-    this.newBtnStatus(false);
-    this.newTrustModal = this._modalService.open(content);
-  }
-
-  getTrusts() {
-    this._web3.getTrusts()
-      .then((res: any) => {
-        this.trusts = res;
-      })
-  }
-
-  createNewTrust() {
-    this.newBtnStatus(true);
-    this._web3.activeAccount()
-      .then(account => {
-          return this._web3.smartLawInstance.methods.newTrust(this.trust.name, this.trust.property, this.trust.beneficiary)
-          .send({ from: account })
-      })
-      .then(receipt => {
-        this.getTrusts();
-        this.newBtnStatus(false);
-        this.newTrustModal.close();
-        this._web3.showSuccess(receipt.transactionHash);
-      })
-      .catch(err => {
-        this.newBtnStatus(false);
-        this.newTrustModal.close();
-        this._web3.showError(err);
-      })
-  }
+  //
+  // getEntities() {
+  //   this._web3.entityAddresses()
+  //     .then((res: any) => {
+  //       this.entities = res;
+  //     })
+  // }
+  //
+  // private newBtnStatus(status) {
+  //   if (status) {
+  //     this.newTrustBtn.caption = "Processing...";
+  //     this.newTrustBtn.isProcessing = true;
+  //   } else {
+  //     this.newTrustBtn.caption = "Create";
+  //     this.newTrustBtn.isProcessing = false;
+  //   }
+  // }
+  //
+  // open(content) {
+  //   this.getEntities();
+  //   this.newBtnStatus(false);
+  //   this.newTrustModal = this._modalService.open(content);
+  // }
+  //
+  // getTrusts() {
+  //   this._web3.getTrusts()
+  //     .then((res: any) => {
+  //       this.trusts = res;
+  //     })
+  // }
+  //
+  // createNewTrust() {
+  //   this.newBtnStatus(true);
+  //   this._web3.activeAccount()
+  //     .then(account => {
+  //         return this._web3.smartLawInstance.methods.newTrust(this.trust.name, this.trust.property, this.trust.beneficiary)
+  //         .send({ from: account })
+  //     })
+  //     .then(receipt => {
+  //       this.getTrusts();
+  //       this.newBtnStatus(false);
+  //       this.newTrustModal.close();
+  //       this._web3.showSuccess(receipt.transactionHash);
+  //     })
+  //     .catch(err => {
+  //       this.newBtnStatus(false);
+  //       this.newTrustModal.close();
+  //       this._web3.showError(err);
+  //     })
+  // }
 
 }

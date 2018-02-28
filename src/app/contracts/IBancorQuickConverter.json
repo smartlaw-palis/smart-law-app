@@ -1,0 +1,470 @@
+{
+  "contractName": "IBancorQuickConverter",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_path",
+          "type": "address[]"
+        },
+        {
+          "name": "_amount",
+          "type": "uint256"
+        },
+        {
+          "name": "_minReturn",
+          "type": "uint256"
+        },
+        {
+          "name": "_for",
+          "type": "address"
+        }
+      ],
+      "name": "convertFor",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_path",
+          "type": "address[]"
+        },
+        {
+          "name": "_amount",
+          "type": "uint256"
+        },
+        {
+          "name": "_minReturn",
+          "type": "uint256"
+        }
+      ],
+      "name": "convert",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.4.11;\nimport './IERC20Token.sol';\n\n/*\n    Bancor Quick Converter interface\n*/\ncontract IBancorQuickConverter {\n    function convert(IERC20Token[] _path, uint256 _amount, uint256 _minReturn) public payable returns (uint256);\n    function convertFor(IERC20Token[] _path, uint256 _amount, uint256 _minReturn, address _for) public payable returns (uint256);\n}\n",
+  "sourcePath": "/Users/chanopalis/Documents/ethereum-contracts/smart-law-contracts/DexRE-Contract/contracts/LiquidRE/bancor/interfaces/IBancorQuickConverter.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/Users/chanopalis/Documents/ethereum-contracts/smart-law-contracts/DexRE-Contract/contracts/LiquidRE/bancor/interfaces/IBancorQuickConverter.sol",
+      "exportedSymbols": {
+        "IBancorQuickConverter": [
+          7606
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".11"
+          ]
+        },
+        "id": 7578,
+        "name": "PragmaDirective",
+        "src": "0:24:36"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 7687,
+          "absolutePath": "/Users/chanopalis/Documents/ethereum-contracts/smart-law-contracts/DexRE-Contract/contracts/LiquidRE/bancor/interfaces/IERC20Token.sol",
+          "file": "./IERC20Token.sol",
+          "scope": 7607,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 7579,
+        "name": "ImportDirective",
+        "src": "25:27:36"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            7606
+          ],
+          "name": "IBancorQuickConverter",
+          "scope": 7607
+        },
+        "children": [
+          {
+            "attributes": {
+              "body": null,
+              "constant": false,
+              "implemented": false,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "convert",
+              "payable": true,
+              "scope": 7606,
+              "stateMutability": "payable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_path",
+                      "scope": 7591,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "contract IERC20Token[] memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "length": null,
+                          "type": "contract IERC20Token[] storage pointer"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "contractScope": null,
+                              "name": "IERC20Token",
+                              "referencedDeclaration": 7686,
+                              "type": "contract IERC20Token"
+                            },
+                            "id": 7580,
+                            "name": "UserDefinedTypeName",
+                            "src": "151:11:36"
+                          }
+                        ],
+                        "id": 7581,
+                        "name": "ArrayTypeName",
+                        "src": "151:13:36"
+                      }
+                    ],
+                    "id": 7582,
+                    "name": "VariableDeclaration",
+                    "src": "151:19:36"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_amount",
+                      "scope": 7591,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 7583,
+                        "name": "ElementaryTypeName",
+                        "src": "172:7:36"
+                      }
+                    ],
+                    "id": 7584,
+                    "name": "VariableDeclaration",
+                    "src": "172:15:36"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_minReturn",
+                      "scope": 7591,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 7585,
+                        "name": "ElementaryTypeName",
+                        "src": "189:7:36"
+                      }
+                    ],
+                    "id": 7586,
+                    "name": "VariableDeclaration",
+                    "src": "189:18:36"
+                  }
+                ],
+                "id": 7587,
+                "name": "ParameterList",
+                "src": "150:58:36"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 7591,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 7588,
+                        "name": "ElementaryTypeName",
+                        "src": "233:7:36"
+                      }
+                    ],
+                    "id": 7589,
+                    "name": "VariableDeclaration",
+                    "src": "233:7:36"
+                  }
+                ],
+                "id": 7590,
+                "name": "ParameterList",
+                "src": "232:9:36"
+              }
+            ],
+            "id": 7591,
+            "name": "FunctionDefinition",
+            "src": "134:108:36"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "constant": false,
+              "implemented": false,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "convertFor",
+              "payable": true,
+              "scope": 7606,
+              "stateMutability": "payable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_path",
+                      "scope": 7605,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "contract IERC20Token[] memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "length": null,
+                          "type": "contract IERC20Token[] storage pointer"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "contractScope": null,
+                              "name": "IERC20Token",
+                              "referencedDeclaration": 7686,
+                              "type": "contract IERC20Token"
+                            },
+                            "id": 7592,
+                            "name": "UserDefinedTypeName",
+                            "src": "267:11:36"
+                          }
+                        ],
+                        "id": 7593,
+                        "name": "ArrayTypeName",
+                        "src": "267:13:36"
+                      }
+                    ],
+                    "id": 7594,
+                    "name": "VariableDeclaration",
+                    "src": "267:19:36"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_amount",
+                      "scope": 7605,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 7595,
+                        "name": "ElementaryTypeName",
+                        "src": "288:7:36"
+                      }
+                    ],
+                    "id": 7596,
+                    "name": "VariableDeclaration",
+                    "src": "288:15:36"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_minReturn",
+                      "scope": 7605,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 7597,
+                        "name": "ElementaryTypeName",
+                        "src": "305:7:36"
+                      }
+                    ],
+                    "id": 7598,
+                    "name": "VariableDeclaration",
+                    "src": "305:18:36"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_for",
+                      "scope": 7605,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 7599,
+                        "name": "ElementaryTypeName",
+                        "src": "325:7:36"
+                      }
+                    ],
+                    "id": 7600,
+                    "name": "VariableDeclaration",
+                    "src": "325:12:36"
+                  }
+                ],
+                "id": 7601,
+                "name": "ParameterList",
+                "src": "266:72:36"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 7605,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 7602,
+                        "name": "ElementaryTypeName",
+                        "src": "363:7:36"
+                      }
+                    ],
+                    "id": 7603,
+                    "name": "VariableDeclaration",
+                    "src": "363:7:36"
+                  }
+                ],
+                "id": 7604,
+                "name": "ParameterList",
+                "src": "362:9:36"
+              }
+            ],
+            "id": 7605,
+            "name": "FunctionDefinition",
+            "src": "247:125:36"
+          }
+        ],
+        "id": 7606,
+        "name": "ContractDefinition",
+        "src": "97:277:36"
+      }
+    ],
+    "id": 7607,
+    "name": "SourceUnit",
+    "src": "0:375:36"
+  },
+  "networks": {},
+  "schemaVersion": "1.0.0",
+  "updatedAt": "2018-02-28T18:05:46.276Z"
+}

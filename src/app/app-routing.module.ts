@@ -3,21 +3,27 @@ import { Routes, RouterModule } from '@angular/router';
 import { EntityComponent } from './entity/entity.component';
 import { TrustComponent } from './trust/trust.component';
 import { TrustDetailComponent } from './trust-detail/trust-detail.component';
+import { TrusteeComponent } from './trustee/trustee.component';
+import { IreoComponent } from './ireo/ireo.component';
 
 const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    component: TrustComponent
+    component: TrusteeComponent
   },
   {
     path: 'legal-entities',
     component: EntityComponent
   },
   {
-    path: 'smart-trust/:hash',
-    component: TrustDetailComponent
-  }
+    path: 'ireos',
+    component: IreoComponent
+  },
+  // {
+  //   path: 'smart-trust/:hash',
+  //   component: TrustDetailComponent
+  // }
 ];
 
 @NgModule({

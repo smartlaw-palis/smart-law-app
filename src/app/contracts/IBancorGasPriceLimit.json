@@ -1,0 +1,155 @@
+{
+  "contractName": "IBancorGasPriceLimit",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "gasPrice",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x60606040523415600e57600080fd5b608e8061001c6000396000f300606060405263ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663fe173b978114603b57600080fd5b3415604557600080fd5b604b605d565b60405190815260200160405180910390f35b6000905600a165627a7a72305820f7a4b376dd51fc69e3f7831982b1ae060db4d20eb4f4dbd4ed0567be21459dd00029",
+  "deployedBytecode": "0x606060405263ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663fe173b978114603b57600080fd5b3415604557600080fd5b604b605d565b60405190815260200160405180910390f35b6000905600a165627a7a72305820f7a4b376dd51fc69e3f7831982b1ae060db4d20eb4f4dbd4ed0567be21459dd00029",
+  "sourceMap": "69:90:35:-;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "69:90:35:-;;;;;;;;;;;;;;;;;105:52;;;;;;;;;;;;;;;;;;;;;;;;;;;;146:7;105:52;:::o",
+  "source": "pragma solidity ^0.4.11;\n\n/*\n    Bancor Gas Price Limit interface\n*/\ncontract IBancorGasPriceLimit {\n    function gasPrice() public pure returns (uint256) {}\n}\n",
+  "sourcePath": "/Users/chanopalis/Documents/ethereum-contracts/smart-law-contracts/DexRE-Contract/contracts/LiquidRE/bancor/interfaces/IBancorGasPriceLimit.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/Users/chanopalis/Documents/ethereum-contracts/smart-law-contracts/DexRE-Contract/contracts/LiquidRE/bancor/interfaces/IBancorGasPriceLimit.sol",
+      "exportedSymbols": {
+        "IBancorGasPriceLimit": [
+          7576
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".11"
+          ]
+        },
+        "id": 7569,
+        "name": "PragmaDirective",
+        "src": "0:24:35"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            7576
+          ],
+          "name": "IBancorGasPriceLimit",
+          "scope": 7577
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": true,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "gasPrice",
+              "payable": false,
+              "scope": 7576,
+              "stateMutability": "pure",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 7570,
+                "name": "ParameterList",
+                "src": "122:2:35"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 7575,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 7571,
+                        "name": "ElementaryTypeName",
+                        "src": "146:7:35"
+                      }
+                    ],
+                    "id": 7572,
+                    "name": "VariableDeclaration",
+                    "src": "146:7:35"
+                  }
+                ],
+                "id": 7573,
+                "name": "ParameterList",
+                "src": "145:9:35"
+              },
+              {
+                "attributes": {
+                  "statements": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 7574,
+                "name": "Block",
+                "src": "155:2:35"
+              }
+            ],
+            "id": 7575,
+            "name": "FunctionDefinition",
+            "src": "105:52:35"
+          }
+        ],
+        "id": 7576,
+        "name": "ContractDefinition",
+        "src": "69:90:35"
+      }
+    ],
+    "id": 7577,
+    "name": "SourceUnit",
+    "src": "0:160:35"
+  },
+  "networks": {},
+  "schemaVersion": "1.0.0",
+  "updatedAt": "2018-02-28T18:05:46.276Z"
+}

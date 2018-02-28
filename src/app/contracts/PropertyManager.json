@@ -1,0 +1,125 @@
+{
+  "contractName": "PropertyManager",
+  "abi": [
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "bytecode": "0x60606040523415600e57600080fd5b603580601b6000396000f3006060604052600080fd00a165627a7a72305820c0d5435504120838d6adaf9f24a9be19d0ef8ff5ea67de858ea41b51e5a87d360029",
+  "deployedBytecode": "0x6060604052600080fd00a165627a7a72305820c0d5435504120838d6adaf9f24a9be19d0ef8ff5ea67de858ea41b51e5a87d360029",
+  "sourceMap": "25:79:47:-;;;55:47;;;;;;;;25:79;;;;;;",
+  "deployedSourceMap": "25:79:47:-;;;;;",
+  "source": "pragma solidity ^0.4.4;\n\ncontract PropertyManager {\n\n  function PropertyManager()\n      public\n  {\n  }\n}\n",
+  "sourcePath": "/Users/chanopalis/Documents/ethereum-contracts/smart-law-contracts/DexRE-Contract/contracts/PropertyManager.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/Users/chanopalis/Documents/ethereum-contracts/smart-law-contracts/DexRE-Contract/contracts/PropertyManager.sol",
+      "exportedSymbols": {
+        "PropertyManager": [
+          8236
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".4"
+          ]
+        },
+        "id": 8231,
+        "name": "PragmaDirective",
+        "src": "0:23:47"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            8236
+          ],
+          "name": "PropertyManager",
+          "scope": 8237
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": true,
+              "modifiers": [
+                null
+              ],
+              "name": "PropertyManager",
+              "payable": false,
+              "scope": 8236,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 8232,
+                "name": "ParameterList",
+                "src": "79:2:47"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 8233,
+                "name": "ParameterList",
+                "src": "97:0:47"
+              },
+              {
+                "attributes": {
+                  "statements": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 8234,
+                "name": "Block",
+                "src": "97:5:47"
+              }
+            ],
+            "id": 8235,
+            "name": "FunctionDefinition",
+            "src": "55:47:47"
+          }
+        ],
+        "id": 8236,
+        "name": "ContractDefinition",
+        "src": "25:79:47"
+      }
+    ],
+    "id": 8237,
+    "name": "SourceUnit",
+    "src": "0:105:47"
+  },
+  "networks": {},
+  "schemaVersion": "1.0.0",
+  "updatedAt": "2018-02-28T18:05:46.277Z"
+}

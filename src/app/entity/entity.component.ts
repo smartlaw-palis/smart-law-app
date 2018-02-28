@@ -1,4 +1,4 @@
-import { Component, OnInit, NgZone } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import { Web3Service } from '../web3.service';
 import _ from 'lodash';
@@ -16,7 +16,8 @@ export class EntityComponent implements OnInit {
   newEntityModal: any = null;
   entity: any = {
     category: 0,
-    accreditedInvestor: false
+    accreditedInvestor: false,
+    country: ''
   };
   entities: any = null;
   newEntityBtn: any = {
@@ -25,7 +26,6 @@ export class EntityComponent implements OnInit {
   };
 
   constructor(
-    private _zone: NgZone,
     private _web3: Web3Service,
     private _modalService: NgbModal
   ) {
@@ -71,43 +71,43 @@ export class EntityComponent implements OnInit {
     }
   }
 
-  verifyEntity(address, i) {
-    //this.entities[i].hasPendingVerification = true;
-    this._web3.activeAccount()
-      .then(account => {
-        return this._web3.smartLawInstance.methods.verifyEntity(address)
-          .send({ from: account })
-      })
-      .then(receipt => {
-        this.getEntities();
-        this._web3.showSuccess(receipt.transactionHash);
-      })
-      .catch(err => {
-        //this.entities[i].hasPendingVerification = false;
-        this._web3.showError(err);
-      })
-  }
+  // verifyEntity(address, i) {
+  //   //this.entities[i].hasPendingVerification = true;
+  //   this._web3.activeAccount()
+  //     .then(account => {
+  //       return this._web3.smartLawInstance.methods.verifyEntity(address)
+  //         .send({ from: account })
+  //     })
+  //     .then(receipt => {
+  //       this.getEntities();
+  //       this._web3.showSuccess(receipt.transactionHash);
+  //     })
+  //     .catch(err => {
+  //       //this.entities[i].hasPendingVerification = false;
+  //       this._web3.showError(err);
+  //     })
+  // }
 
-  acceptOwnership() {
-    this._web3.activeAccount()
-      .then(account => {
-        return this._web3.smartLawInstance.methods.acceptOwnership()
-          .send({ from: account })
-      })
-      .then(receipt => {
-        this.getEntities();
-        this._web3.showSuccess(receipt.transactionHash);
-      })
-      .catch(err => {
-        this._web3.showError(err);
-      })
-  }
-
+  // acceptOwnership() {
+  //   this._web3.activeAccount()
+  //     .then(account => {
+  //       return this._web3.smartLawInstance.methods.acceptOwnership()
+  //         .send({ from: account })
+  //     })
+  //     .then(receipt => {
+  //       this.getEntities();
+  //       this._web3.showSuccess(receipt.transactionHash);
+  //     })
+  //     .catch(err => {
+  //       this._web3.showError(err);
+  //     })
+  // }
+  //
   createNewEntity() {
     this.newBtnStatus(true);
     this._web3.activeAccount()
       .then(account => {
-        return this._web3.smartLawInstance.methods.newEntity(this.entity.category, this.entity.accreditedInvestor)
+        return this._web3.EntityFactoryInstance.methods.newEntity(this.entity.category, this.entity.accreditedInvestor, this.entity.country)
           .send({ from: account })
       })
       .then(receipt => {

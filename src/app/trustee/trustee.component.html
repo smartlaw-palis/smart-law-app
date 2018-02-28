@@ -1,0 +1,60 @@
+<ng-template #newTrusteeModal let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">New Trustee</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="form-group">
+        <label>Name</label>
+        <input class="form-control" type="text" name="country" [(ngModel)]="trustee.name">
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button [disabled]="newTrusteeBtn.isProcessing" (click)="createNewTrustee()" type="button" class="btn btn-outline-dark">{{newTrusteeBtn.caption}}</button>
+  </div>
+</ng-template>
+
+
+<div class="row">
+  <div class="col-md-12 my-3">
+    <button class="btn btn-primary float-right" (click)="open(newTrusteeModal)">Register as Trustee</button>
+  </div>
+  <div class="col-md-12">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Address</th>
+          <th>Owner</th>
+          <th>Name</th>
+        </tr>
+      </thead>
+      <tbody *ngIf="!trustees">
+        <tr>
+          <td colspan="6" class="text-center">
+            Loading...
+          </td>
+        </tr>
+      </tbody>
+      <tbody *ngIf="trustees">
+        <tr *ngIf="trustees.length == 0">
+          <td colspan="6" class="text-center">
+            No trustee found.
+          </td>
+        </tr>
+        <tr *ngFor="let trustee of trustees; let i = index">
+          <td>{{trustee.address}}</td>
+          <td>{{trustee.owner}}</td>
+          <td>{{trustee.name}}</td>
+          <!-- <td>
+            {{trustee.verified}}
+            <button *ngIf="trustee.hasPendingVerification==false && isOwner" (click)="verifyEntity(trustee.address, i)" class="btn btn-sm btn-primary">Verify</button>
+          </td> -->
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

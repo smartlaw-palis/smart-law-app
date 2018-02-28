@@ -12,6 +12,8 @@ import { EntityComponent } from './entity/entity.component';
 import { TrustComponent } from './trust/trust.component';
 import { Web3Service } from './web3.service';
 import { TrustDetailComponent } from './trust-detail/trust-detail.component';
+import { TrusteeComponent } from './trustee/trustee.component';
+import { IreoComponent } from './ireo/ireo.component';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { TrustDetailComponent } from './trust-detail/trust-detail.component';
     AppComponent,
     EntityComponent,
     TrustComponent,
-    TrustDetailComponent
+    TrustDetailComponent,
+    TrusteeComponent,
+    IreoComponent
   ],
   imports: [
     CommonModule,

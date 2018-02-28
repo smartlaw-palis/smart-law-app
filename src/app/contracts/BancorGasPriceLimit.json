@@ -1,0 +1,668 @@
+{
+  "contractName": "BancorGasPriceLimit",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "acceptOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_gasPrice",
+          "type": "uint256"
+        }
+      ],
+      "name": "setGasPrice",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "newOwner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "gasPrice",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_gasPrice",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "_prevOwner",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnerUpdate",
+      "type": "event"
+    }
+  ],
+  "bytecode": "0x60606040526000600255341561001457600080fd5b6040516020806103168339810160405280805160008054600160a060020a03191633600160a060020a0316178155909250829150811161005357600080fd5b506002556102b0806100666000396000f300606060405236156100755763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166379ba5097811461007a5780638da5cb5b1461008f578063bf1fe420146100be578063d4ee1d90146100d4578063f2fde38b146100e7578063fe173b9714610106575b600080fd5b341561008557600080fd5b61008d61012b565b005b341561009a57600080fd5b6100a26101d2565b604051600160a060020a03909116815260200160405180910390f35b34156100c957600080fd5b61008d6004356101e1565b34156100df57600080fd5b6100a261020d565b34156100f257600080fd5b61008d600160a060020a036004351661021c565b341561011157600080fd5b61011961027e565b60405190815260200160405180910390f35b60015433600160a060020a0390811691161461014657600080fd5b6000546001547f343765429aea5a34b3ff6a3785a98a5abb2597aca87bfbb58632c173d585373a91600160a060020a039081169116604051600160a060020a039283168152911660208201526040908101905180910390a1600180546000805473ffffffffffffffffffffffffffffffffffffffff19908116600160a060020a03841617909155169055565b600054600160a060020a031681565b60005433600160a060020a039081169116146101f957fe5b806000811161020757600080fd5b50600255565b600154600160a060020a031681565b60005433600160a060020a0390811691161461023457fe5b600054600160a060020a038281169116141561024f57600080fd5b6001805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392909216919091179055565b600254815600a165627a7a723058207ee00bac19f94bd47b9af21f5a5a83c290806d2ee52b2985d61dd9e99f56439e0029",
+  "deployedBytecode": "0x606060405236156100755763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166379ba5097811461007a5780638da5cb5b1461008f578063bf1fe420146100be578063d4ee1d90146100d4578063f2fde38b146100e7578063fe173b9714610106575b600080fd5b341561008557600080fd5b61008d61012b565b005b341561009a57600080fd5b6100a26101d2565b604051600160a060020a03909116815260200160405180910390f35b34156100c957600080fd5b61008d6004356101e1565b34156100df57600080fd5b6100a261020d565b34156100f257600080fd5b61008d600160a060020a036004351661021c565b341561011157600080fd5b61011961027e565b60405190815260200160405180910390f35b60015433600160a060020a0390811691161461014657600080fd5b6000546001547f343765429aea5a34b3ff6a3785a98a5abb2597aca87bfbb58632c173d585373a91600160a060020a039081169116604051600160a060020a039283168152911660208201526040908101905180910390a1600180546000805473ffffffffffffffffffffffffffffffffffffffff19908116600160a060020a03841617909155169055565b600054600160a060020a031681565b60005433600160a060020a039081169116146101f957fe5b806000811161020757600080fd5b50600255565b600154600160a060020a031681565b60005433600160a060020a0390811691161461023457fe5b600054600160a060020a038281169116141561024f57600080fd5b6001805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392909216919091179055565b600254815600a165627a7a723058207ee00bac19f94bd47b9af21f5a5a83c290806d2ee52b2985d61dd9e99f56439e0029",
+  "sourceMap": "518:663:16:-;;;617:5;591:31;;762:139;;;;;;;;;;;;;;;;;;;;;;348:5:23;:18;;-1:-1:-1;;;;;;348:18:23;356:10;-1:-1:-1;;;;;348:18:23;;;;762:139:16;;-1:-1:-1;762:139:16;;-1:-1:-1;270:11:27;;262:20;;;;;;-1:-1:-1;874:8:16;:20;518:663;;;;;;",
+  "deployedSourceMap": "518:663:16:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;949:170:23;;;;;;;;;;;;;;155:20;;;;;;;;;;;;;;;-1:-1:-1;;;;;155:20:23;;;;;;;;;;;;;;1030:149:16;;;;;;;;;;;;;;181:23:23;;;;;;;;;;;;726:137;;;;;;;;;;-1:-1:-1;;;;;726:137:23;;;;;591:31:16;;;;;;;;;;;;;;;;;;;;;;;;;;;949:170:23;1015:8;;1001:10;-1:-1:-1;;;;;1001:22:23;;;1015:8;;1001:22;993:31;;;;;;1046:5;;;1053:8;1034:28;;-1:-1:-1;;;;;1046:5:23;;;;1053:8;1034:28;;-1:-1:-1;;;;;1034:28:23;;;;;;;;;;;;;;;;;;;;;;1080:8;;;;1072:16;;-1:-1:-1;;1072:16:23;;;-1:-1:-1;;;;;1080:8:23;;1072:16;;;;1098:14;;;949:170::o;155:20::-;;;-1:-1:-1;;;;;155:20:23;;:::o;1030:149:16:-;471:5:23;;457:10;-1:-1:-1;;;;;457:19:23;;;471:5;;457:19;450:27;;;;1127:9:16;280:1:27;270:11;;262:20;;;;;;-1:-1:-1;1152:8:16;:20;1030:149::o;181:23:23:-;;;-1:-1:-1;;;;;181:23:23;;:::o;726:137::-;471:5;;457:10;-1:-1:-1;;;;;457:19:23;;;471:5;;457:19;450:27;;;;820:5;;-1:-1:-1;;;;;807:18:23;;;820:5;;807:18;;799:27;;;;;;836:8;:20;;-1:-1:-1;;836:20:23;-1:-1:-1;;;;;836:20:23;;;;;;;;;;726:137::o;591:31:16:-;;;;:::o",
+  "source": "pragma solidity ^0.4.11;\nimport './Owned.sol';\nimport './Utils.sol';\nimport './interfaces/IBancorGasPriceLimit.sol';\n\n/*\n    The BancorGasPriceLimit contract serves as an extra front-running attack mitigation mechanism.\n    It sets a maximum gas price on all bancor conversions, which prevents users from \"cutting in line\"\n    in order to front-run other transactions.\n    The gas price limit is universal to all converters and it can be updated by the owner to be in line\n    with the network's current gas price.\n*/\ncontract BancorGasPriceLimit is IBancorGasPriceLimit, Owned, Utils {\n    uint256 public gasPrice = 0 wei;    // maximum gas price for bancor transactions\n\n    /**\n        @dev constructor\n\n        @param _gasPrice    gas price limit\n    */\n    function BancorGasPriceLimit(uint256 _gasPrice)\n        greaterThanZero(_gasPrice)\n        public\n    {\n        gasPrice = _gasPrice;\n    }\n\n    /*\n        @dev allows the owner to update the gas price limit\n\n        @param _gasPrice    new gas price limit\n    */\n    function setGasPrice(uint256 _gasPrice)\n        public\n        ownerOnly\n        greaterThanZero(_gasPrice)\n    {\n        gasPrice = _gasPrice;\n    }\n}\n",
+  "sourcePath": "/Users/chanopalis/Documents/ethereum-contracts/smart-law-contracts/DexRE-Contract/contracts/LiquidRE/bancor/BancorGasPriceLimit.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/Users/chanopalis/Documents/ethereum-contracts/smart-law-contracts/DexRE-Contract/contracts/LiquidRE/bancor/BancorGasPriceLimit.sol",
+      "exportedSymbols": {
+        "BancorGasPriceLimit": [
+          5292
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".11"
+          ]
+        },
+        "id": 5251,
+        "name": "PragmaDirective",
+        "src": "0:24:16"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 6695,
+          "absolutePath": "/Users/chanopalis/Documents/ethereum-contracts/smart-law-contracts/DexRE-Contract/contracts/LiquidRE/bancor/Owned.sol",
+          "file": "./Owned.sol",
+          "scope": 5293,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 5252,
+        "name": "ImportDirective",
+        "src": "25:21:16"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 7237,
+          "absolutePath": "/Users/chanopalis/Documents/ethereum-contracts/smart-law-contracts/DexRE-Contract/contracts/LiquidRE/bancor/Utils.sol",
+          "file": "./Utils.sol",
+          "scope": 5293,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 5253,
+        "name": "ImportDirective",
+        "src": "47:21:16"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 7577,
+          "absolutePath": "/Users/chanopalis/Documents/ethereum-contracts/smart-law-contracts/DexRE-Contract/contracts/LiquidRE/bancor/interfaces/IBancorGasPriceLimit.sol",
+          "file": "./interfaces/IBancorGasPriceLimit.sol",
+          "scope": 5293,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 5254,
+        "name": "ImportDirective",
+        "src": "69:47:16"
+      },
+      {
+        "attributes": {
+          "contractDependencies": [
+            6694,
+            7236,
+            7576,
+            7727
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            5292,
+            7236,
+            6694,
+            7727,
+            7576
+          ],
+          "name": "BancorGasPriceLimit",
+          "scope": 5293
+        },
+        "children": [
+          {
+            "attributes": {
+              "arguments": [
+                null
+              ]
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "IBancorGasPriceLimit",
+                  "referencedDeclaration": 7576,
+                  "type": "contract IBancorGasPriceLimit"
+                },
+                "id": 5255,
+                "name": "UserDefinedTypeName",
+                "src": "550:20:16"
+              }
+            ],
+            "id": 5256,
+            "name": "InheritanceSpecifier",
+            "src": "550:20:16"
+          },
+          {
+            "attributes": {
+              "arguments": [
+                null
+              ]
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "Owned",
+                  "referencedDeclaration": 6694,
+                  "type": "contract Owned"
+                },
+                "id": 5257,
+                "name": "UserDefinedTypeName",
+                "src": "572:5:16"
+              }
+            ],
+            "id": 5258,
+            "name": "InheritanceSpecifier",
+            "src": "572:5:16"
+          },
+          {
+            "attributes": {
+              "arguments": [
+                null
+              ]
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "Utils",
+                  "referencedDeclaration": 7236,
+                  "type": "contract Utils"
+                },
+                "id": 5259,
+                "name": "UserDefinedTypeName",
+                "src": "579:5:16"
+              }
+            ],
+            "id": 5260,
+            "name": "InheritanceSpecifier",
+            "src": "579:5:16"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "gasPrice",
+              "scope": 5292,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint256",
+                  "type": "uint256"
+                },
+                "id": 5261,
+                "name": "ElementaryTypeName",
+                "src": "591:7:16"
+              },
+              {
+                "attributes": {
+                  "argumentTypes": null,
+                  "hexvalue": "30",
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "lValueRequested": false,
+                  "subdenomination": "wei",
+                  "token": "number",
+                  "type": "int_const 0",
+                  "value": "0"
+                },
+                "id": 5262,
+                "name": "Literal",
+                "src": "617:5:16"
+              }
+            ],
+            "id": 5263,
+            "name": "VariableDeclaration",
+            "src": "591:31:16"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": true,
+              "name": "BancorGasPriceLimit",
+              "payable": false,
+              "scope": 5292,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_gasPrice",
+                      "scope": 5276,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 5264,
+                        "name": "ElementaryTypeName",
+                        "src": "791:7:16"
+                      }
+                    ],
+                    "id": 5265,
+                    "name": "VariableDeclaration",
+                    "src": "791:17:16"
+                  }
+                ],
+                "id": 5266,
+                "name": "ParameterList",
+                "src": "790:19:16"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 5270,
+                "name": "ParameterList",
+                "src": "864:0:16"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 7082,
+                      "type": "modifier (uint256)",
+                      "value": "greaterThanZero"
+                    },
+                    "id": 5267,
+                    "name": "Identifier",
+                    "src": "818:15:16"
+                  },
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 5265,
+                      "type": "uint256",
+                      "value": "_gasPrice"
+                    },
+                    "id": 5268,
+                    "name": "Identifier",
+                    "src": "834:9:16"
+                  }
+                ],
+                "id": 5269,
+                "name": "ModifierInvocation",
+                "src": "818:26:16"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                5263
+                              ],
+                              "referencedDeclaration": 5263,
+                              "type": "uint256",
+                              "value": "gasPrice"
+                            },
+                            "id": 5271,
+                            "name": "Identifier",
+                            "src": "874:8:16"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 5265,
+                              "type": "uint256",
+                              "value": "_gasPrice"
+                            },
+                            "id": 5272,
+                            "name": "Identifier",
+                            "src": "885:9:16"
+                          }
+                        ],
+                        "id": 5273,
+                        "name": "Assignment",
+                        "src": "874:20:16"
+                      }
+                    ],
+                    "id": 5274,
+                    "name": "ExpressionStatement",
+                    "src": "874:20:16"
+                  }
+                ],
+                "id": 5275,
+                "name": "Block",
+                "src": "864:37:16"
+              }
+            ],
+            "id": 5276,
+            "name": "FunctionDefinition",
+            "src": "762:139:16"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": false,
+              "name": "setGasPrice",
+              "payable": false,
+              "scope": 5292,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_gasPrice",
+                      "scope": 5291,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 5277,
+                        "name": "ElementaryTypeName",
+                        "src": "1051:7:16"
+                      }
+                    ],
+                    "id": 5278,
+                    "name": "VariableDeclaration",
+                    "src": "1051:17:16"
+                  }
+                ],
+                "id": 5279,
+                "name": "ParameterList",
+                "src": "1050:19:16"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 5285,
+                "name": "ParameterList",
+                "src": "1142:0:16"
+              },
+              {
+                "attributes": {
+                  "arguments": [
+                    null
+                  ]
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 6651,
+                      "type": "modifier ()",
+                      "value": "ownerOnly"
+                    },
+                    "id": 5280,
+                    "name": "Identifier",
+                    "src": "1093:9:16"
+                  }
+                ],
+                "id": 5281,
+                "name": "ModifierInvocation",
+                "src": "1093:9:16"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 7082,
+                      "type": "modifier (uint256)",
+                      "value": "greaterThanZero"
+                    },
+                    "id": 5282,
+                    "name": "Identifier",
+                    "src": "1111:15:16"
+                  },
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 5278,
+                      "type": "uint256",
+                      "value": "_gasPrice"
+                    },
+                    "id": 5283,
+                    "name": "Identifier",
+                    "src": "1127:9:16"
+                  }
+                ],
+                "id": 5284,
+                "name": "ModifierInvocation",
+                "src": "1111:26:16"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                5263
+                              ],
+                              "referencedDeclaration": 5263,
+                              "type": "uint256",
+                              "value": "gasPrice"
+                            },
+                            "id": 5286,
+                            "name": "Identifier",
+                            "src": "1152:8:16"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 5278,
+                              "type": "uint256",
+                              "value": "_gasPrice"
+                            },
+                            "id": 5287,
+                            "name": "Identifier",
+                            "src": "1163:9:16"
+                          }
+                        ],
+                        "id": 5288,
+                        "name": "Assignment",
+                        "src": "1152:20:16"
+                      }
+                    ],
+                    "id": 5289,
+                    "name": "ExpressionStatement",
+                    "src": "1152:20:16"
+                  }
+                ],
+                "id": 5290,
+                "name": "Block",
+                "src": "1142:37:16"
+              }
+            ],
+            "id": 5291,
+            "name": "FunctionDefinition",
+            "src": "1030:149:16"
+          }
+        ],
+        "id": 5292,
+        "name": "ContractDefinition",
+        "src": "518:663:16"
+      }
+    ],
+    "id": 5293,
+    "name": "SourceUnit",
+    "src": "0:1182:16"
+  },
+  "networks": {},
+  "schemaVersion": "1.0.0",
+  "updatedAt": "2018-02-28T18:05:46.266Z"
+}

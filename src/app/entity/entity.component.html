@@ -25,6 +25,10 @@
           <option value="true">Yes</option>
         </select>
       </div>
+      <div class="form-group">
+        <label>Country</label>
+        <input class="form-control" type="text" name="country" [(ngModel)]="entity.country">
+      </div>
     </form>
   </div>
   <div class="modal-footer">
@@ -34,8 +38,7 @@
 
 <div class="row">
   <div class="col-md-12 my-3">
-    <button class="btn btn-primary float-right" (click)="open(newEntityModal)">Create Entity</button>
-    <button *ngIf="isNewOwner" class="btn btn-primary float-right" (click)="acceptOwnership()">Accept Ownership</button>
+    <button class="btn btn-primary float-right" (click)="open(newEntityModal)">Register as Entity</button>
   </div>
   <div class="col-md-12">
     <table class="table table-striped">
@@ -43,9 +46,10 @@
         <tr>
           <th>Address</th>
           <th>Owner</th>
+          <th>Country</th>
           <th>Category</th>
           <th>Investor</th>
-          <th>Verified</th>
+          <!-- <th>Verified</th> -->
         </tr>
       </thead>
       <tbody *ngIf="!entities">
@@ -64,12 +68,13 @@
         <tr *ngFor="let entity of entities; let i = index">
           <td>{{entity.address}}</td>
           <td>{{entity.owner}}</td>
+          <td>{{entity.country}}</td>
           <td>{{entity.category}}</td>
           <td>{{entity.accreditedInvestor}}</td>
-          <td>
+          <!-- <td>
             {{entity.verified}}
             <button *ngIf="entity.hasPendingVerification==false && isOwner" (click)="verifyEntity(entity.address, i)" class="btn btn-sm btn-primary">Verify</button>
-          </td>
+          </td> -->
         </tr>
       </tbody>
     </table>
