@@ -2,6 +2,7 @@ declare var require: any;
 const Web3 = require('web3');
 import { ToastyService, ToastyConfig, ToastOptions } from 'ng2-toasty';
 import _ from 'lodash';
+import * as moment from 'moment';
 
 import { Injectable } from '@angular/core';
 
@@ -19,10 +20,10 @@ export class Web3Service {
 
   public web3: any = null;
   public addresses: any = {
-      LiquidRE: '0x2788fa633ee62b5284f1fe43adc77bb4d153f2bd',
-      DexRE: '',
-      TrusteeFactory: '0x28ebac418b76f6c6c5be9dda0024bb845ec1a1dc',
-      EntityFactory: '0x153a3f91e4cd89e27513cdb5792060205917956a'
+    LiquidRE: '0x8ba41a5634d05337a697f593a4f58ab3b4032418',
+    DexRE: '',
+    TrusteeFactory: '0xf52b21007d0617663c33595c4d3b75a3145fc39b',
+    EntityFactory: '0xb1ae369709353c81b37261af0a45d90b19a7fdeb'
   };
   public LiquidREInstance: any = null;
   public TrusteeFactoryInstance: any = null;
@@ -169,15 +170,19 @@ export class Web3Service {
     let addresses = await this.trusteeAddresses();
     if (addresses.length > 0) {
       for (let i = 0; i < addresses.length; i++) {
-        let trusteeInstance = await this.createTrusteeInstance(addresses[i]);
-        trustees.push({
-          owner: await trusteeInstance.methods.owner().call(),
-          name: await trusteeInstance.methods.name().call(),
-          address: addresses[i],
-        });
+        trustees.push(await this.getTrustee(addresses[i]));
       }
     }
     return trustees;
+  }
+
+  async getTrustee(_address) {
+    let trusteeInstance = await this.createTrusteeInstance(_address);
+    return {
+      owner: await trusteeInstance.methods.owner().call(),
+      name: await trusteeInstance.methods.name().call(),
+      address: _address,
+    };
   }
 
   async getIREOs() {
@@ -186,12 +191,15 @@ export class Web3Service {
     if (addresses.length > 0) {
       for (let i = 0; i < addresses.length; i++) {
         let ireoInstance = await this.createIREOInstance(addresses[i]);
+        let trustee = await ireoInstance.methods.trustee().call();
+
         ireos.push({
+          trustee: await this.getTrustee(trustee),
           entity: await ireoInstance.methods.entity().call(),
-          startTime: await ireoInstance.methods.startTime().call(),
-          endTime: await ireoInstance.methods.endTime().call(),
-          goal: await ireoInstance.methods.fundingGoal().call(),
-          price: await ireoInstance.methods.price().call(),
+          startTime: moment.unix(await ireoInstance.methods.startTime().call()).format('MMM DD, YYYY hh:ss:mm A'),
+          endTime: moment.unix(await ireoInstance.methods.endTime().call()).format('MMM DD, YYYY hh:ss:mm A'),
+          goal: this.web3.utils.fromWei(await ireoInstance.methods.fundingGoal().call(), 'ether'),
+          price: this.web3.utils.fromWei(await ireoInstance.methods.price().call(), 'ether'),
           status: await ireoInstance.methods.status().call(),
           raised: await ireoInstance.methods.amountRaised().call(),
           address: addresses[i],
@@ -333,6 +341,10 @@ export class Web3Service {
     return await this.TrusteeFactoryInstance.methods.isTrusteeOwner(account).call();
   }
 
+  async isTrustee(_address) {
+    return await this.TrusteeFactoryInstance.methods.isTrustee(_address).call();
+  }
+
   async availableFunds() {
     let account = await this.activeAccount();
     let entity = await this.EntityFactoryInstance.methods.entityAddress(account).call();
@@ -340,8 +352,8 @@ export class Web3Service {
     let funds = 0;
 
     try {
-      funds = this.web3.utils.fromWei(await entityInstance.methods.availableFunds().call({from: account}) + '', 'ether');
-    } catch(err) {}
+      funds = this.web3.utils.fromWei(await entityInstance.methods.availableFunds().call({ from: account }) + '', 'ether');
+    } catch (err) { }
     return funds;
   }
 

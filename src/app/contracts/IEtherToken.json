@@ -284,7 +284,7 @@
       "absolutePath": "/Users/chanopalis/Documents/ethereum-contracts/smart-law-contracts/DexRE-Contract/contracts/LiquidRE/bancor/interfaces/IEtherToken.sol",
       "exportedSymbols": {
         "IEtherToken": [
-          7710
+          7919
         ]
       }
     },
@@ -298,58 +298,58 @@
             ".11"
           ]
         },
-        "id": 7688,
+        "id": 7897,
         "name": "PragmaDirective",
-        "src": "0:24:38"
+        "src": "0:24:39"
       },
       {
         "attributes": {
-          "SourceUnit": 7825,
+          "SourceUnit": 8034,
           "absolutePath": "/Users/chanopalis/Documents/ethereum-contracts/smart-law-contracts/DexRE-Contract/contracts/LiquidRE/bancor/interfaces/ITokenHolder.sol",
           "file": "./ITokenHolder.sol",
-          "scope": 7711,
+          "scope": 7920,
           "symbolAliases": [
             null
           ],
           "unitAlias": ""
         },
-        "id": 7689,
+        "id": 7898,
         "name": "ImportDirective",
-        "src": "25:28:38"
+        "src": "25:28:39"
       },
       {
         "attributes": {
-          "SourceUnit": 7687,
+          "SourceUnit": 7896,
           "absolutePath": "/Users/chanopalis/Documents/ethereum-contracts/smart-law-contracts/DexRE-Contract/contracts/LiquidRE/bancor/interfaces/IERC20Token.sol",
           "file": "./IERC20Token.sol",
-          "scope": 7711,
+          "scope": 7920,
           "symbolAliases": [
             null
           ],
           "unitAlias": ""
         },
-        "id": 7690,
+        "id": 7899,
         "name": "ImportDirective",
-        "src": "54:27:38"
+        "src": "54:27:39"
       },
       {
         "attributes": {
           "contractDependencies": [
-            7686,
-            7727,
-            7824
+            7895,
+            7936,
+            8033
           ],
           "contractKind": "contract",
           "documentation": null,
           "fullyImplemented": false,
           "linearizedBaseContracts": [
-            7710,
-            7686,
-            7824,
-            7727
+            7919,
+            7895,
+            8033,
+            7936
           ],
           "name": "IEtherToken",
-          "scope": 7711
+          "scope": 7920
         },
         "children": [
           {
@@ -363,17 +363,17 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "ITokenHolder",
-                  "referencedDeclaration": 7824,
+                  "referencedDeclaration": 8033,
                   "type": "contract ITokenHolder"
                 },
-                "id": 7691,
+                "id": 7900,
                 "name": "UserDefinedTypeName",
-                "src": "139:12:38"
+                "src": "139:12:39"
               }
             ],
-            "id": 7692,
+            "id": 7901,
             "name": "InheritanceSpecifier",
-            "src": "139:12:38"
+            "src": "139:12:39"
           },
           {
             "attributes": {
@@ -386,17 +386,17 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "IERC20Token",
-                  "referencedDeclaration": 7686,
+                  "referencedDeclaration": 7895,
                   "type": "contract IERC20Token"
                 },
-                "id": 7693,
+                "id": 7902,
                 "name": "UserDefinedTypeName",
-                "src": "153:11:38"
+                "src": "153:11:39"
               }
             ],
-            "id": 7694,
+            "id": 7903,
             "name": "InheritanceSpecifier",
-            "src": "153:11:38"
+            "src": "153:11:39"
           },
           {
             "attributes": {
@@ -409,7 +409,7 @@
               ],
               "name": "deposit",
               "payable": true,
-              "scope": 7710,
+              "scope": 7919,
               "stateMutability": "payable",
               "superFunction": null,
               "visibility": "public"
@@ -422,9 +422,9 @@
                   ]
                 },
                 "children": [],
-                "id": 7695,
+                "id": 7904,
                 "name": "ParameterList",
-                "src": "187:2:38"
+                "src": "187:2:39"
               },
               {
                 "attributes": {
@@ -433,14 +433,14 @@
                   ]
                 },
                 "children": [],
-                "id": 7696,
+                "id": 7905,
                 "name": "ParameterList",
-                "src": "204:0:38"
+                "src": "204:0:39"
               }
             ],
-            "id": 7697,
+            "id": 7906,
             "name": "FunctionDefinition",
-            "src": "171:34:38"
+            "src": "171:34:39"
           },
           {
             "attributes": {
@@ -453,7 +453,7 @@
               ],
               "name": "withdraw",
               "payable": false,
-              "scope": 7710,
+              "scope": 7919,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -465,7 +465,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_amount",
-                      "scope": 7702,
+                      "scope": 7911,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -478,19 +478,19 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 7698,
+                        "id": 7907,
                         "name": "ElementaryTypeName",
-                        "src": "228:7:38"
+                        "src": "228:7:39"
                       }
                     ],
-                    "id": 7699,
+                    "id": 7908,
                     "name": "VariableDeclaration",
-                    "src": "228:15:38"
+                    "src": "228:15:39"
                   }
                 ],
-                "id": 7700,
+                "id": 7909,
                 "name": "ParameterList",
-                "src": "227:17:38"
+                "src": "227:17:39"
               },
               {
                 "attributes": {
@@ -499,14 +499,14 @@
                   ]
                 },
                 "children": [],
-                "id": 7701,
+                "id": 7910,
                 "name": "ParameterList",
-                "src": "251:0:38"
+                "src": "251:0:39"
               }
             ],
-            "id": 7702,
+            "id": 7911,
             "name": "FunctionDefinition",
-            "src": "210:42:38"
+            "src": "210:42:39"
           },
           {
             "attributes": {
@@ -519,7 +519,7 @@
               ],
               "name": "withdrawTo",
               "payable": false,
-              "scope": 7710,
+              "scope": 7919,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -531,7 +531,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_to",
-                      "scope": 7709,
+                      "scope": 7918,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -544,20 +544,20 @@
                           "name": "address",
                           "type": "address"
                         },
-                        "id": 7703,
+                        "id": 7912,
                         "name": "ElementaryTypeName",
-                        "src": "277:7:38"
+                        "src": "277:7:39"
                       }
                     ],
-                    "id": 7704,
+                    "id": 7913,
                     "name": "VariableDeclaration",
-                    "src": "277:11:38"
+                    "src": "277:11:39"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "name": "_amount",
-                      "scope": 7709,
+                      "scope": 7918,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -570,19 +570,19 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 7705,
+                        "id": 7914,
                         "name": "ElementaryTypeName",
-                        "src": "290:7:38"
+                        "src": "290:7:39"
                       }
                     ],
-                    "id": 7706,
+                    "id": 7915,
                     "name": "VariableDeclaration",
-                    "src": "290:15:38"
+                    "src": "290:15:39"
                   }
                 ],
-                "id": 7707,
+                "id": 7916,
                 "name": "ParameterList",
-                "src": "276:30:38"
+                "src": "276:30:39"
               },
               {
                 "attributes": {
@@ -591,26 +591,26 @@
                   ]
                 },
                 "children": [],
-                "id": 7708,
+                "id": 7917,
                 "name": "ParameterList",
-                "src": "313:0:38"
+                "src": "313:0:39"
               }
             ],
-            "id": 7709,
+            "id": 7918,
             "name": "FunctionDefinition",
-            "src": "257:57:38"
+            "src": "257:57:39"
           }
         ],
-        "id": 7710,
+        "id": 7919,
         "name": "ContractDefinition",
-        "src": "115:201:38"
+        "src": "115:201:39"
       }
     ],
-    "id": 7711,
+    "id": 7920,
     "name": "SourceUnit",
-    "src": "0:317:38"
+    "src": "0:317:39"
   },
   "networks": {},
   "schemaVersion": "1.0.0",
-  "updatedAt": "2018-02-28T18:05:46.276Z"
+  "updatedAt": "2018-03-02T16:04:52.256Z"
 }

@@ -109,10 +109,10 @@
       "type": "event"
     }
   ],
-  "bytecode": "0x60606040526000600255341561001457600080fd5b6040516020806103168339810160405280805160008054600160a060020a03191633600160a060020a0316178155909250829150811161005357600080fd5b506002556102b0806100666000396000f300606060405236156100755763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166379ba5097811461007a5780638da5cb5b1461008f578063bf1fe420146100be578063d4ee1d90146100d4578063f2fde38b146100e7578063fe173b9714610106575b600080fd5b341561008557600080fd5b61008d61012b565b005b341561009a57600080fd5b6100a26101d2565b604051600160a060020a03909116815260200160405180910390f35b34156100c957600080fd5b61008d6004356101e1565b34156100df57600080fd5b6100a261020d565b34156100f257600080fd5b61008d600160a060020a036004351661021c565b341561011157600080fd5b61011961027e565b60405190815260200160405180910390f35b60015433600160a060020a0390811691161461014657600080fd5b6000546001547f343765429aea5a34b3ff6a3785a98a5abb2597aca87bfbb58632c173d585373a91600160a060020a039081169116604051600160a060020a039283168152911660208201526040908101905180910390a1600180546000805473ffffffffffffffffffffffffffffffffffffffff19908116600160a060020a03841617909155169055565b600054600160a060020a031681565b60005433600160a060020a039081169116146101f957fe5b806000811161020757600080fd5b50600255565b600154600160a060020a031681565b60005433600160a060020a0390811691161461023457fe5b600054600160a060020a038281169116141561024f57600080fd5b6001805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392909216919091179055565b600254815600a165627a7a723058207ee00bac19f94bd47b9af21f5a5a83c290806d2ee52b2985d61dd9e99f56439e0029",
-  "deployedBytecode": "0x606060405236156100755763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166379ba5097811461007a5780638da5cb5b1461008f578063bf1fe420146100be578063d4ee1d90146100d4578063f2fde38b146100e7578063fe173b9714610106575b600080fd5b341561008557600080fd5b61008d61012b565b005b341561009a57600080fd5b6100a26101d2565b604051600160a060020a03909116815260200160405180910390f35b34156100c957600080fd5b61008d6004356101e1565b34156100df57600080fd5b6100a261020d565b34156100f257600080fd5b61008d600160a060020a036004351661021c565b341561011157600080fd5b61011961027e565b60405190815260200160405180910390f35b60015433600160a060020a0390811691161461014657600080fd5b6000546001547f343765429aea5a34b3ff6a3785a98a5abb2597aca87bfbb58632c173d585373a91600160a060020a039081169116604051600160a060020a039283168152911660208201526040908101905180910390a1600180546000805473ffffffffffffffffffffffffffffffffffffffff19908116600160a060020a03841617909155169055565b600054600160a060020a031681565b60005433600160a060020a039081169116146101f957fe5b806000811161020757600080fd5b50600255565b600154600160a060020a031681565b60005433600160a060020a0390811691161461023457fe5b600054600160a060020a038281169116141561024f57600080fd5b6001805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392909216919091179055565b600254815600a165627a7a723058207ee00bac19f94bd47b9af21f5a5a83c290806d2ee52b2985d61dd9e99f56439e0029",
-  "sourceMap": "518:663:16:-;;;617:5;591:31;;762:139;;;;;;;;;;;;;;;;;;;;;;348:5:23;:18;;-1:-1:-1;;;;;;348:18:23;356:10;-1:-1:-1;;;;;348:18:23;;;;762:139:16;;-1:-1:-1;762:139:16;;-1:-1:-1;270:11:27;;262:20;;;;;;-1:-1:-1;874:8:16;:20;518:663;;;;;;",
-  "deployedSourceMap": "518:663:16:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;949:170:23;;;;;;;;;;;;;;155:20;;;;;;;;;;;;;;;-1:-1:-1;;;;;155:20:23;;;;;;;;;;;;;;1030:149:16;;;;;;;;;;;;;;181:23:23;;;;;;;;;;;;726:137;;;;;;;;;;-1:-1:-1;;;;;726:137:23;;;;;591:31:16;;;;;;;;;;;;;;;;;;;;;;;;;;;949:170:23;1015:8;;1001:10;-1:-1:-1;;;;;1001:22:23;;;1015:8;;1001:22;993:31;;;;;;1046:5;;;1053:8;1034:28;;-1:-1:-1;;;;;1046:5:23;;;;1053:8;1034:28;;-1:-1:-1;;;;;1034:28:23;;;;;;;;;;;;;;;;;;;;;;1080:8;;;;1072:16;;-1:-1:-1;;1072:16:23;;;-1:-1:-1;;;;;1080:8:23;;1072:16;;;;1098:14;;;949:170::o;155:20::-;;;-1:-1:-1;;;;;155:20:23;;:::o;1030:149:16:-;471:5:23;;457:10;-1:-1:-1;;;;;457:19:23;;;471:5;;457:19;450:27;;;;1127:9:16;280:1:27;270:11;;262:20;;;;;;-1:-1:-1;1152:8:16;:20;1030:149::o;181:23:23:-;;;-1:-1:-1;;;;;181:23:23;;:::o;726:137::-;471:5;;457:10;-1:-1:-1;;;;;457:19:23;;;471:5;;457:19;450:27;;;;820:5;;-1:-1:-1;;;;;807:18:23;;;820:5;;807:18;;799:27;;;;;;836:8;:20;;-1:-1:-1;;836:20:23;-1:-1:-1;;;;;836:20:23;;;;;;;;;;726:137::o;591:31:16:-;;;;:::o",
+  "bytecode": "0x60606040526000600255341561001457600080fd5b6040516020806103b28339810160405280805160008054600160a060020a03191633600160a060020a0316178155909250829150811161005357600080fd5b5060025561034c806100666000396000f300606060405236156100755763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166379ba5097811461007a5780638da5cb5b1461008f578063bf1fe420146100cb578063d4ee1d90146100e1578063f2fde38b146100f4578063fe173b9714610120575b600080fd5b341561008557600080fd5b61008d610145565b005b341561009a57600080fd5b6100a2610220565b60405173ffffffffffffffffffffffffffffffffffffffff909116815260200160405180910390f35b34156100d657600080fd5b61008d60043561023c565b34156100ec57600080fd5b6100a2610275565b34156100ff57600080fd5b61008d73ffffffffffffffffffffffffffffffffffffffff60043516610291565b341561012b57600080fd5b61013361031a565b60405190815260200160405180910390f35b6001543373ffffffffffffffffffffffffffffffffffffffff90811691161461016d57600080fd5b6000546001547f343765429aea5a34b3ff6a3785a98a5abb2597aca87bfbb58632c173d585373a9173ffffffffffffffffffffffffffffffffffffffff908116911660405173ffffffffffffffffffffffffffffffffffffffff9283168152911660208201526040908101905180910390a1600180546000805473ffffffffffffffffffffffffffffffffffffffff1990811673ffffffffffffffffffffffffffffffffffffffff841617909155169055565b60005473ffffffffffffffffffffffffffffffffffffffff1681565b6000543373ffffffffffffffffffffffffffffffffffffffff90811691161461026157fe5b806000811161026f57600080fd5b50600255565b60015473ffffffffffffffffffffffffffffffffffffffff1681565b6000543373ffffffffffffffffffffffffffffffffffffffff9081169116146102b657fe5b60005473ffffffffffffffffffffffffffffffffffffffff828116911614156102de57600080fd5b6001805473ffffffffffffffffffffffffffffffffffffffff191673ffffffffffffffffffffffffffffffffffffffff92909216919091179055565b600254815600a165627a7a723058208eada2e60f0f7b40499ff6894650d9d896fa9e430a169a872a9e1ff7796621520029",
+  "deployedBytecode": "0x606060405236156100755763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166379ba5097811461007a5780638da5cb5b1461008f578063bf1fe420146100cb578063d4ee1d90146100e1578063f2fde38b146100f4578063fe173b9714610120575b600080fd5b341561008557600080fd5b61008d610145565b005b341561009a57600080fd5b6100a2610220565b60405173ffffffffffffffffffffffffffffffffffffffff909116815260200160405180910390f35b34156100d657600080fd5b61008d60043561023c565b34156100ec57600080fd5b6100a2610275565b34156100ff57600080fd5b61008d73ffffffffffffffffffffffffffffffffffffffff60043516610291565b341561012b57600080fd5b61013361031a565b60405190815260200160405180910390f35b6001543373ffffffffffffffffffffffffffffffffffffffff90811691161461016d57600080fd5b6000546001547f343765429aea5a34b3ff6a3785a98a5abb2597aca87bfbb58632c173d585373a9173ffffffffffffffffffffffffffffffffffffffff908116911660405173ffffffffffffffffffffffffffffffffffffffff9283168152911660208201526040908101905180910390a1600180546000805473ffffffffffffffffffffffffffffffffffffffff1990811673ffffffffffffffffffffffffffffffffffffffff841617909155169055565b60005473ffffffffffffffffffffffffffffffffffffffff1681565b6000543373ffffffffffffffffffffffffffffffffffffffff90811691161461026157fe5b806000811161026f57600080fd5b50600255565b60015473ffffffffffffffffffffffffffffffffffffffff1681565b6000543373ffffffffffffffffffffffffffffffffffffffff9081169116146102b657fe5b60005473ffffffffffffffffffffffffffffffffffffffff828116911614156102de57600080fd5b6001805473ffffffffffffffffffffffffffffffffffffffff191673ffffffffffffffffffffffffffffffffffffffff92909216919091179055565b600254815600a165627a7a723058208eada2e60f0f7b40499ff6894650d9d896fa9e430a169a872a9e1ff7796621520029",
+  "sourceMap": "518:663:17:-;;;617:5;591:31;;762:139;;;;;;;;;;;;;;;;;;;;;;348:5:24;:18;;-1:-1:-1;;;;;;348:18:24;356:10;-1:-1:-1;;;;;348:18:24;;;;762:139:17;;-1:-1:-1;762:139:17;;-1:-1:-1;270:11:28;;262:20;;;;;;-1:-1:-1;874:8:17;:20;518:663;;;;;;",
+  "deployedSourceMap": "518:663:17:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;949:170:24;;;;;;;;;;;;;;155:20;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1030:149:17;;;;;;;;;;;;;;181:23:24;;;;;;;;;;;;726:137;;;;;;;;;;;;;;;;591:31:17;;;;;;;;;;;;;;;;;;;;;;;;;;;949:170:24;1015:8;;1001:10;1015:8;1001:22;;;1015:8;;1001:22;993:31;;;;;;1046:5;;;1053:8;1034:28;;1046:5;;;;;1053:8;1034:28;;;;;;;;;;;;;;;;;;;;;;;;;1080:8;;;;1072:16;;-1:-1:-1;;1072:16:24;;;1080:8;;;1072:16;;;;1098:14;;;949:170::o;155:20::-;;;;;;:::o;1030:149:17:-;471:5:24;;457:10;471:5;457:19;;;471:5;;457:19;450:27;;;;1127:9:17;280:1:28;270:11;;262:20;;;;;;-1:-1:-1;1152:8:17;:20;1030:149::o;181:23:24:-;;;;;;:::o;726:137::-;471:5;;457:10;471:5;457:19;;;471:5;;457:19;450:27;;;;820:5;;;807:18;;;820:5;;807:18;;799:27;;;;;;836:8;:20;;-1:-1:-1;;836:20:24;;;;;;;;;;;;726:137::o;591:31:17:-;;;;:::o",
   "source": "pragma solidity ^0.4.11;\nimport './Owned.sol';\nimport './Utils.sol';\nimport './interfaces/IBancorGasPriceLimit.sol';\n\n/*\n    The BancorGasPriceLimit contract serves as an extra front-running attack mitigation mechanism.\n    It sets a maximum gas price on all bancor conversions, which prevents users from \"cutting in line\"\n    in order to front-run other transactions.\n    The gas price limit is universal to all converters and it can be updated by the owner to be in line\n    with the network's current gas price.\n*/\ncontract BancorGasPriceLimit is IBancorGasPriceLimit, Owned, Utils {\n    uint256 public gasPrice = 0 wei;    // maximum gas price for bancor transactions\n\n    /**\n        @dev constructor\n\n        @param _gasPrice    gas price limit\n    */\n    function BancorGasPriceLimit(uint256 _gasPrice)\n        greaterThanZero(_gasPrice)\n        public\n    {\n        gasPrice = _gasPrice;\n    }\n\n    /*\n        @dev allows the owner to update the gas price limit\n\n        @param _gasPrice    new gas price limit\n    */\n    function setGasPrice(uint256 _gasPrice)\n        public\n        ownerOnly\n        greaterThanZero(_gasPrice)\n    {\n        gasPrice = _gasPrice;\n    }\n}\n",
   "sourcePath": "/Users/chanopalis/Documents/ethereum-contracts/smart-law-contracts/DexRE-Contract/contracts/LiquidRE/bancor/BancorGasPriceLimit.sol",
   "ast": {
@@ -120,7 +120,7 @@
       "absolutePath": "/Users/chanopalis/Documents/ethereum-contracts/smart-law-contracts/DexRE-Contract/contracts/LiquidRE/bancor/BancorGasPriceLimit.sol",
       "exportedSymbols": {
         "BancorGasPriceLimit": [
-          5292
+          5428
         ]
       }
     },
@@ -134,75 +134,75 @@
             ".11"
           ]
         },
-        "id": 5251,
+        "id": 5387,
         "name": "PragmaDirective",
-        "src": "0:24:16"
+        "src": "0:24:17"
       },
       {
         "attributes": {
-          "SourceUnit": 6695,
+          "SourceUnit": 6831,
           "absolutePath": "/Users/chanopalis/Documents/ethereum-contracts/smart-law-contracts/DexRE-Contract/contracts/LiquidRE/bancor/Owned.sol",
           "file": "./Owned.sol",
-          "scope": 5293,
+          "scope": 5429,
           "symbolAliases": [
             null
           ],
           "unitAlias": ""
         },
-        "id": 5252,
+        "id": 5388,
         "name": "ImportDirective",
-        "src": "25:21:16"
+        "src": "25:21:17"
       },
       {
         "attributes": {
-          "SourceUnit": 7237,
+          "SourceUnit": 7446,
           "absolutePath": "/Users/chanopalis/Documents/ethereum-contracts/smart-law-contracts/DexRE-Contract/contracts/LiquidRE/bancor/Utils.sol",
           "file": "./Utils.sol",
-          "scope": 5293,
+          "scope": 5429,
           "symbolAliases": [
             null
           ],
           "unitAlias": ""
         },
-        "id": 5253,
+        "id": 5389,
         "name": "ImportDirective",
-        "src": "47:21:16"
+        "src": "47:21:17"
       },
       {
         "attributes": {
-          "SourceUnit": 7577,
+          "SourceUnit": 7786,
           "absolutePath": "/Users/chanopalis/Documents/ethereum-contracts/smart-law-contracts/DexRE-Contract/contracts/LiquidRE/bancor/interfaces/IBancorGasPriceLimit.sol",
           "file": "./interfaces/IBancorGasPriceLimit.sol",
-          "scope": 5293,
+          "scope": 5429,
           "symbolAliases": [
             null
           ],
           "unitAlias": ""
         },
-        "id": 5254,
+        "id": 5390,
         "name": "ImportDirective",
-        "src": "69:47:16"
+        "src": "69:47:17"
       },
       {
         "attributes": {
           "contractDependencies": [
-            6694,
-            7236,
-            7576,
-            7727
+            6830,
+            7445,
+            7785,
+            7936
           ],
           "contractKind": "contract",
           "documentation": null,
           "fullyImplemented": true,
           "linearizedBaseContracts": [
-            5292,
-            7236,
-            6694,
-            7727,
-            7576
+            5428,
+            7445,
+            6830,
+            7936,
+            7785
           ],
           "name": "BancorGasPriceLimit",
-          "scope": 5293
+          "scope": 5429
         },
         "children": [
           {
@@ -216,17 +216,17 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "IBancorGasPriceLimit",
-                  "referencedDeclaration": 7576,
+                  "referencedDeclaration": 7785,
                   "type": "contract IBancorGasPriceLimit"
                 },
-                "id": 5255,
+                "id": 5391,
                 "name": "UserDefinedTypeName",
-                "src": "550:20:16"
+                "src": "550:20:17"
               }
             ],
-            "id": 5256,
+            "id": 5392,
             "name": "InheritanceSpecifier",
-            "src": "550:20:16"
+            "src": "550:20:17"
           },
           {
             "attributes": {
@@ -239,17 +239,17 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "Owned",
-                  "referencedDeclaration": 6694,
+                  "referencedDeclaration": 6830,
                   "type": "contract Owned"
                 },
-                "id": 5257,
+                "id": 5393,
                 "name": "UserDefinedTypeName",
-                "src": "572:5:16"
+                "src": "572:5:17"
               }
             ],
-            "id": 5258,
+            "id": 5394,
             "name": "InheritanceSpecifier",
-            "src": "572:5:16"
+            "src": "572:5:17"
           },
           {
             "attributes": {
@@ -262,23 +262,23 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "Utils",
-                  "referencedDeclaration": 7236,
+                  "referencedDeclaration": 7445,
                   "type": "contract Utils"
                 },
-                "id": 5259,
+                "id": 5395,
                 "name": "UserDefinedTypeName",
-                "src": "579:5:16"
+                "src": "579:5:17"
               }
             ],
-            "id": 5260,
+            "id": 5396,
             "name": "InheritanceSpecifier",
-            "src": "579:5:16"
+            "src": "579:5:17"
           },
           {
             "attributes": {
               "constant": false,
               "name": "gasPrice",
-              "scope": 5292,
+              "scope": 5428,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "uint256",
@@ -290,9 +290,9 @@
                   "name": "uint256",
                   "type": "uint256"
                 },
-                "id": 5261,
+                "id": 5397,
                 "name": "ElementaryTypeName",
-                "src": "591:7:16"
+                "src": "591:7:17"
               },
               {
                 "attributes": {
@@ -307,14 +307,14 @@
                   "type": "int_const 0",
                   "value": "0"
                 },
-                "id": 5262,
+                "id": 5398,
                 "name": "Literal",
-                "src": "617:5:16"
+                "src": "617:5:17"
               }
             ],
-            "id": 5263,
+            "id": 5399,
             "name": "VariableDeclaration",
-            "src": "591:31:16"
+            "src": "591:31:17"
           },
           {
             "attributes": {
@@ -323,7 +323,7 @@
               "isConstructor": true,
               "name": "BancorGasPriceLimit",
               "payable": false,
-              "scope": 5292,
+              "scope": 5428,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -335,7 +335,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_gasPrice",
-                      "scope": 5276,
+                      "scope": 5412,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -348,19 +348,19 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 5264,
+                        "id": 5400,
                         "name": "ElementaryTypeName",
-                        "src": "791:7:16"
+                        "src": "791:7:17"
                       }
                     ],
-                    "id": 5265,
+                    "id": 5401,
                     "name": "VariableDeclaration",
-                    "src": "791:17:16"
+                    "src": "791:17:17"
                   }
                 ],
-                "id": 5266,
+                "id": 5402,
                 "name": "ParameterList",
-                "src": "790:19:16"
+                "src": "790:19:17"
               },
               {
                 "attributes": {
@@ -369,9 +369,9 @@
                   ]
                 },
                 "children": [],
-                "id": 5270,
+                "id": 5406,
                 "name": "ParameterList",
-                "src": "864:0:16"
+                "src": "864:0:17"
               },
               {
                 "children": [
@@ -381,13 +381,13 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 7082,
+                      "referencedDeclaration": 7218,
                       "type": "modifier (uint256)",
                       "value": "greaterThanZero"
                     },
-                    "id": 5267,
+                    "id": 5403,
                     "name": "Identifier",
-                    "src": "818:15:16"
+                    "src": "818:15:17"
                   },
                   {
                     "attributes": {
@@ -395,18 +395,18 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 5265,
+                      "referencedDeclaration": 5401,
                       "type": "uint256",
                       "value": "_gasPrice"
                     },
-                    "id": 5268,
+                    "id": 5404,
                     "name": "Identifier",
-                    "src": "834:9:16"
+                    "src": "834:9:17"
                   }
                 ],
-                "id": 5269,
+                "id": 5405,
                 "name": "ModifierInvocation",
-                "src": "818:26:16"
+                "src": "818:26:17"
               },
               {
                 "children": [
@@ -427,15 +427,15 @@
                             "attributes": {
                               "argumentTypes": null,
                               "overloadedDeclarations": [
-                                5263
+                                5399
                               ],
-                              "referencedDeclaration": 5263,
+                              "referencedDeclaration": 5399,
                               "type": "uint256",
                               "value": "gasPrice"
                             },
-                            "id": 5271,
+                            "id": 5407,
                             "name": "Identifier",
-                            "src": "874:8:16"
+                            "src": "874:8:17"
                           },
                           {
                             "attributes": {
@@ -443,33 +443,33 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 5265,
+                              "referencedDeclaration": 5401,
                               "type": "uint256",
                               "value": "_gasPrice"
                             },
-                            "id": 5272,
+                            "id": 5408,
                             "name": "Identifier",
-                            "src": "885:9:16"
+                            "src": "885:9:17"
                           }
                         ],
-                        "id": 5273,
+                        "id": 5409,
                         "name": "Assignment",
-                        "src": "874:20:16"
+                        "src": "874:20:17"
                       }
                     ],
-                    "id": 5274,
+                    "id": 5410,
                     "name": "ExpressionStatement",
-                    "src": "874:20:16"
+                    "src": "874:20:17"
                   }
                 ],
-                "id": 5275,
+                "id": 5411,
                 "name": "Block",
-                "src": "864:37:16"
+                "src": "864:37:17"
               }
             ],
-            "id": 5276,
+            "id": 5412,
             "name": "FunctionDefinition",
-            "src": "762:139:16"
+            "src": "762:139:17"
           },
           {
             "attributes": {
@@ -478,7 +478,7 @@
               "isConstructor": false,
               "name": "setGasPrice",
               "payable": false,
-              "scope": 5292,
+              "scope": 5428,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -490,7 +490,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_gasPrice",
-                      "scope": 5291,
+                      "scope": 5427,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -503,19 +503,19 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 5277,
+                        "id": 5413,
                         "name": "ElementaryTypeName",
-                        "src": "1051:7:16"
+                        "src": "1051:7:17"
                       }
                     ],
-                    "id": 5278,
+                    "id": 5414,
                     "name": "VariableDeclaration",
-                    "src": "1051:17:16"
+                    "src": "1051:17:17"
                   }
                 ],
-                "id": 5279,
+                "id": 5415,
                 "name": "ParameterList",
-                "src": "1050:19:16"
+                "src": "1050:19:17"
               },
               {
                 "attributes": {
@@ -524,9 +524,9 @@
                   ]
                 },
                 "children": [],
-                "id": 5285,
+                "id": 5421,
                 "name": "ParameterList",
-                "src": "1142:0:16"
+                "src": "1142:0:17"
               },
               {
                 "attributes": {
@@ -541,18 +541,18 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 6651,
+                      "referencedDeclaration": 6787,
                       "type": "modifier ()",
                       "value": "ownerOnly"
                     },
-                    "id": 5280,
+                    "id": 5416,
                     "name": "Identifier",
-                    "src": "1093:9:16"
+                    "src": "1093:9:17"
                   }
                 ],
-                "id": 5281,
+                "id": 5417,
                 "name": "ModifierInvocation",
-                "src": "1093:9:16"
+                "src": "1093:9:17"
               },
               {
                 "children": [
@@ -562,13 +562,13 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 7082,
+                      "referencedDeclaration": 7218,
                       "type": "modifier (uint256)",
                       "value": "greaterThanZero"
                     },
-                    "id": 5282,
+                    "id": 5418,
                     "name": "Identifier",
-                    "src": "1111:15:16"
+                    "src": "1111:15:17"
                   },
                   {
                     "attributes": {
@@ -576,18 +576,18 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 5278,
+                      "referencedDeclaration": 5414,
                       "type": "uint256",
                       "value": "_gasPrice"
                     },
-                    "id": 5283,
+                    "id": 5419,
                     "name": "Identifier",
-                    "src": "1127:9:16"
+                    "src": "1127:9:17"
                   }
                 ],
-                "id": 5284,
+                "id": 5420,
                 "name": "ModifierInvocation",
-                "src": "1111:26:16"
+                "src": "1111:26:17"
               },
               {
                 "children": [
@@ -608,15 +608,15 @@
                             "attributes": {
                               "argumentTypes": null,
                               "overloadedDeclarations": [
-                                5263
+                                5399
                               ],
-                              "referencedDeclaration": 5263,
+                              "referencedDeclaration": 5399,
                               "type": "uint256",
                               "value": "gasPrice"
                             },
-                            "id": 5286,
+                            "id": 5422,
                             "name": "Identifier",
-                            "src": "1152:8:16"
+                            "src": "1152:8:17"
                           },
                           {
                             "attributes": {
@@ -624,45 +624,45 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 5278,
+                              "referencedDeclaration": 5414,
                               "type": "uint256",
                               "value": "_gasPrice"
                             },
-                            "id": 5287,
+                            "id": 5423,
                             "name": "Identifier",
-                            "src": "1163:9:16"
+                            "src": "1163:9:17"
                           }
                         ],
-                        "id": 5288,
+                        "id": 5424,
                         "name": "Assignment",
-                        "src": "1152:20:16"
+                        "src": "1152:20:17"
                       }
                     ],
-                    "id": 5289,
+                    "id": 5425,
                     "name": "ExpressionStatement",
-                    "src": "1152:20:16"
+                    "src": "1152:20:17"
                   }
                 ],
-                "id": 5290,
+                "id": 5426,
                 "name": "Block",
-                "src": "1142:37:16"
+                "src": "1142:37:17"
               }
             ],
-            "id": 5291,
+            "id": 5427,
             "name": "FunctionDefinition",
-            "src": "1030:149:16"
+            "src": "1030:149:17"
           }
         ],
-        "id": 5292,
+        "id": 5428,
         "name": "ContractDefinition",
-        "src": "518:663:16"
+        "src": "518:663:17"
       }
     ],
-    "id": 5293,
+    "id": 5429,
     "name": "SourceUnit",
-    "src": "0:1182:16"
+    "src": "0:1182:17"
   },
   "networks": {},
   "schemaVersion": "1.0.0",
-  "updatedAt": "2018-02-28T18:05:46.266Z"
+  "updatedAt": "2018-03-02T16:04:52.239Z"
 }

@@ -54,8 +54,8 @@
       "type": "constructor"
     }
   ],
-  "bytecode": "0x606060405262029810600155341561001657600080fd5b610116806100256000396000f300606060405263ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416630554e4a28114604f5780634bcc17091460715780637bb476f514609557600080fd5b3415605957600080fd5b605f60a5565b60405190815260200160405180910390f35b609360043573ffffffffffffffffffffffffffffffffffffffff6024351660b6565b005b3415609f57600080fd5b605f60c6565b600060ad60c6565b60005403905090565b5043600255600080549091019055565b6000806000600254430391506000546001548381151560e157fe5b040293925050505600a165627a7a7230582006530b7c1d10aa48b06d8d0a8c4054992e383a411423b12f62fe154d6419eed20029",
-  "deployedBytecode": "0x606060405263ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416630554e4a28114604f5780634bcc17091460715780637bb476f514609557600080fd5b3415605957600080fd5b605f60a5565b60405190815260200160405180910390f35b609360043573ffffffffffffffffffffffffffffffffffffffff6024351660b6565b005b3415609f57600080fd5b605f60c6565b600060ad60c6565b60005403905090565b5043600255600080549091019055565b6000806000600254430391506000546001548381151560e157fe5b040293925050505600a165627a7a7230582006530b7c1d10aa48b06d8d0a8c4054992e383a411423b12f62fe154d6419eed20029",
+  "bytecode": "0x606060405262029810600155341561001657600080fd5b610116806100256000396000f300606060405263ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416630554e4a28114604f5780634bcc17091460715780637bb476f514609557600080fd5b3415605957600080fd5b605f60a5565b60405190815260200160405180910390f35b609360043573ffffffffffffffffffffffffffffffffffffffff6024351660b6565b005b3415609f57600080fd5b605f60c6565b600060ad60c6565b60005403905090565b5043600255600080549091019055565b6000806000600254430391506000546001548381151560e157fe5b040293925050505600a165627a7a723058209811dab0c7aeae96db0e716595b4b03bc63bc0fad5753cca3dea86961e3ae3a80029",
+  "deployedBytecode": "0x606060405263ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416630554e4a28114604f5780634bcc17091460715780637bb476f514609557600080fd5b3415605957600080fd5b605f60a5565b60405190815260200160405180910390f35b609360043573ffffffffffffffffffffffffffffffffffffffff6024351660b6565b005b3415609f57600080fd5b605f60c6565b600060ad60c6565b60005403905090565b5043600255600080549091019055565b6000806000600254430391506000546001548381151560e157fe5b040293925050505600a165627a7a723058209811dab0c7aeae96db0e716595b4b03bc63bc0fad5753cca3dea86961e3ae3a80029",
   "sourceMap": "25:850:7:-;;;93:6;71:28;;130:44;;;;;;;;25:850;;;;;;",
   "deployedSourceMap": "25:850:7:-;;;;;;;;;;;;;;;;;;;;;;;;;;;726:146;;;;;;;;;;;;;;;;;;;;;;;;;;;180:207;;;;;;;;;;;;393:327;;;;;;;;;;;;726:146;802:4;845:20;:18;:20::i;:::-;829:13;;:36;822:43;;726:146;:::o;180:207::-;-1:-1:-1;335:12:7;319:13;:28;357:13;:23;;;;;;;180:207::o;393:327::-;467:4;538:23;603:20;579:13;;564:12;:28;538:54;;666:13;;648:14;;627:18;:35;;;;;;;;626:53;;393:327;-1:-1:-1;;;393:327:7:o",
   "source": "pragma solidity ^0.4.4;\n\ncontract Buffer {\n    uint bufferBalance;\n    uint blocksInPeriod = 170000;\n    uint startingBlock;\n\n    function Buffer()\n        public\n    {\n    }\n\n    function Deposit(uint amount, address lret)\n        payable\n        public\n    {\n        //transferFrom(msg.sender, lret, amount);\n        startingBlock = block.number;\n        bufferBalance += amount;\n    }\n\n    function getAvailableAmount()\n        public\n        view\n        returns(uint)\n    {\n        //return amount of buffer available to CRR\n        uint blocksSinceDeposit = block.number - startingBlock;\n\n        uint availableAmount = (blocksSinceDeposit / blocksInPeriod) * bufferBalance;\n\n        return availableAmount;\n\n    }\n\n    function getUnavailableAmount()\n        public\n        view\n        returns(uint)\n    {\n        return bufferBalance - getAvailableAmount();\n    }\n\n}\n",
@@ -382,7 +382,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 10230,
+                                  "referencedDeclaration": 10439,
                                   "type": "block",
                                   "value": "block"
                                 },
@@ -594,7 +594,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 10230,
+                                  "referencedDeclaration": 10439,
                                   "type": "block",
                                   "value": "block"
                                 },
@@ -968,5 +968,5 @@
   },
   "networks": {},
   "schemaVersion": "1.0.0",
-  "updatedAt": "2018-02-28T18:05:46.245Z"
+  "updatedAt": "2018-03-02T16:04:52.214Z"
 }

@@ -51,7 +51,6 @@
           <th>Price</th>
           <th>Goal</th>
           <th>Raised</th>
-          <th>Entity</th>
           <th>Trustee</th>
         </tr>
       </thead>
@@ -69,14 +68,16 @@
           </td>
         </tr>
         <tr *ngFor="let ireo of ireos; let i = index">
-          <td>{{ireo.status}}</td>
+          <td>
+              <span *ngIf="ireo.status">Approved</span>
+              <span *ngIf="!ireo.status">Pending</span>
+          </td>
           <td>{{ireo.startTime}}</td>
           <td>{{ireo.endTime}}</td>
-          <td>{{ireo.price}}</td>
-          <td>{{ireo.goal}}</td>
-          <td>{{ireo.raised}}</td>
-          <td>{{ireo.entity}}</td>
-          <td>{{ireo.trustee}}</td>
+          <td>{{ireo.price}} ETH</td>
+          <td>{{ireo.goal}} ETH</td>
+          <td>{{ireo.raised}} ETH</td>
+          <td>{{ireo.trustee.name}}</td>
         </tr>
       </tbody>
     </table>

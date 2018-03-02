@@ -66,13 +66,17 @@ export class IreoComponent implements OnInit {
       }
     }
 
+    getTimestamp(_date) {
+        return moment(_date).format('X');
+    }
+
     createNewIREO() {
       this.newBtnStatus(true);
       let goal = (this._web3.web3.utils.toWei(this.ireo.goal+'', 'ether')).valueOf();
       let price = (this._web3.web3.utils.toWei(this.ireo.price+'', 'ether')).valueOf();
-      let startTime = moment(this.ireo.startTime).valueOf();
-      let endTime = moment(this.ireo.endTime).valueOf();
-      console.log(goal, price);
+      let startTime = this.getTimestamp(this.ireo.startTime);
+      let endTime = this.getTimestamp(this.ireo.endTime);
+
       this._web3.activeAccount()
         .then(account => {
           return this._web3.LiquidREInstance.methods.newIREO(this.ireo.trustee, startTime, endTime, goal, price)

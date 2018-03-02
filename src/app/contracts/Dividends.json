@@ -8,8 +8,8 @@
       "type": "constructor"
     }
   ],
-  "bytecode": "0x60606040523415600e57600080fd5b603580601b6000396000f3006060604052600080fd00a165627a7a7230582055d791b4180d374fb4d9da9f56e25accca172a91809e12c4a75906c6d2b507fe0029",
-  "deployedBytecode": "0x6060604052600080fd00a165627a7a7230582055d791b4180d374fb4d9da9f56e25accca172a91809e12c4a75906c6d2b507fe0029",
+  "bytecode": "0x60606040523415600e57600080fd5b603580601b6000396000f3006060604052600080fd00a165627a7a72305820d56f18010a849a8b26aed6688be45ca922102a045ef65d742ae83c015538ee7d0029",
+  "deployedBytecode": "0x6060604052600080fd00a165627a7a72305820d56f18010a849a8b26aed6688be45ca922102a045ef65d742ae83c015538ee7d0029",
   "sourceMap": "46:1247:8:-;;;299:34;;;;;;;;46:1247;;;;;;",
   "deployedSourceMap": "46:1247:8:-;;;;;",
   "source": "pragma solidity ^0.4.16;\nimport './TPEG.sol';\ncontract Dividends\n{\n\n  uint totalDividendPoints;\n  uint unclaimedDividends;\n  uint constant pointsMultiplier = 10e18;\n  struct Account {\n    uint balance;\n    uint lastDividendPoints;\n  }\n  mapping(address => Account) accounts;\n  //uint totalSupply;\n  function Dividends() public {\n\n  }\n\n  function dividendsOwing(address account) internal view returns(uint) {\n    var newDividendPoints = totalDividendPoints - accounts[account].lastDividendPoints;\n    return (accounts[account].balance * newDividendPoints) / pointsMultiplier;\n  }\n  modifier updateAccount(address account) {\n    var owing = dividendsOwing(account);\n    if (owing > 0) {\n      unclaimedDividends -= owing;\n      accounts[account].balance += owing;\n      accounts[account].lastDividendPoints = totalDividendPoints;\n    }\n    _;\n  }\n\n  /**\n  ** This function will disburse a dividend of TST\n  **/\n  /* function disburseDividend(uint amount) public {\n    //var totalDividendPoints += (amount * pointsMultiplier / totalSupply);\n    //totalSupply += amount;\n    unclaimedDividends += amount;\n    //TST.transfer(,unclaimedDividends);\n  } */\n\n  /**\n  ** This function will accept a deposit of TST\n  **/\n  /* function despositDividend(uint amount, address lret) public pure {\n\n  } */\n\n\n}\n",
@@ -39,7 +39,7 @@
       },
       {
         "attributes": {
-          "SourceUnit": 2288,
+          "SourceUnit": 2424,
           "absolutePath": "/Users/chanopalis/Documents/ethereum-contracts/smart-law-contracts/DexRE-Contract/contracts/LiquidRE/TPEG.sol",
           "file": "./TPEG.sol",
           "scope": 1254,
@@ -1164,5 +1164,5 @@
   },
   "networks": {},
   "schemaVersion": "1.0.0",
-  "updatedAt": "2018-02-28T18:05:46.245Z"
+  "updatedAt": "2018-03-02T16:04:52.214Z"
 }

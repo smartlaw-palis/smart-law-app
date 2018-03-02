@@ -72,7 +72,7 @@
       "absolutePath": "/Users/chanopalis/Documents/ethereum-contracts/smart-law-contracts/DexRE-Contract/contracts/LiquidRE/bancor/interfaces/ITokenHolder.sol",
       "exportedSymbols": {
         "ITokenHolder": [
-          7824
+          8033
         ]
       }
     },
@@ -86,54 +86,54 @@
             ".11"
           ]
         },
-        "id": 7810,
+        "id": 8019,
         "name": "PragmaDirective",
-        "src": "0:24:42"
+        "src": "0:24:43"
       },
       {
         "attributes": {
-          "SourceUnit": 7728,
+          "SourceUnit": 7937,
           "absolutePath": "/Users/chanopalis/Documents/ethereum-contracts/smart-law-contracts/DexRE-Contract/contracts/LiquidRE/bancor/interfaces/IOwned.sol",
           "file": "./IOwned.sol",
-          "scope": 7825,
+          "scope": 8034,
           "symbolAliases": [
             null
           ],
           "unitAlias": ""
         },
-        "id": 7811,
+        "id": 8020,
         "name": "ImportDirective",
-        "src": "25:22:42"
+        "src": "25:22:43"
       },
       {
         "attributes": {
-          "SourceUnit": 7687,
+          "SourceUnit": 7896,
           "absolutePath": "/Users/chanopalis/Documents/ethereum-contracts/smart-law-contracts/DexRE-Contract/contracts/LiquidRE/bancor/interfaces/IERC20Token.sol",
           "file": "./IERC20Token.sol",
-          "scope": 7825,
+          "scope": 8034,
           "symbolAliases": [
             null
           ],
           "unitAlias": ""
         },
-        "id": 7812,
+        "id": 8021,
         "name": "ImportDirective",
-        "src": "48:27:42"
+        "src": "48:27:43"
       },
       {
         "attributes": {
           "contractDependencies": [
-            7727
+            7936
           ],
           "contractKind": "contract",
           "documentation": null,
           "fullyImplemented": false,
           "linearizedBaseContracts": [
-            7824,
-            7727
+            8033,
+            7936
           ],
           "name": "ITokenHolder",
-          "scope": 7825
+          "scope": 8034
         },
         "children": [
           {
@@ -147,17 +147,17 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "IOwned",
-                  "referencedDeclaration": 7727,
+                  "referencedDeclaration": 7936,
                   "type": "contract IOwned"
                 },
-                "id": 7813,
+                "id": 8022,
                 "name": "UserDefinedTypeName",
-                "src": "135:6:42"
+                "src": "135:6:43"
               }
             ],
-            "id": 7814,
+            "id": 8023,
             "name": "InheritanceSpecifier",
-            "src": "135:6:42"
+            "src": "135:6:43"
           },
           {
             "attributes": {
@@ -170,7 +170,7 @@
               ],
               "name": "withdrawTokens",
               "payable": false,
-              "scope": 7824,
+              "scope": 8033,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -182,7 +182,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_token",
-                      "scope": 7823,
+                      "scope": 8032,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "contract IERC20Token",
@@ -194,23 +194,23 @@
                         "attributes": {
                           "contractScope": null,
                           "name": "IERC20Token",
-                          "referencedDeclaration": 7686,
+                          "referencedDeclaration": 7895,
                           "type": "contract IERC20Token"
                         },
-                        "id": 7815,
+                        "id": 8024,
                         "name": "UserDefinedTypeName",
-                        "src": "172:11:42"
+                        "src": "172:11:43"
                       }
                     ],
-                    "id": 7816,
+                    "id": 8025,
                     "name": "VariableDeclaration",
-                    "src": "172:18:42"
+                    "src": "172:18:43"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "name": "_to",
-                      "scope": 7823,
+                      "scope": 8032,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -223,20 +223,20 @@
                           "name": "address",
                           "type": "address"
                         },
-                        "id": 7817,
+                        "id": 8026,
                         "name": "ElementaryTypeName",
-                        "src": "192:7:42"
+                        "src": "192:7:43"
                       }
                     ],
-                    "id": 7818,
+                    "id": 8027,
                     "name": "VariableDeclaration",
-                    "src": "192:11:42"
+                    "src": "192:11:43"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "name": "_amount",
-                      "scope": 7823,
+                      "scope": 8032,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -249,19 +249,19 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 7819,
+                        "id": 8028,
                         "name": "ElementaryTypeName",
-                        "src": "205:7:42"
+                        "src": "205:7:43"
                       }
                     ],
-                    "id": 7820,
+                    "id": 8029,
                     "name": "VariableDeclaration",
-                    "src": "205:15:42"
+                    "src": "205:15:43"
                   }
                 ],
-                "id": 7821,
+                "id": 8030,
                 "name": "ParameterList",
-                "src": "171:50:42"
+                "src": "171:50:43"
               },
               {
                 "attributes": {
@@ -270,26 +270,26 @@
                   ]
                 },
                 "children": [],
-                "id": 7822,
+                "id": 8031,
                 "name": "ParameterList",
-                "src": "228:0:42"
+                "src": "228:0:43"
               }
             ],
-            "id": 7823,
+            "id": 8032,
             "name": "FunctionDefinition",
-            "src": "148:81:42"
+            "src": "148:81:43"
           }
         ],
-        "id": 7824,
+        "id": 8033,
         "name": "ContractDefinition",
-        "src": "110:121:42"
+        "src": "110:121:43"
       }
     ],
-    "id": 7825,
+    "id": 8034,
     "name": "SourceUnit",
-    "src": "0:232:42"
+    "src": "0:232:43"
   },
   "networks": {},
   "schemaVersion": "1.0.0",
-  "updatedAt": "2018-02-28T18:05:46.276Z"
+  "updatedAt": "2018-03-02T16:04:52.257Z"
 }

@@ -195,10 +195,10 @@
       "type": "event"
     }
   ],
-  "bytecode": "0x6060604052341561000f57600080fd5b6040516060806106ce83398101604052808051919060200180519190602001805160008054600160a060020a03191633600160a060020a03908116919091179091559092508491508116151561006457600080fd5b82600160a060020a038116151561007a57600080fd5b82600160a060020a038116151561009057600080fd5b505060028054600160a060020a03958616600160a060020a031991821617909155600380549486169482169490941790935550600480549190931691161790556105ef806100df6000396000f300606060405236156100ac5763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416634b75f54f81146100b15780635e35359e146100e057806379ba50971461010a5780638da5cb5b1461011d578063961a929c14610130578063bbc5d3d914610143578063c31e054714610162578063d4ee1d9014610175578063e33051dd14610188578063ecc06c76146101a7578063f2fde38b146101c6575b600080fd5b34156100bc57600080fd5b6100c46101e5565b604051600160a060020a03909116815260200160405180910390f35b34156100eb57600080fd5b610108600160a060020a03600435811690602435166044356101f4565b005b341561011557600080fd5b6101086102fb565b341561012857600080fd5b6100c46103a2565b341561013b57600080fd5b6100c46103b1565b341561014e57600080fd5b610108600160a060020a03600435166103c0565b341561016d57600080fd5b6100c4610441565b341561018057600080fd5b6100c4610450565b341561019357600080fd5b610108600160a060020a036004351661045f565b34156101b257600080fd5b610108600160a060020a03600435166104e0565b34156101d157600080fd5b610108600160a060020a0360043516610561565b600254600160a060020a031681565b60005433600160a060020a0390811691161461020c57fe5b82600160a060020a038116151561022257600080fd5b82600160a060020a038116151561023857600080fd5b8330600160a060020a031681600160a060020a03161415151561025a57600080fd5b85600160a060020a031663a9059cbb86866000604051602001526040517c010000000000000000000000000000000000000000000000000000000063ffffffff8516028152600160a060020a0390921660048301526024820152604401602060405180830381600087803b15156102d057600080fd5b6102c65a03f115156102e157600080fd5b5050506040518051905015156102f357fe5b505050505050565b60015433600160a060020a0390811691161461031657600080fd5b6000546001547f343765429aea5a34b3ff6a3785a98a5abb2597aca87bfbb58632c173d585373a91600160a060020a039081169116604051600160a060020a039283168152911660208201526040908101905180910390a1600180546000805473ffffffffffffffffffffffffffffffffffffffff19908116600160a060020a03841617909155169055565b600054600160a060020a031681565b600354600160a060020a031681565b60005433600160a060020a039081169116146103d857fe5b80600160a060020a03811615156103ee57600080fd5b8130600160a060020a031681600160a060020a03161415151561041057600080fd5b50506004805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392909216919091179055565b600454600160a060020a031681565b600154600160a060020a031681565b60005433600160a060020a0390811691161461047757fe5b80600160a060020a038116151561048d57600080fd5b8130600160a060020a031681600160a060020a0316141515156104af57600080fd5b50506003805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392909216919091179055565b60005433600160a060020a039081169116146104f857fe5b80600160a060020a038116151561050e57600080fd5b8130600160a060020a031681600160a060020a03161415151561053057600080fd5b50506002805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392909216919091179055565b60005433600160a060020a0390811691161461057957fe5b600054600160a060020a038281169116141561059457600080fd5b6001805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a03929092169190911790555600a165627a7a72305820ba6a53bf862fe591b8612917c66af4295816e9329cb17b45d081d876c472f4d40029",
-  "deployedBytecode": "0x606060405236156100ac5763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416634b75f54f81146100b15780635e35359e146100e057806379ba50971461010a5780638da5cb5b1461011d578063961a929c14610130578063bbc5d3d914610143578063c31e054714610162578063d4ee1d9014610175578063e33051dd14610188578063ecc06c76146101a7578063f2fde38b146101c6575b600080fd5b34156100bc57600080fd5b6100c46101e5565b604051600160a060020a03909116815260200160405180910390f35b34156100eb57600080fd5b610108600160a060020a03600435811690602435166044356101f4565b005b341561011557600080fd5b6101086102fb565b341561012857600080fd5b6100c46103a2565b341561013b57600080fd5b6100c46103b1565b341561014e57600080fd5b610108600160a060020a03600435166103c0565b341561016d57600080fd5b6100c4610441565b341561018057600080fd5b6100c4610450565b341561019357600080fd5b610108600160a060020a036004351661045f565b34156101b257600080fd5b610108600160a060020a03600435166104e0565b34156101d157600080fd5b610108600160a060020a0360043516610561565b600254600160a060020a031681565b60005433600160a060020a0390811691161461020c57fe5b82600160a060020a038116151561022257600080fd5b82600160a060020a038116151561023857600080fd5b8330600160a060020a031681600160a060020a03161415151561025a57600080fd5b85600160a060020a031663a9059cbb86866000604051602001526040517c010000000000000000000000000000000000000000000000000000000063ffffffff8516028152600160a060020a0390921660048301526024820152604401602060405180830381600087803b15156102d057600080fd5b6102c65a03f115156102e157600080fd5b5050506040518051905015156102f357fe5b505050505050565b60015433600160a060020a0390811691161461031657600080fd5b6000546001547f343765429aea5a34b3ff6a3785a98a5abb2597aca87bfbb58632c173d585373a91600160a060020a039081169116604051600160a060020a039283168152911660208201526040908101905180910390a1600180546000805473ffffffffffffffffffffffffffffffffffffffff19908116600160a060020a03841617909155169055565b600054600160a060020a031681565b600354600160a060020a031681565b60005433600160a060020a039081169116146103d857fe5b80600160a060020a03811615156103ee57600080fd5b8130600160a060020a031681600160a060020a03161415151561041057600080fd5b50506004805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392909216919091179055565b600454600160a060020a031681565b600154600160a060020a031681565b60005433600160a060020a0390811691161461047757fe5b80600160a060020a038116151561048d57600080fd5b8130600160a060020a031681600160a060020a0316141515156104af57600080fd5b50506003805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392909216919091179055565b60005433600160a060020a039081169116146104f857fe5b80600160a060020a038116151561050e57600080fd5b8130600160a060020a031681600160a060020a03161415151561053057600080fd5b50506002805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392909216919091179055565b60005433600160a060020a0390811691161461057957fe5b600054600160a060020a038281169116141561059457600080fd5b6001805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a03929092169190911790555600a165627a7a72305820ba6a53bf862fe591b8612917c66af4295816e9329cb17b45d081d876c472f4d40029",
-  "sourceMap": "484:2098:14:-;;;1084:379;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;348:5:23;:18;;-1:-1:-1;;;;;;348:18:23;356:10;-1:-1:-1;;;;;348:18:23;;;;;;;;;;1084:379:14;;-1:-1:-1;1241:8:14;;-1:-1:-1;435:15:27;;;;427:24;;;;;;1272:14:14;-1:-1:-1;;;;;435:15:27;;;;427:24;;;;;;1309:15:14;-1:-1:-1;;;;;435:15:27;;;;427:24;;;;;;-1:-1:-1;;1356:7:14;:18;;-1:-1:-1;;;;;1356:18:14;;;-1:-1:-1;;;;;;1356:18:14;;;;;;;1384:13;:30;;;;;;;;;;;;;;;-1:-1:-1;1424:14:14;:32;;;;;;;;;;;484:2098;;;;;;",
-  "deployedSourceMap": "484:2098:14:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;568:29;;;;;;;;;;;;;;;-1:-1:-1;;;;;568:29:14;;;;;;;;;;;;;;901:241:26;;;;;;;;;;-1:-1:-1;;;;;901:241:26;;;;;;;;;;;;;;949:170:23;;;;;;;;;;;;155:20;;;;;;;;;;;;643:41:14;;;;;;;;;;;;2357:223;;;;;;;;;;-1:-1:-1;;;;;2357:223:14;;;;;735:43;;;;;;;;;;;;181:23:23;;;;;;;;;;;;1966:216:14;;;;;;;;;;-1:-1:-1;;;;;1966:216:14;;;;;1617:174;;;;;;;;;;-1:-1:-1;;;;;1617:174:14;;;;;726:137:23;;;;;;;;;;-1:-1:-1;;;;;726:137:23;;;;;568:29:14;;;-1:-1:-1;;;;;568:29:14;;:::o;901:241:26:-;471:5:23;;457:10;-1:-1:-1;;;;;457:19:23;;;471:5;;457:19;450:27;;;;1029:6:26;-1:-1:-1;;;;;435:15:27;;;;427:24;;;;;;1058:3:26;-1:-1:-1;;;;;435:15:27;;;;427:24;;;;;;1079:3:26;621:4:27;-1:-1:-1;;;;;601:25:27;:8;-1:-1:-1;;;;;601:25:27;;;593:34;;;;;;;;1105:6:26;-1:-1:-1;;;;;1105:15:26;;1121:3;1126:7;1105:29;;;;;;;;;;;;;;;-1:-1:-1;;;;;1105:29:26;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1098:37;;;;;;461:1:27;;487::23;901:241:26;;;:::o;949:170:23:-;1015:8;;1001:10;-1:-1:-1;;;;;1001:22:23;;;1015:8;;1001:22;993:31;;;;;;1046:5;;;1053:8;1034:28;;-1:-1:-1;;;;;1046:5:23;;;;1053:8;1034:28;;-1:-1:-1;;;;;1034:28:23;;;;;;;;;;;;;;;;;;;;;;1080:8;;;;1072:16;;-1:-1:-1;;1072:16:23;;;-1:-1:-1;;;;;1080:8:23;;1072:16;;;;1098:14;;;949:170::o;155:20::-;;;-1:-1:-1;;;;;155:20:23;;:::o;643:41:14:-;;;-1:-1:-1;;;;;643:41:14;;:::o;2357:223::-;471:5:23;;457:10;-1:-1:-1;;;;;457:19:23;;;471:5;;457:19;450:27;;;;2477:15:14;-1:-1:-1;;;;;435:15:27;;;;427:24;;;;;;2510:15:14;621:4:27;-1:-1:-1;;;;;601:25:27;:8;-1:-1:-1;;;;;601:25:27;;;593:34;;;;;;;;-1:-1:-1;;2541:14:14;:32;;-1:-1:-1;;2541:32:14;-1:-1:-1;;;;;2541:32:14;;;;;;;;;;2357:223::o;735:43::-;;;-1:-1:-1;;;;;735:43:14;;:::o;181:23:23:-;;;-1:-1:-1;;;;;181:23:23;;:::o;1966:216:14:-;471:5:23;;457:10;-1:-1:-1;;;;;457:19:23;;;471:5;;457:19;450:27;;;;2083:14:14;-1:-1:-1;;;;;435:15:27;;;;427:24;;;;;;2115:14:14;621:4:27;-1:-1:-1;;;;;601:25:27;:8;-1:-1:-1;;;;;601:25:27;;;593:34;;;;;;;;-1:-1:-1;;2145:13:14;:30;;-1:-1:-1;;2145:30:14;-1:-1:-1;;;;;2145:30:14;;;;;;;;;;1966:216::o;1617:174::-;471:5:23;;457:10;-1:-1:-1;;;;;457:19:23;;;471:5;;457:19;450:27;;;;1716:8:14;-1:-1:-1;;;;;435:15:27;;;;427:24;;;;;;1742:8:14;621:4:27;-1:-1:-1;;;;;601:25:27;:8;-1:-1:-1;;;;;601:25:27;;;593:34;;;;;;;;-1:-1:-1;;1766:7:14;:18;;-1:-1:-1;;1766:18:14;-1:-1:-1;;;;;1766:18:14;;;;;;;;;;1617:174::o;726:137:23:-;471:5;;457:10;-1:-1:-1;;;;;457:19:23;;;471:5;;457:19;450:27;;;;820:5;;-1:-1:-1;;;;;807:18:23;;;820:5;;807:18;;799:27;;;;;;836:8;:20;;-1:-1:-1;;836:20:23;-1:-1:-1;;;;;836:20:23;;;;;;;;;;726:137::o",
+  "bytecode": "0x6060604052341561000f57600080fd5b6040516060806106ce83398101604052808051919060200180519190602001805160008054600160a060020a03191633600160a060020a03908116919091179091559092508491508116151561006457600080fd5b82600160a060020a038116151561007a57600080fd5b82600160a060020a038116151561009057600080fd5b505060028054600160a060020a03958616600160a060020a031991821617909155600380549486169482169490941790935550600480549190931691161790556105ef806100df6000396000f300606060405236156100ac5763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416634b75f54f81146100b15780635e35359e146100e057806379ba50971461010a5780638da5cb5b1461011d578063961a929c14610130578063bbc5d3d914610143578063c31e054714610162578063d4ee1d9014610175578063e33051dd14610188578063ecc06c76146101a7578063f2fde38b146101c6575b600080fd5b34156100bc57600080fd5b6100c46101e5565b604051600160a060020a03909116815260200160405180910390f35b34156100eb57600080fd5b610108600160a060020a03600435811690602435166044356101f4565b005b341561011557600080fd5b6101086102fb565b341561012857600080fd5b6100c46103a2565b341561013b57600080fd5b6100c46103b1565b341561014e57600080fd5b610108600160a060020a03600435166103c0565b341561016d57600080fd5b6100c4610441565b341561018057600080fd5b6100c4610450565b341561019357600080fd5b610108600160a060020a036004351661045f565b34156101b257600080fd5b610108600160a060020a03600435166104e0565b34156101d157600080fd5b610108600160a060020a0360043516610561565b600254600160a060020a031681565b60005433600160a060020a0390811691161461020c57fe5b82600160a060020a038116151561022257600080fd5b82600160a060020a038116151561023857600080fd5b8330600160a060020a031681600160a060020a03161415151561025a57600080fd5b85600160a060020a031663a9059cbb86866000604051602001526040517c010000000000000000000000000000000000000000000000000000000063ffffffff8516028152600160a060020a0390921660048301526024820152604401602060405180830381600087803b15156102d057600080fd5b6102c65a03f115156102e157600080fd5b5050506040518051905015156102f357fe5b505050505050565b60015433600160a060020a0390811691161461031657600080fd5b6000546001547f343765429aea5a34b3ff6a3785a98a5abb2597aca87bfbb58632c173d585373a91600160a060020a039081169116604051600160a060020a039283168152911660208201526040908101905180910390a1600180546000805473ffffffffffffffffffffffffffffffffffffffff19908116600160a060020a03841617909155169055565b600054600160a060020a031681565b600354600160a060020a031681565b60005433600160a060020a039081169116146103d857fe5b80600160a060020a03811615156103ee57600080fd5b8130600160a060020a031681600160a060020a03161415151561041057600080fd5b50506004805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392909216919091179055565b600454600160a060020a031681565b600154600160a060020a031681565b60005433600160a060020a0390811691161461047757fe5b80600160a060020a038116151561048d57600080fd5b8130600160a060020a031681600160a060020a0316141515156104af57600080fd5b50506003805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392909216919091179055565b60005433600160a060020a039081169116146104f857fe5b80600160a060020a038116151561050e57600080fd5b8130600160a060020a031681600160a060020a03161415151561053057600080fd5b50506002805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392909216919091179055565b60005433600160a060020a0390811691161461057957fe5b600054600160a060020a038281169116141561059457600080fd5b6001805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a03929092169190911790555600a165627a7a7230582070637be7747ffd4ef832def7e4424c6ab278d966f8c353ac7cb7e1fe81c2da1c0029",
+  "deployedBytecode": "0x606060405236156100ac5763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416634b75f54f81146100b15780635e35359e146100e057806379ba50971461010a5780638da5cb5b1461011d578063961a929c14610130578063bbc5d3d914610143578063c31e054714610162578063d4ee1d9014610175578063e33051dd14610188578063ecc06c76146101a7578063f2fde38b146101c6575b600080fd5b34156100bc57600080fd5b6100c46101e5565b604051600160a060020a03909116815260200160405180910390f35b34156100eb57600080fd5b610108600160a060020a03600435811690602435166044356101f4565b005b341561011557600080fd5b6101086102fb565b341561012857600080fd5b6100c46103a2565b341561013b57600080fd5b6100c46103b1565b341561014e57600080fd5b610108600160a060020a03600435166103c0565b341561016d57600080fd5b6100c4610441565b341561018057600080fd5b6100c4610450565b341561019357600080fd5b610108600160a060020a036004351661045f565b34156101b257600080fd5b610108600160a060020a03600435166104e0565b34156101d157600080fd5b610108600160a060020a0360043516610561565b600254600160a060020a031681565b60005433600160a060020a0390811691161461020c57fe5b82600160a060020a038116151561022257600080fd5b82600160a060020a038116151561023857600080fd5b8330600160a060020a031681600160a060020a03161415151561025a57600080fd5b85600160a060020a031663a9059cbb86866000604051602001526040517c010000000000000000000000000000000000000000000000000000000063ffffffff8516028152600160a060020a0390921660048301526024820152604401602060405180830381600087803b15156102d057600080fd5b6102c65a03f115156102e157600080fd5b5050506040518051905015156102f357fe5b505050505050565b60015433600160a060020a0390811691161461031657600080fd5b6000546001547f343765429aea5a34b3ff6a3785a98a5abb2597aca87bfbb58632c173d585373a91600160a060020a039081169116604051600160a060020a039283168152911660208201526040908101905180910390a1600180546000805473ffffffffffffffffffffffffffffffffffffffff19908116600160a060020a03841617909155169055565b600054600160a060020a031681565b600354600160a060020a031681565b60005433600160a060020a039081169116146103d857fe5b80600160a060020a03811615156103ee57600080fd5b8130600160a060020a031681600160a060020a03161415151561041057600080fd5b50506004805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392909216919091179055565b600454600160a060020a031681565b600154600160a060020a031681565b60005433600160a060020a0390811691161461047757fe5b80600160a060020a038116151561048d57600080fd5b8130600160a060020a031681600160a060020a0316141515156104af57600080fd5b50506003805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392909216919091179055565b60005433600160a060020a039081169116146104f857fe5b80600160a060020a038116151561050e57600080fd5b8130600160a060020a031681600160a060020a03161415151561053057600080fd5b50506002805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392909216919091179055565b60005433600160a060020a0390811691161461057957fe5b600054600160a060020a038281169116141561059457600080fd5b6001805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a03929092169190911790555600a165627a7a7230582070637be7747ffd4ef832def7e4424c6ab278d966f8c353ac7cb7e1fe81c2da1c0029",
+  "sourceMap": "484:2098:15:-;;;1084:379;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;348:5:24;:18;;-1:-1:-1;;;;;;348:18:24;356:10;-1:-1:-1;;;;;348:18:24;;;;;;;;;;1084:379:15;;-1:-1:-1;1241:8:15;;-1:-1:-1;435:15:28;;;;427:24;;;;;;1272:14:15;-1:-1:-1;;;;;435:15:28;;;;427:24;;;;;;1309:15:15;-1:-1:-1;;;;;435:15:28;;;;427:24;;;;;;-1:-1:-1;;1356:7:15;:18;;-1:-1:-1;;;;;1356:18:15;;;-1:-1:-1;;;;;;1356:18:15;;;;;;;1384:13;:30;;;;;;;;;;;;;;;-1:-1:-1;1424:14:15;:32;;;;;;;;;;;484:2098;;;;;;",
+  "deployedSourceMap": "484:2098:15:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;568:29;;;;;;;;;;;;;;;-1:-1:-1;;;;;568:29:15;;;;;;;;;;;;;;901:241:27;;;;;;;;;;-1:-1:-1;;;;;901:241:27;;;;;;;;;;;;;;949:170:24;;;;;;;;;;;;155:20;;;;;;;;;;;;643:41:15;;;;;;;;;;;;2357:223;;;;;;;;;;-1:-1:-1;;;;;2357:223:15;;;;;735:43;;;;;;;;;;;;181:23:24;;;;;;;;;;;;1966:216:15;;;;;;;;;;-1:-1:-1;;;;;1966:216:15;;;;;1617:174;;;;;;;;;;-1:-1:-1;;;;;1617:174:15;;;;;726:137:24;;;;;;;;;;-1:-1:-1;;;;;726:137:24;;;;;568:29:15;;;-1:-1:-1;;;;;568:29:15;;:::o;901:241:27:-;471:5:24;;457:10;-1:-1:-1;;;;;457:19:24;;;471:5;;457:19;450:27;;;;1029:6:27;-1:-1:-1;;;;;435:15:28;;;;427:24;;;;;;1058:3:27;-1:-1:-1;;;;;435:15:28;;;;427:24;;;;;;1079:3:27;621:4:28;-1:-1:-1;;;;;601:25:28;:8;-1:-1:-1;;;;;601:25:28;;;593:34;;;;;;;;1105:6:27;-1:-1:-1;;;;;1105:15:27;;1121:3;1126:7;1105:29;;;;;;;;;;;;;;;-1:-1:-1;;;;;1105:29:27;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1098:37;;;;;;461:1:28;;487::24;901:241:27;;;:::o;949:170:24:-;1015:8;;1001:10;-1:-1:-1;;;;;1001:22:24;;;1015:8;;1001:22;993:31;;;;;;1046:5;;;1053:8;1034:28;;-1:-1:-1;;;;;1046:5:24;;;;1053:8;1034:28;;-1:-1:-1;;;;;1034:28:24;;;;;;;;;;;;;;;;;;;;;;1080:8;;;;1072:16;;-1:-1:-1;;1072:16:24;;;-1:-1:-1;;;;;1080:8:24;;1072:16;;;;1098:14;;;949:170::o;155:20::-;;;-1:-1:-1;;;;;155:20:24;;:::o;643:41:15:-;;;-1:-1:-1;;;;;643:41:15;;:::o;2357:223::-;471:5:24;;457:10;-1:-1:-1;;;;;457:19:24;;;471:5;;457:19;450:27;;;;2477:15:15;-1:-1:-1;;;;;435:15:28;;;;427:24;;;;;;2510:15:15;621:4:28;-1:-1:-1;;;;;601:25:28;:8;-1:-1:-1;;;;;601:25:28;;;593:34;;;;;;;;-1:-1:-1;;2541:14:15;:32;;-1:-1:-1;;2541:32:15;-1:-1:-1;;;;;2541:32:15;;;;;;;;;;2357:223::o;735:43::-;;;-1:-1:-1;;;;;735:43:15;;:::o;181:23:24:-;;;-1:-1:-1;;;;;181:23:24;;:::o;1966:216:15:-;471:5:24;;457:10;-1:-1:-1;;;;;457:19:24;;;471:5;;457:19;450:27;;;;2083:14:15;-1:-1:-1;;;;;435:15:28;;;;427:24;;;;;;2115:14:15;621:4:28;-1:-1:-1;;;;;601:25:28;:8;-1:-1:-1;;;;;601:25:28;;;593:34;;;;;;;;-1:-1:-1;;2145:13:15;:30;;-1:-1:-1;;2145:30:15;-1:-1:-1;;;;;2145:30:15;;;;;;;;;;1966:216::o;1617:174::-;471:5:24;;457:10;-1:-1:-1;;;;;457:19:24;;;471:5;;457:19;450:27;;;;1716:8:15;-1:-1:-1;;;;;435:15:28;;;;427:24;;;;;;1742:8:15;621:4:28;-1:-1:-1;;;;;601:25:28;:8;-1:-1:-1;;;;;601:25:28;;;593:34;;;;;;;;-1:-1:-1;;1766:7:15;:18;;-1:-1:-1;;1766:18:15;-1:-1:-1;;;;;1766:18:15;;;;;;;;;;1617:174::o;726:137:24:-;471:5;;457:10;-1:-1:-1;;;;;457:19:24;;;471:5;;457:19;450:27;;;;820:5;;-1:-1:-1;;;;;807:18:24;;;820:5;;807:18;;799:27;;;;;;836:8;:20;;-1:-1:-1;;836:20:24;-1:-1:-1;;;;;836:20:24;;;;;;;;;;726:137::o",
   "source": "pragma solidity ^0.4.11;\nimport './TokenHolder.sol';\nimport './interfaces/IBancorConverterExtensions.sol';\n\n/**\n    @dev the BancorConverterExtensions contract is an owned contract that serves as a single point of access\n    to the BancorFormula, BancorGasPriceLimit and BancorQuickConverter contracts from all BancorConverter contract instances.\n    it allows upgrading these contracts without the need to update each and every\n    BancorConverter contract instance individually.\n*/\ncontract BancorConverterExtensions is IBancorConverterExtensions, TokenHolder {\n    IBancorFormula public formula;  // bancor calculation formula contract\n    IBancorGasPriceLimit public gasPriceLimit; // bancor universal gas price limit contract\n    IBancorQuickConverter public quickConverter; // bancor quick converter contract\n\n    /**\n        @dev constructor\n\n        @param _formula         address of a bancor formula contract\n        @param _gasPriceLimit   address of a bancor gas price limit contract\n        @param _quickConverter  address of a bancor quick converter contract\n    */\n    function BancorConverterExtensions(IBancorFormula _formula, IBancorGasPriceLimit _gasPriceLimit, IBancorQuickConverter _quickConverter)\n        validAddress(_formula)\n        validAddress(_gasPriceLimit)\n        validAddress(_quickConverter)\n        public \n    {\n        formula = _formula;\n        gasPriceLimit = _gasPriceLimit;\n        quickConverter = _quickConverter;\n    }\n\n    /*\n        @dev allows the owner to update the formula contract address\n\n        @param _formula    address of a bancor formula contract\n    */\n    function setFormula(IBancorFormula _formula)\n        public\n        ownerOnly\n        validAddress(_formula)\n        notThis(_formula)\n    {\n        formula = _formula;\n    }\n\n    /*\n        @dev allows the owner to update the gas price limit contract address\n\n        @param _gasPriceLimit   address of a bancor gas price limit contract\n    */\n    function setGasPriceLimit(IBancorGasPriceLimit _gasPriceLimit)\n        public\n        ownerOnly\n        validAddress(_gasPriceLimit)\n        notThis(_gasPriceLimit)\n    {\n        gasPriceLimit = _gasPriceLimit;\n    }\n\n    /*\n        @dev allows the owner to update the quick converter contract address\n\n        @param _quickConverter  address of a bancor quick converter contract\n    */\n    function setQuickConverter(IBancorQuickConverter _quickConverter)\n        public\n        ownerOnly\n        validAddress(_quickConverter)\n        notThis(_quickConverter)\n    {\n        quickConverter = _quickConverter;\n    }\n}\n",
   "sourcePath": "/Users/chanopalis/Documents/ethereum-contracts/smart-law-contracts/DexRE-Contract/contracts/LiquidRE/bancor/BancorConverterExtensions.sol",
   "ast": {
@@ -206,7 +206,7 @@
       "absolutePath": "/Users/chanopalis/Documents/ethereum-contracts/smart-law-contracts/DexRE-Contract/contracts/LiquidRE/bancor/BancorConverterExtensions.sol",
       "exportedSymbols": {
         "BancorConverterExtensions": [
-          3652
+          3788
         ]
       }
     },
@@ -220,64 +220,64 @@
             ".11"
           ]
         },
-        "id": 3554,
+        "id": 3690,
         "name": "PragmaDirective",
-        "src": "0:24:14"
+        "src": "0:24:15"
       },
       {
         "attributes": {
-          "SourceUnit": 7065,
+          "SourceUnit": 7201,
           "absolutePath": "/Users/chanopalis/Documents/ethereum-contracts/smart-law-contracts/DexRE-Contract/contracts/LiquidRE/bancor/TokenHolder.sol",
           "file": "./TokenHolder.sol",
-          "scope": 3653,
+          "scope": 3789,
           "symbolAliases": [
             null
           ],
           "unitAlias": ""
         },
-        "id": 3555,
+        "id": 3691,
         "name": "ImportDirective",
-        "src": "25:27:14"
+        "src": "25:27:15"
       },
       {
         "attributes": {
-          "SourceUnit": 7539,
+          "SourceUnit": 7748,
           "absolutePath": "/Users/chanopalis/Documents/ethereum-contracts/smart-law-contracts/DexRE-Contract/contracts/LiquidRE/bancor/interfaces/IBancorConverterExtensions.sol",
           "file": "./interfaces/IBancorConverterExtensions.sol",
-          "scope": 3653,
+          "scope": 3789,
           "symbolAliases": [
             null
           ],
           "unitAlias": ""
         },
-        "id": 3556,
+        "id": 3692,
         "name": "ImportDirective",
-        "src": "53:53:14"
+        "src": "53:53:15"
       },
       {
         "attributes": {
           "contractDependencies": [
-            6694,
-            7064,
-            7236,
-            7538,
-            7727,
-            7824
+            6830,
+            7200,
+            7445,
+            7747,
+            7936,
+            8033
           ],
           "contractKind": "contract",
           "documentation": "@dev the BancorConverterExtensions contract is an owned contract that serves as a single point of access\nto the BancorFormula, BancorGasPriceLimit and BancorQuickConverter contracts from all BancorConverter contract instances.\nit allows upgrading these contracts without the need to update each and every\nBancorConverter contract instance individually.",
           "fullyImplemented": true,
           "linearizedBaseContracts": [
-            3652,
-            7064,
-            7236,
-            6694,
-            7824,
-            7727,
-            7538
+            3788,
+            7200,
+            7445,
+            6830,
+            8033,
+            7936,
+            7747
           ],
           "name": "BancorConverterExtensions",
-          "scope": 3653
+          "scope": 3789
         },
         "children": [
           {
@@ -291,17 +291,17 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "IBancorConverterExtensions",
-                  "referencedDeclaration": 7538,
+                  "referencedDeclaration": 7747,
                   "type": "contract IBancorConverterExtensions"
                 },
-                "id": 3557,
+                "id": 3693,
                 "name": "UserDefinedTypeName",
-                "src": "522:26:14"
+                "src": "522:26:15"
               }
             ],
-            "id": 3558,
+            "id": 3694,
             "name": "InheritanceSpecifier",
-            "src": "522:26:14"
+            "src": "522:26:15"
           },
           {
             "attributes": {
@@ -314,23 +314,23 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "TokenHolder",
-                  "referencedDeclaration": 7064,
+                  "referencedDeclaration": 7200,
                   "type": "contract TokenHolder"
                 },
-                "id": 3559,
+                "id": 3695,
                 "name": "UserDefinedTypeName",
-                "src": "550:11:14"
+                "src": "550:11:15"
               }
             ],
-            "id": 3560,
+            "id": 3696,
             "name": "InheritanceSpecifier",
-            "src": "550:11:14"
+            "src": "550:11:15"
           },
           {
             "attributes": {
               "constant": false,
               "name": "formula",
-              "scope": 3652,
+              "scope": 3788,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "contract IBancorFormula",
@@ -342,23 +342,23 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "IBancorFormula",
-                  "referencedDeclaration": 7567,
+                  "referencedDeclaration": 7776,
                   "type": "contract IBancorFormula"
                 },
-                "id": 3561,
+                "id": 3697,
                 "name": "UserDefinedTypeName",
-                "src": "568:14:14"
+                "src": "568:14:15"
               }
             ],
-            "id": 3562,
+            "id": 3698,
             "name": "VariableDeclaration",
-            "src": "568:29:14"
+            "src": "568:29:15"
           },
           {
             "attributes": {
               "constant": false,
               "name": "gasPriceLimit",
-              "scope": 3652,
+              "scope": 3788,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "contract IBancorGasPriceLimit",
@@ -370,23 +370,23 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "IBancorGasPriceLimit",
-                  "referencedDeclaration": 7576,
+                  "referencedDeclaration": 7785,
                   "type": "contract IBancorGasPriceLimit"
                 },
-                "id": 3563,
+                "id": 3699,
                 "name": "UserDefinedTypeName",
-                "src": "643:20:14"
+                "src": "643:20:15"
               }
             ],
-            "id": 3564,
+            "id": 3700,
             "name": "VariableDeclaration",
-            "src": "643:41:14"
+            "src": "643:41:15"
           },
           {
             "attributes": {
               "constant": false,
               "name": "quickConverter",
-              "scope": 3652,
+              "scope": 3788,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "contract IBancorQuickConverter",
@@ -398,17 +398,17 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "IBancorQuickConverter",
-                  "referencedDeclaration": 7606,
+                  "referencedDeclaration": 7815,
                   "type": "contract IBancorQuickConverter"
                 },
-                "id": 3565,
+                "id": 3701,
                 "name": "UserDefinedTypeName",
-                "src": "735:21:14"
+                "src": "735:21:15"
               }
             ],
-            "id": 3566,
+            "id": 3702,
             "name": "VariableDeclaration",
-            "src": "735:43:14"
+            "src": "735:43:15"
           },
           {
             "attributes": {
@@ -417,7 +417,7 @@
               "isConstructor": true,
               "name": "BancorConverterExtensions",
               "payable": false,
-              "scope": 3652,
+              "scope": 3788,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -429,7 +429,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_formula",
-                      "scope": 3597,
+                      "scope": 3733,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "contract IBancorFormula",
@@ -441,23 +441,23 @@
                         "attributes": {
                           "contractScope": null,
                           "name": "IBancorFormula",
-                          "referencedDeclaration": 7567,
+                          "referencedDeclaration": 7776,
                           "type": "contract IBancorFormula"
                         },
-                        "id": 3567,
+                        "id": 3703,
                         "name": "UserDefinedTypeName",
-                        "src": "1119:14:14"
+                        "src": "1119:14:15"
                       }
                     ],
-                    "id": 3568,
+                    "id": 3704,
                     "name": "VariableDeclaration",
-                    "src": "1119:23:14"
+                    "src": "1119:23:15"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "name": "_gasPriceLimit",
-                      "scope": 3597,
+                      "scope": 3733,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "contract IBancorGasPriceLimit",
@@ -469,23 +469,23 @@
                         "attributes": {
                           "contractScope": null,
                           "name": "IBancorGasPriceLimit",
-                          "referencedDeclaration": 7576,
+                          "referencedDeclaration": 7785,
                           "type": "contract IBancorGasPriceLimit"
                         },
-                        "id": 3569,
+                        "id": 3705,
                         "name": "UserDefinedTypeName",
-                        "src": "1144:20:14"
+                        "src": "1144:20:15"
                       }
                     ],
-                    "id": 3570,
+                    "id": 3706,
                     "name": "VariableDeclaration",
-                    "src": "1144:35:14"
+                    "src": "1144:35:15"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "name": "_quickConverter",
-                      "scope": 3597,
+                      "scope": 3733,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "contract IBancorQuickConverter",
@@ -497,22 +497,22 @@
                         "attributes": {
                           "contractScope": null,
                           "name": "IBancorQuickConverter",
-                          "referencedDeclaration": 7606,
+                          "referencedDeclaration": 7815,
                           "type": "contract IBancorQuickConverter"
                         },
-                        "id": 3571,
+                        "id": 3707,
                         "name": "UserDefinedTypeName",
-                        "src": "1181:21:14"
+                        "src": "1181:21:15"
                       }
                     ],
-                    "id": 3572,
+                    "id": 3708,
                     "name": "VariableDeclaration",
-                    "src": "1181:37:14"
+                    "src": "1181:37:15"
                   }
                 ],
-                "id": 3573,
+                "id": 3709,
                 "name": "ParameterList",
-                "src": "1118:101:14"
+                "src": "1118:101:15"
               },
               {
                 "attributes": {
@@ -521,9 +521,9 @@
                   ]
                 },
                 "children": [],
-                "id": 3583,
+                "id": 3719,
                 "name": "ParameterList",
-                "src": "1346:0:14"
+                "src": "1346:0:15"
               },
               {
                 "children": [
@@ -533,13 +533,13 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 7094,
+                      "referencedDeclaration": 7230,
                       "type": "modifier (address)",
                       "value": "validAddress"
                     },
-                    "id": 3574,
+                    "id": 3710,
                     "name": "Identifier",
-                    "src": "1228:12:14"
+                    "src": "1228:12:15"
                   },
                   {
                     "attributes": {
@@ -547,18 +547,18 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 3568,
+                      "referencedDeclaration": 3704,
                       "type": "contract IBancorFormula",
                       "value": "_formula"
                     },
-                    "id": 3575,
+                    "id": 3711,
                     "name": "Identifier",
-                    "src": "1241:8:14"
+                    "src": "1241:8:15"
                   }
                 ],
-                "id": 3576,
+                "id": 3712,
                 "name": "ModifierInvocation",
-                "src": "1228:22:14"
+                "src": "1228:22:15"
               },
               {
                 "children": [
@@ -568,13 +568,13 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 7094,
+                      "referencedDeclaration": 7230,
                       "type": "modifier (address)",
                       "value": "validAddress"
                     },
-                    "id": 3577,
+                    "id": 3713,
                     "name": "Identifier",
-                    "src": "1259:12:14"
+                    "src": "1259:12:15"
                   },
                   {
                     "attributes": {
@@ -582,18 +582,18 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 3570,
+                      "referencedDeclaration": 3706,
                       "type": "contract IBancorGasPriceLimit",
                       "value": "_gasPriceLimit"
                     },
-                    "id": 3578,
+                    "id": 3714,
                     "name": "Identifier",
-                    "src": "1272:14:14"
+                    "src": "1272:14:15"
                   }
                 ],
-                "id": 3579,
+                "id": 3715,
                 "name": "ModifierInvocation",
-                "src": "1259:28:14"
+                "src": "1259:28:15"
               },
               {
                 "children": [
@@ -603,13 +603,13 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 7094,
+                      "referencedDeclaration": 7230,
                       "type": "modifier (address)",
                       "value": "validAddress"
                     },
-                    "id": 3580,
+                    "id": 3716,
                     "name": "Identifier",
-                    "src": "1296:12:14"
+                    "src": "1296:12:15"
                   },
                   {
                     "attributes": {
@@ -617,18 +617,18 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 3572,
+                      "referencedDeclaration": 3708,
                       "type": "contract IBancorQuickConverter",
                       "value": "_quickConverter"
                     },
-                    "id": 3581,
+                    "id": 3717,
                     "name": "Identifier",
-                    "src": "1309:15:14"
+                    "src": "1309:15:15"
                   }
                 ],
-                "id": 3582,
+                "id": 3718,
                 "name": "ModifierInvocation",
-                "src": "1296:29:14"
+                "src": "1296:29:15"
               },
               {
                 "children": [
@@ -649,15 +649,15 @@
                             "attributes": {
                               "argumentTypes": null,
                               "overloadedDeclarations": [
-                                3562
+                                3698
                               ],
-                              "referencedDeclaration": 3562,
+                              "referencedDeclaration": 3698,
                               "type": "contract IBancorFormula",
                               "value": "formula"
                             },
-                            "id": 3584,
+                            "id": 3720,
                             "name": "Identifier",
-                            "src": "1356:7:14"
+                            "src": "1356:7:15"
                           },
                           {
                             "attributes": {
@@ -665,23 +665,23 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 3568,
+                              "referencedDeclaration": 3704,
                               "type": "contract IBancorFormula",
                               "value": "_formula"
                             },
-                            "id": 3585,
+                            "id": 3721,
                             "name": "Identifier",
-                            "src": "1366:8:14"
+                            "src": "1366:8:15"
                           }
                         ],
-                        "id": 3586,
+                        "id": 3722,
                         "name": "Assignment",
-                        "src": "1356:18:14"
+                        "src": "1356:18:15"
                       }
                     ],
-                    "id": 3587,
+                    "id": 3723,
                     "name": "ExpressionStatement",
-                    "src": "1356:18:14"
+                    "src": "1356:18:15"
                   },
                   {
                     "children": [
@@ -700,15 +700,15 @@
                             "attributes": {
                               "argumentTypes": null,
                               "overloadedDeclarations": [
-                                3564
+                                3700
                               ],
-                              "referencedDeclaration": 3564,
+                              "referencedDeclaration": 3700,
                               "type": "contract IBancorGasPriceLimit",
                               "value": "gasPriceLimit"
                             },
-                            "id": 3588,
+                            "id": 3724,
                             "name": "Identifier",
-                            "src": "1384:13:14"
+                            "src": "1384:13:15"
                           },
                           {
                             "attributes": {
@@ -716,23 +716,23 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 3570,
+                              "referencedDeclaration": 3706,
                               "type": "contract IBancorGasPriceLimit",
                               "value": "_gasPriceLimit"
                             },
-                            "id": 3589,
+                            "id": 3725,
                             "name": "Identifier",
-                            "src": "1400:14:14"
+                            "src": "1400:14:15"
                           }
                         ],
-                        "id": 3590,
+                        "id": 3726,
                         "name": "Assignment",
-                        "src": "1384:30:14"
+                        "src": "1384:30:15"
                       }
                     ],
-                    "id": 3591,
+                    "id": 3727,
                     "name": "ExpressionStatement",
-                    "src": "1384:30:14"
+                    "src": "1384:30:15"
                   },
                   {
                     "children": [
@@ -751,15 +751,15 @@
                             "attributes": {
                               "argumentTypes": null,
                               "overloadedDeclarations": [
-                                3566
+                                3702
                               ],
-                              "referencedDeclaration": 3566,
+                              "referencedDeclaration": 3702,
                               "type": "contract IBancorQuickConverter",
                               "value": "quickConverter"
                             },
-                            "id": 3592,
+                            "id": 3728,
                             "name": "Identifier",
-                            "src": "1424:14:14"
+                            "src": "1424:14:15"
                           },
                           {
                             "attributes": {
@@ -767,33 +767,33 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 3572,
+                              "referencedDeclaration": 3708,
                               "type": "contract IBancorQuickConverter",
                               "value": "_quickConverter"
                             },
-                            "id": 3593,
+                            "id": 3729,
                             "name": "Identifier",
-                            "src": "1441:15:14"
+                            "src": "1441:15:15"
                           }
                         ],
-                        "id": 3594,
+                        "id": 3730,
                         "name": "Assignment",
-                        "src": "1424:32:14"
+                        "src": "1424:32:15"
                       }
                     ],
-                    "id": 3595,
+                    "id": 3731,
                     "name": "ExpressionStatement",
-                    "src": "1424:32:14"
+                    "src": "1424:32:15"
                   }
                 ],
-                "id": 3596,
+                "id": 3732,
                 "name": "Block",
-                "src": "1346:117:14"
+                "src": "1346:117:15"
               }
             ],
-            "id": 3597,
+            "id": 3733,
             "name": "FunctionDefinition",
-            "src": "1084:379:14"
+            "src": "1084:379:15"
           },
           {
             "attributes": {
@@ -802,7 +802,7 @@
               "isConstructor": false,
               "name": "setFormula",
               "payable": false,
-              "scope": 3652,
+              "scope": 3788,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -814,7 +814,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_formula",
-                      "scope": 3615,
+                      "scope": 3751,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "contract IBancorFormula",
@@ -826,22 +826,22 @@
                         "attributes": {
                           "contractScope": null,
                           "name": "IBancorFormula",
-                          "referencedDeclaration": 7567,
+                          "referencedDeclaration": 7776,
                           "type": "contract IBancorFormula"
                         },
-                        "id": 3598,
+                        "id": 3734,
                         "name": "UserDefinedTypeName",
-                        "src": "1637:14:14"
+                        "src": "1637:14:15"
                       }
                     ],
-                    "id": 3599,
+                    "id": 3735,
                     "name": "VariableDeclaration",
-                    "src": "1637:23:14"
+                    "src": "1637:23:15"
                   }
                 ],
-                "id": 3600,
+                "id": 3736,
                 "name": "ParameterList",
-                "src": "1636:25:14"
+                "src": "1636:25:15"
               },
               {
                 "attributes": {
@@ -850,9 +850,9 @@
                   ]
                 },
                 "children": [],
-                "id": 3609,
+                "id": 3745,
                 "name": "ParameterList",
-                "src": "1756:0:14"
+                "src": "1756:0:15"
               },
               {
                 "attributes": {
@@ -867,18 +867,18 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 6651,
+                      "referencedDeclaration": 6787,
                       "type": "modifier ()",
                       "value": "ownerOnly"
                     },
-                    "id": 3601,
+                    "id": 3737,
                     "name": "Identifier",
-                    "src": "1685:9:14"
+                    "src": "1685:9:15"
                   }
                 ],
-                "id": 3602,
+                "id": 3738,
                 "name": "ModifierInvocation",
-                "src": "1685:9:14"
+                "src": "1685:9:15"
               },
               {
                 "children": [
@@ -888,13 +888,13 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 7094,
+                      "referencedDeclaration": 7230,
                       "type": "modifier (address)",
                       "value": "validAddress"
                     },
-                    "id": 3603,
+                    "id": 3739,
                     "name": "Identifier",
-                    "src": "1703:12:14"
+                    "src": "1703:12:15"
                   },
                   {
                     "attributes": {
@@ -902,18 +902,18 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 3599,
+                      "referencedDeclaration": 3735,
                       "type": "contract IBancorFormula",
                       "value": "_formula"
                     },
-                    "id": 3604,
+                    "id": 3740,
                     "name": "Identifier",
-                    "src": "1716:8:14"
+                    "src": "1716:8:15"
                   }
                 ],
-                "id": 3605,
+                "id": 3741,
                 "name": "ModifierInvocation",
-                "src": "1703:22:14"
+                "src": "1703:22:15"
               },
               {
                 "children": [
@@ -923,13 +923,13 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 7108,
+                      "referencedDeclaration": 7244,
                       "type": "modifier (address)",
                       "value": "notThis"
                     },
-                    "id": 3606,
+                    "id": 3742,
                     "name": "Identifier",
-                    "src": "1734:7:14"
+                    "src": "1734:7:15"
                   },
                   {
                     "attributes": {
@@ -937,18 +937,18 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 3599,
+                      "referencedDeclaration": 3735,
                       "type": "contract IBancorFormula",
                       "value": "_formula"
                     },
-                    "id": 3607,
+                    "id": 3743,
                     "name": "Identifier",
-                    "src": "1742:8:14"
+                    "src": "1742:8:15"
                   }
                 ],
-                "id": 3608,
+                "id": 3744,
                 "name": "ModifierInvocation",
-                "src": "1734:17:14"
+                "src": "1734:17:15"
               },
               {
                 "children": [
@@ -969,15 +969,15 @@
                             "attributes": {
                               "argumentTypes": null,
                               "overloadedDeclarations": [
-                                3562
+                                3698
                               ],
-                              "referencedDeclaration": 3562,
+                              "referencedDeclaration": 3698,
                               "type": "contract IBancorFormula",
                               "value": "formula"
                             },
-                            "id": 3610,
+                            "id": 3746,
                             "name": "Identifier",
-                            "src": "1766:7:14"
+                            "src": "1766:7:15"
                           },
                           {
                             "attributes": {
@@ -985,33 +985,33 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 3599,
+                              "referencedDeclaration": 3735,
                               "type": "contract IBancorFormula",
                               "value": "_formula"
                             },
-                            "id": 3611,
+                            "id": 3747,
                             "name": "Identifier",
-                            "src": "1776:8:14"
+                            "src": "1776:8:15"
                           }
                         ],
-                        "id": 3612,
+                        "id": 3748,
                         "name": "Assignment",
-                        "src": "1766:18:14"
+                        "src": "1766:18:15"
                       }
                     ],
-                    "id": 3613,
+                    "id": 3749,
                     "name": "ExpressionStatement",
-                    "src": "1766:18:14"
+                    "src": "1766:18:15"
                   }
                 ],
-                "id": 3614,
+                "id": 3750,
                 "name": "Block",
-                "src": "1756:35:14"
+                "src": "1756:35:15"
               }
             ],
-            "id": 3615,
+            "id": 3751,
             "name": "FunctionDefinition",
-            "src": "1617:174:14"
+            "src": "1617:174:15"
           },
           {
             "attributes": {
@@ -1020,7 +1020,7 @@
               "isConstructor": false,
               "name": "setGasPriceLimit",
               "payable": false,
-              "scope": 3652,
+              "scope": 3788,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -1032,7 +1032,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_gasPriceLimit",
-                      "scope": 3633,
+                      "scope": 3769,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "contract IBancorGasPriceLimit",
@@ -1044,22 +1044,22 @@
                         "attributes": {
                           "contractScope": null,
                           "name": "IBancorGasPriceLimit",
-                          "referencedDeclaration": 7576,
+                          "referencedDeclaration": 7785,
                           "type": "contract IBancorGasPriceLimit"
                         },
-                        "id": 3616,
+                        "id": 3752,
                         "name": "UserDefinedTypeName",
-                        "src": "1992:20:14"
+                        "src": "1992:20:15"
                       }
                     ],
-                    "id": 3617,
+                    "id": 3753,
                     "name": "VariableDeclaration",
-                    "src": "1992:35:14"
+                    "src": "1992:35:15"
                   }
                 ],
-                "id": 3618,
+                "id": 3754,
                 "name": "ParameterList",
-                "src": "1991:37:14"
+                "src": "1991:37:15"
               },
               {
                 "attributes": {
@@ -1068,9 +1068,9 @@
                   ]
                 },
                 "children": [],
-                "id": 3627,
+                "id": 3763,
                 "name": "ParameterList",
-                "src": "2135:0:14"
+                "src": "2135:0:15"
               },
               {
                 "attributes": {
@@ -1085,18 +1085,18 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 6651,
+                      "referencedDeclaration": 6787,
                       "type": "modifier ()",
                       "value": "ownerOnly"
                     },
-                    "id": 3619,
+                    "id": 3755,
                     "name": "Identifier",
-                    "src": "2052:9:14"
+                    "src": "2052:9:15"
                   }
                 ],
-                "id": 3620,
+                "id": 3756,
                 "name": "ModifierInvocation",
-                "src": "2052:9:14"
+                "src": "2052:9:15"
               },
               {
                 "children": [
@@ -1106,13 +1106,13 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 7094,
+                      "referencedDeclaration": 7230,
                       "type": "modifier (address)",
                       "value": "validAddress"
                     },
-                    "id": 3621,
+                    "id": 3757,
                     "name": "Identifier",
-                    "src": "2070:12:14"
+                    "src": "2070:12:15"
                   },
                   {
                     "attributes": {
@@ -1120,18 +1120,18 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 3617,
+                      "referencedDeclaration": 3753,
                       "type": "contract IBancorGasPriceLimit",
                       "value": "_gasPriceLimit"
                     },
-                    "id": 3622,
+                    "id": 3758,
                     "name": "Identifier",
-                    "src": "2083:14:14"
+                    "src": "2083:14:15"
                   }
                 ],
-                "id": 3623,
+                "id": 3759,
                 "name": "ModifierInvocation",
-                "src": "2070:28:14"
+                "src": "2070:28:15"
               },
               {
                 "children": [
@@ -1141,13 +1141,13 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 7108,
+                      "referencedDeclaration": 7244,
                       "type": "modifier (address)",
                       "value": "notThis"
                     },
-                    "id": 3624,
+                    "id": 3760,
                     "name": "Identifier",
-                    "src": "2107:7:14"
+                    "src": "2107:7:15"
                   },
                   {
                     "attributes": {
@@ -1155,18 +1155,18 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 3617,
+                      "referencedDeclaration": 3753,
                       "type": "contract IBancorGasPriceLimit",
                       "value": "_gasPriceLimit"
                     },
-                    "id": 3625,
+                    "id": 3761,
                     "name": "Identifier",
-                    "src": "2115:14:14"
+                    "src": "2115:14:15"
                   }
                 ],
-                "id": 3626,
+                "id": 3762,
                 "name": "ModifierInvocation",
-                "src": "2107:23:14"
+                "src": "2107:23:15"
               },
               {
                 "children": [
@@ -1187,15 +1187,15 @@
                             "attributes": {
                               "argumentTypes": null,
                               "overloadedDeclarations": [
-                                3564
+                                3700
                               ],
-                              "referencedDeclaration": 3564,
+                              "referencedDeclaration": 3700,
                               "type": "contract IBancorGasPriceLimit",
                               "value": "gasPriceLimit"
                             },
-                            "id": 3628,
+                            "id": 3764,
                             "name": "Identifier",
-                            "src": "2145:13:14"
+                            "src": "2145:13:15"
                           },
                           {
                             "attributes": {
@@ -1203,33 +1203,33 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 3617,
+                              "referencedDeclaration": 3753,
                               "type": "contract IBancorGasPriceLimit",
                               "value": "_gasPriceLimit"
                             },
-                            "id": 3629,
+                            "id": 3765,
                             "name": "Identifier",
-                            "src": "2161:14:14"
+                            "src": "2161:14:15"
                           }
                         ],
-                        "id": 3630,
+                        "id": 3766,
                         "name": "Assignment",
-                        "src": "2145:30:14"
+                        "src": "2145:30:15"
                       }
                     ],
-                    "id": 3631,
+                    "id": 3767,
                     "name": "ExpressionStatement",
-                    "src": "2145:30:14"
+                    "src": "2145:30:15"
                   }
                 ],
-                "id": 3632,
+                "id": 3768,
                 "name": "Block",
-                "src": "2135:47:14"
+                "src": "2135:47:15"
               }
             ],
-            "id": 3633,
+            "id": 3769,
             "name": "FunctionDefinition",
-            "src": "1966:216:14"
+            "src": "1966:216:15"
           },
           {
             "attributes": {
@@ -1238,7 +1238,7 @@
               "isConstructor": false,
               "name": "setQuickConverter",
               "payable": false,
-              "scope": 3652,
+              "scope": 3788,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -1250,7 +1250,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_quickConverter",
-                      "scope": 3651,
+                      "scope": 3787,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "contract IBancorQuickConverter",
@@ -1262,22 +1262,22 @@
                         "attributes": {
                           "contractScope": null,
                           "name": "IBancorQuickConverter",
-                          "referencedDeclaration": 7606,
+                          "referencedDeclaration": 7815,
                           "type": "contract IBancorQuickConverter"
                         },
-                        "id": 3634,
+                        "id": 3770,
                         "name": "UserDefinedTypeName",
-                        "src": "2384:21:14"
+                        "src": "2384:21:15"
                       }
                     ],
-                    "id": 3635,
+                    "id": 3771,
                     "name": "VariableDeclaration",
-                    "src": "2384:37:14"
+                    "src": "2384:37:15"
                   }
                 ],
-                "id": 3636,
+                "id": 3772,
                 "name": "ParameterList",
-                "src": "2383:39:14"
+                "src": "2383:39:15"
               },
               {
                 "attributes": {
@@ -1286,9 +1286,9 @@
                   ]
                 },
                 "children": [],
-                "id": 3645,
+                "id": 3781,
                 "name": "ParameterList",
-                "src": "2531:0:14"
+                "src": "2531:0:15"
               },
               {
                 "attributes": {
@@ -1303,18 +1303,18 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 6651,
+                      "referencedDeclaration": 6787,
                       "type": "modifier ()",
                       "value": "ownerOnly"
                     },
-                    "id": 3637,
+                    "id": 3773,
                     "name": "Identifier",
-                    "src": "2446:9:14"
+                    "src": "2446:9:15"
                   }
                 ],
-                "id": 3638,
+                "id": 3774,
                 "name": "ModifierInvocation",
-                "src": "2446:9:14"
+                "src": "2446:9:15"
               },
               {
                 "children": [
@@ -1324,13 +1324,13 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 7094,
+                      "referencedDeclaration": 7230,
                       "type": "modifier (address)",
                       "value": "validAddress"
                     },
-                    "id": 3639,
+                    "id": 3775,
                     "name": "Identifier",
-                    "src": "2464:12:14"
+                    "src": "2464:12:15"
                   },
                   {
                     "attributes": {
@@ -1338,18 +1338,18 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 3635,
+                      "referencedDeclaration": 3771,
                       "type": "contract IBancorQuickConverter",
                       "value": "_quickConverter"
                     },
-                    "id": 3640,
+                    "id": 3776,
                     "name": "Identifier",
-                    "src": "2477:15:14"
+                    "src": "2477:15:15"
                   }
                 ],
-                "id": 3641,
+                "id": 3777,
                 "name": "ModifierInvocation",
-                "src": "2464:29:14"
+                "src": "2464:29:15"
               },
               {
                 "children": [
@@ -1359,13 +1359,13 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 7108,
+                      "referencedDeclaration": 7244,
                       "type": "modifier (address)",
                       "value": "notThis"
                     },
-                    "id": 3642,
+                    "id": 3778,
                     "name": "Identifier",
-                    "src": "2502:7:14"
+                    "src": "2502:7:15"
                   },
                   {
                     "attributes": {
@@ -1373,18 +1373,18 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 3635,
+                      "referencedDeclaration": 3771,
                       "type": "contract IBancorQuickConverter",
                       "value": "_quickConverter"
                     },
-                    "id": 3643,
+                    "id": 3779,
                     "name": "Identifier",
-                    "src": "2510:15:14"
+                    "src": "2510:15:15"
                   }
                 ],
-                "id": 3644,
+                "id": 3780,
                 "name": "ModifierInvocation",
-                "src": "2502:24:14"
+                "src": "2502:24:15"
               },
               {
                 "children": [
@@ -1405,15 +1405,15 @@
                             "attributes": {
                               "argumentTypes": null,
                               "overloadedDeclarations": [
-                                3566
+                                3702
                               ],
-                              "referencedDeclaration": 3566,
+                              "referencedDeclaration": 3702,
                               "type": "contract IBancorQuickConverter",
                               "value": "quickConverter"
                             },
-                            "id": 3646,
+                            "id": 3782,
                             "name": "Identifier",
-                            "src": "2541:14:14"
+                            "src": "2541:14:15"
                           },
                           {
                             "attributes": {
@@ -1421,45 +1421,45 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 3635,
+                              "referencedDeclaration": 3771,
                               "type": "contract IBancorQuickConverter",
                               "value": "_quickConverter"
                             },
-                            "id": 3647,
+                            "id": 3783,
                             "name": "Identifier",
-                            "src": "2558:15:14"
+                            "src": "2558:15:15"
                           }
                         ],
-                        "id": 3648,
+                        "id": 3784,
                         "name": "Assignment",
-                        "src": "2541:32:14"
+                        "src": "2541:32:15"
                       }
                     ],
-                    "id": 3649,
+                    "id": 3785,
                     "name": "ExpressionStatement",
-                    "src": "2541:32:14"
+                    "src": "2541:32:15"
                   }
                 ],
-                "id": 3650,
+                "id": 3786,
                 "name": "Block",
-                "src": "2531:49:14"
+                "src": "2531:49:15"
               }
             ],
-            "id": 3651,
+            "id": 3787,
             "name": "FunctionDefinition",
-            "src": "2357:223:14"
+            "src": "2357:223:15"
           }
         ],
-        "id": 3652,
+        "id": 3788,
         "name": "ContractDefinition",
-        "src": "484:2098:14"
+        "src": "484:2098:15"
       }
     ],
-    "id": 3653,
+    "id": 3789,
     "name": "SourceUnit",
-    "src": "0:2583:14"
+    "src": "0:2583:15"
   },
   "networks": {},
   "schemaVersion": "1.0.0",
-  "updatedAt": "2018-02-28T18:05:46.260Z"
+  "updatedAt": "2018-03-02T16:04:52.229Z"
 }
